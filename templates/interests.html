@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div id="no-javascript">Sorry, you need Javascript enabled to see this page properly.</div>
+<script type="text/javascript">
+  document.getElementById("no-javascript").style.display = "none";
+
+  {% if not t %}
+  parseProjects("static/xml{{url}}.xml");
+  {% else %}
+  parseProjects("static/xml{{url}}.xml", "{{t}}");
+  {% endif %}
+
+</script>
+
+{% endblock %}

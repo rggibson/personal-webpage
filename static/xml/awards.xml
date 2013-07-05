@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Awards>
+
+<Award>
+<Name><![CDATA[Pre-Approved Candidate for NSERC Industrial R&D Fellowship]]></Name>
+<Project_ID>none</Project_ID>
+<Summary>Helps fund recent Ph.D. graduates in industrial research positions.  Approved April, 2013.</Summary>
+<Link><![CDATA[
+http://www.nsercpartnerships.ca/FundingPrograms-ProgrammeDeSubventions/IRDF-BPRDI-eng.asp
+]]></Link>
+</Award>
+
+<Award>
+<Name>AAAI Computer Poker Competition Champion</Name>
+<Project_ID>poker</Project_ID>
+<Summary>Headed University of Alberta's 3-player entries that won 5 out of 6 events from 2010 - 2012.</Summary>
+</Award>
+
+<Award>
+<Name>AIIDE 2011 Best Conference Reviewer Award</Name>
+<Project_ID>none</Project_ID>
+<Summary>Collaboritve effort with Duane Szafron and colleagues, awarded October 2011.</Summary>
+</Award>
+
+<Award>
+<Name>Alberta Innovates - Technology Futures Graduate Student Scholarship</Name>
+<Project_ID>none</Project_ID>
+<Summary>Held between January 2011 and December 2013, $36,000 / year.</Summary>
+</Award>
+
+<Award>
+<Name>Runner-Up in the Mario Event of the 2009 Reinforcement Learning Competition</Name>
+<Project_ID>mario</Project_ID>
+<Summary>Built an agent that learns to play variations of Super Mario Bros.</Summary>
+</Award>
+
+<Award>
+<Name>NSERC Alexander Graham Bell Canada Graduate Scholarship</Name>
+<Project_ID>none</Project_ID>
+<Summary>Held between January 2009 and December 2010 (Ph.D., $35,000 / year) and between September 2006 and August 2008 (Master's, $17,500 / year).</Summary>
+</Award>
+
+<Award>
+<Name>Governor General's Silver Medal</Name>
+<Project_ID>none</Project_ID>
+<Summary>Awarded for top academic standing in the Faculty of Science among graduating class at University of Victoria.  Awarded May, 2006.</Summary>
+<Link><![CDATA[
+http://communications.uvic.ca/uvicinfo/buildsite/preview.php?ptype=PAGEMAIN&id=156
+]]></Link>
+</Award>
+
+</Awards>

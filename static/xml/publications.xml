@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Publications>
+
+<Publication>
+<Area>Artificial Intelligence</Area>
+<Project_ID>poker</Project_ID>
+<ID>13arxiv-domination</ID>
+<Title>Regret Minimization in Non-Zero-Sum Games with Applications to Building Champion Multiplayer Computer Poker Agents</Title>
+<Authors><![CDATA[<b>Richard Gibson</b>]]></Authors>
+<Published>ArXiv e-prints (2013)</Published>
+<Summary><![CDATA[
+In this paper, I provide the first set of theoretical guarantees for the Counterfactual Regret Minimization algorithm in games with more than two players. 
+In addition, I provide details of the 3-player limit hold'em champion program of the <a href="http://www.computerpokercompetition.org">Annual Computer Poker Competition</a>.
+]]></Summary>
+<Abstract>
+In two-player zero-sum games, if both players minimize their average external regret, then the average of the strategy profiles converges to a Nash equilibrium. 
+For n-player general-sum games, however, theoretical guarantees for regret minimization are less understood. 
+Nonetheless, Counterfactual Regret Minimization (CFR), a popular regret minimization algorithm for extensive-form games, has generated winning three-player Texas Hold'em agents in the Annual Computer Poker Competition (ACPC). 
+In this paper, we provide the first set of theoretical properties for regret minimization algorithms in non-zero-sum games by proving that solutions eliminate iterative strict domination. 
+We formally define \emph{dominated actions} in extensive-form games, show that CFR avoids iteratively strictly dominated actions and strategies, and demonstrate that removing iteratively dominated actions is enough to win a mock tournament in a small poker game. 
+In addition, for two-player non-zero-sum games, we bound the worst case performance and show that in practice, regret minimization can yield strategies very close to equilibrium. 
+Our theoretical advancements lead us to a new modification of CFR for games with more than two players that is more efficient and may be used to generate stronger strategies than previously possible. 
+Furthermore, we present a new three-player Texas Hold'em poker agent that was built using CFR and a novel game decomposition method.  
+Our new agent wins the three-player events of the 2012 ACPC and defeats the winning three-player programs from previous competitions while requiring less resources to generate than the 2011 winner. 
+Finally, we show that our CFR modification computes a strategy of equal quality to our new agent in a quarter of the time of standard CFR using half the memory. </Abstract>
+<Download>bibtex</Download>
+<Download>paper</Download>
+</Publication>
+
+<Publication>
+<Area>Artificial Intelligence</Area>
+<Project_ID>poker</Project_ID>
+<ID>13aamas-3pkuhn</ID>
+<Title>A Parameterized Family of Equilibrium Profiles for Three-Player Kuhn Poker</Title>
+<Authors><![CDATA[Duane Szafron, <b>Richard Gibson</b>, and Nathan Sturtevant]]></Authors>
+<Published>Proceedings of the Twelfth International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2013)</Published>
+<Summary><![CDATA[
+This paper presents an infinite collection of solutions to a 3-player variant of a toy poker game called <i>Kuhn Poker</i>.
+To my knowledge, this is the largest game with more than two players to be solved analytically to date.
+]]></Summary>
+<Abstract>
+This paper presents a parameterized family of equilibrium strategy profiles for three-player Kuhn poker. 
+This family illustrates an important feature of three-player equilibrium profiles that is not
+present in two-player equilibrium profiles - the ability of one player to transfer utility to a second player at the expense of the third player, while playing a strategy in the profile family. 
+This family of strategy profiles was derived analytically and the proof that the members of this family are equilibrium profiles is an analytic one. 
+In addition, the problem of selecting a robust strategy from an equilibrium profile is discussed.
+</Abstract>
+<Download>bibtex</Download>
+<Download>paper</Download>
+<Download>poster</Download>
+<Download>slides</Download>
+</Publication>
+
+<Publication>
+<Area>Artificial Intelligence</Area>
+<Project_ID>poker</Project_ID>
+<ID>12nips-as</ID>
+<Title>Efficient Monte Carlo Counterfactual Regret Minimization in Games with Many Player Actions</Title>
+<Authors><![CDATA[<b>Richard Gibson</b>, Neil Burch, Marc Lanctot, and Duane Szafron]]></Authors>
+<Published>Advances in Neural Information Processing Systems 25 (NIPS 2012)</Published>
+<Summary><![CDATA[
+We introduce <i>Average Strategy Sampling</i>, a new sampling algorithm that works particularly well in games with many actions, such as no-limit poker. 
+In addition, we provide improved regret bounds for CFR and some of its popular sampling variants.
+]]></Summary>
+<Abstract>
+Counterfactual Regret Minimization (CFR) is a popular, iterative algorithm for computing strategies in extensive-form games. 
+The Monte Carlo CFR (MCCFR) variants reduce the per iteration time cost of CFR by traversing a smaller, sampled portion of the tree. 
+The previous most effective instances of MCCFR can still be very slow in games with many player actions since they sample every action for a given player. 
+In this paper, we present a new MCCFR algorithm, Average Strategy Sampling (AS), that samples a subset of the player's actions according to the player's average strategy. 
+Our new algorithm is inspired by a new, tighter bound on the number of iterations required by CFR to converge to a given solution quality. 
+In addition, we prove a similar, tighter bound for AS and other popular MCCFR variants. 
+Finally, we validate our work by demonstrating that AS converges faster than previous MCCFR algorithms in both no-limit poker and Bluff. 
+</Abstract>
+<Download>bibtex</Download>
+<Download>paper</Download>
+<Download>supplementary material</Download>
+<Download>poster</Download>
+</Publication>
+
+<Publication>
+<Area>Artificial Intelligence</Area>
+<Project_ID>poker</Project_ID>
+<ID>12icml-ir</ID>
+<Title>No-Regret Learning in Extensive-Form Games with Imperfect Recall</Title>
+<Authors><![CDATA[Marc Lanctot, <b>Richard Gibson</b>, Neil Burch, Martin Zinkevich, and Michael Bowling]]></Authors>
+<Published>Proceedings of the Twenty-Ninth International Conference on Machine Learning (ICML 2012)</Published>
+<Summary><![CDATA[
+We provide the first set of theoretical guarantees for Counterfactual Regret Minimization when applied to <i>well-formed</i> imperfect recall games where players may forget information that they once knew. 
+]]></Summary>
+<Abstract>
+Counterfactual Regret Minimization (CFR) is an efficient no-regret learning algorithm for decision problems modeled as extensive games. 
+CFR's regret bounds depend on the requirement of perfect recall: players always remember information that was revealed to them and the order in which it was revealed. 
+In games without perfect recall, however, CFR's guarantees do not apply.
+In this paper, we present the first regret bound for CFR when applied
+to a general class of games with imperfect recall. 
+We also show that CFR applied to any abstraction
+belonging to our class results in a regret bound not just for the abstract game, but for the full game as well.
+We verify our theory and show how imperfect recall can be used to trade a small increase in regret for a significant reduction in memory in three domains: die-roll poker, phantom tic-tac-toe, and Bluff.</Abstract>
+<Download>bibtex</Download>
+<Download>paper</Download>
+<Download>extended technical report</Download>
+</Publication>
+
+<Publication>
+<Area>Artificial Intelligence</Area>
+<Project_ID>poker</Project_ID>
+<ID>12aaai-gensampling</ID>
+<Title>Generalized Sampling and Variance in Counterfactual Regret Minimization</Title>
+<Authors><![CDATA[<b>Richard Gibson</b>, Marc Lanctot, Neil Burch, Duane Szafron, and Michael Bowling]]></Authors>
+<Published>Proceedings of the Twenty-Sixth AAAI Conference on Artificial Intelligence (AAAI 2012)</Published>
+<Summary><![CDATA[
+This paper generalizes previous sampling techniques in Counterfactual Regret Minimization, proves a regret bound according to the variance of the sampled estimates, and proposes a new <i>probing</i> algorithm that can reduce variance and increase convergence rates.  
+]]></Summary>
+<Abstract>
+In large extensive form games with imperfect information, Counterfactual Regret Minimization (CFR) is a popular, iterative algorithm for computing approximate Nash equilibria.
+While the base algorithm performs a full tree traversal on each iteration, Monte Carlo CFR (MCCFR) reduces the per iteration time cost by traversing just a sampled portion of the tree.
+On the other hand, MCCFR's sampled values introduce variance, and the effects of this variance were previously unknown.
+In this paper, we generalize MCCFR by considering any generic estimator of the sought values.
+We show that any choice of an estimator can be used to probabilistically minimize regret, provided the estimator is bounded and unbiased.
+In addition, we relate the variance of the estimator to the convergence rate of an algorithm that calculates regret directly from the estimator.
+We demonstrate the application of our analysis by defining a new bounded, unbiased estimator with empirically lower variance than MCCFR estimates. 
+Finally, we use this estimator in a new sampling algorithm to compute approximate equilibria in Goofspiel, Bluff, and Texas hold'em poker.
+Under each of our selected sampling schemes, our new algorithm converges faster than MCCFR.
+</Abstract>
+<Download>bibtex</Download>
+<Download>paper</Download>
+<Download>extended technical report</Download>
+<Download>poster</Download>
+</Publication>
+
+<Publication>
+<Area>Artificial Intelligence</Area>
+<Project_ID>poker</Project_ID>
+<ID>12aamas-pcs</ID>
+<Title>Efficient Nash Equilibrium Approximation Through Monte Carlo Counterfactual Regret Minimization</Title>
+<Authors><![CDATA[Michael Johanson, Nolan Bard, Marc Lanctot, <b>Richard Gibson</b>, and Michael Bowling]]></Authors>
+<Published>Proceedings of the Eleventh International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2012)</Published>
+<Summary><![CDATA[
+This paper introduces <i>Public Chance Sampling</i>, a Monte Carlo CFR sampling algorithm that can take advantage of the structure of some games to perform <i>O(n<sup>2</sup>)</i> work in <i>O(n)</i> time. 
+]]></Summary>
+<Abstract>
+Recently, there has been considerable progress towards algorithms for approximating Nash equilibrium strategies in extensive games.  One such algorithm, Counterfactual Regret Minimization (CFR), has proven to be effective in two-player zero-sum poker domains.  While the basic algorithm is iterative and performs a full game traversal on each iteration, sampling based approaches are possible.  For instance, chance-sampled CFR considers just a single chance outcome per traversal, resulting in faster but less precise iterations.  While more iterations are required, chance-sampled CFR requires less time overall to converge.  In this work, we present new sampling techniques that consider sets of chance outcomes during each traversal to produce slower, more accurate iterations.  By sampling only the public chance outcomes seen by all players, we take advantage of the imperfect information structure of the game to (i) avoid recomputation of strategy probabilities, and (ii) achieve an algorithmic speed improvement, performing $O(n^2)$ work at terminal nodes in $O(n)$ time.  We demonstrate that this new CFR update converges more quickly than chance-sampled CFR in the large domains of poker and Bluff.
+</Abstract>
+<Download>bibtex</Download>
+<Download>paper</Download>
+</Publication>
+
+<Publication>
+<Area>Artificial Intelligence</Area>
+<Project_ID>poker</Project_ID>
+<ID>11nips-stitching</ID>
+<Title>On Strategy Stitching in Large Extensive Form Multiplayer Games</Title>
+<Authors><![CDATA[<b>Richard Gibson</b> and Duane Szafron]]></Authors>
+<Published>Advances in Neural Information Processing Systems 24 (NIPS 2011)</Published>
+<Summary><![CDATA[
+In this paper, we present two frameworks for computing partial strategies and stitching them together to form one complete strategy for the entire game. 
+This work generalizes previous approaches to strategy stitching and demonstrates its effectiveness in a variety of poker games. 
+]]></Summary>
+<Abstract>
+Computing a good strategy in a large extensive form game often demands an extraordinary amount of computer memory, necessitating the use of abstraction to reduce the game size.  Typically, strategies from abstract games perform better in the real game as the granularity of abstraction is increased.  This paper investigates two techniques for stitching a base strategy in a coarse abstraction of the full game tree, to expert strategies in fine abstractions of smaller subtrees.  We provide a general framework for creating static experts, an approach that generalizes some previous strategy stitching efforts.  In addition, we show that static experts can create strong agents for both 2-player and 3-player Leduc and Limit Texas Hold'em poker, and that a specific class of static experts can be preferred among a number of alternatives.  Furthermore, we describe a poker agent that used static experts and won the 3-player events of the 2010 Annual Computer Poker Competition.
+</Abstract>
+<Download>bibtex</Download>
+<Download>paper</Download>
+<Download>poster</Download>
+</Publication>
+
+<Publication>
+<Area>Artificial Intelligence</Area>
+<Project_ID>poker</Project_ID>
+<ID>11ijcai-abstract</ID>
+<Title>Regret Minimization in Multiplayer Extensive Games</Title>
+<Authors><![CDATA[<b>Richard Gibson</b> and Duane Szafron]]></Authors>
+<Published>Proceedings of the Twenty-Second International Joint Conference on Artificial Intelligence (IJCAI 2011)</Published>
+<Summary><![CDATA[
+This extended abstract summarizes some of my early work in computer poker and discusses future extensions of that work. 
+This was presented during the Doctoral Consortium at IJCAI 2011.
+]]></Summary>
+<Abstract>
+The counterfactual regret minimization (CFR) algorithm is state of the art for computing strategies in large games and other sequential decision-making problems.  Little is known, however, about CFR in games with more than 2 players.  This extended abstract outlines research towards a better understanding of CFR in multiplayer games and new procedures for computing even stronger multiplayer strategies.  We summarize work already completed that investigates techniques for creating expert strategies for playing smaller sub-games, and work that proves CFR avoids classes of undesirable strategies.  In addition, we provide an outline of our future research direction.   Our goals are to apply regret minimization to the problem of playing multiple games simultaneously, and augment CFR to achieve effective on-line opponent modelling of multiple opponents.  The objective of this research is to build a world-class computer poker player for multiplayer Limit Texas Hold'em.
+</Abstract>
+<Download>bibtex</Download>
+<Download>paper</Download>
+</Publication>
+
+<Publication>
+<Area>Artificial Intelligence</Area>
+<Project_ID>risk</Project_ID>
+<ID>10aiide-risk</ID>
+<Title>An Automated Technique for Drafting Territories in the Board Game Risk</Title>
+<Authors><![CDATA[<b>Richard Gibson</b>, Neesha Desai, and Richard Zhao]]></Authors>
+<Published>Proceedings of the Sixth AAAI Conference on Artificial Intelligence and Interactive Digital Entertainment (AIIDE 2010)</Published>
+<Summary><![CDATA[
+In this paper, we present an algorithm for selecting starting territories in RISK and build an agent that defeats several benchmark opponents.  
+]]></Summary>
+<Abstract>
+In the standard rules of the board game Risk, players take turns selecting or drafting the 42 territories on the board until all territories are owned.  We present a technique for drafting territories in Risk that combines the Monte Carlo tree search algorithm UCT with an automated evaluation function.  Created through supervised machine learning, this function scores outcomes of drafts in order to shorten the length of a UCT simulation.  Using this approach, we augment an existing bot for the computer game Lux Delux, a clone of Risk.  Our drafting technique is shown to greatly improve performance against the strongest opponents supplied with Lux Delux.  The evidence provided indicates that territory drafting is important to overall success in Risk.
+</Abstract>
+<Download>bibtex</Download>
+<Download>paper</Download>
+<Download>slides</Download>
+</Publication>
+
+<Publication>
+<Area>Coding Theory</Area>
+<Project_ID>golay</Project_ID>
+<ID>11dcc-odd</ID>
+<Title>Quaternary Golay Sequence Pairs II: Odd Length</Title>
+<Authors><![CDATA[<b>Richard Gibson</b> and Jonathan Jedwab]]></Authors>
+<Published>Designs, Codes, and Cryptography 59 (2011)</Published>
+<Summary><![CDATA[
+This paper connects the existence of certain small length quaternary Golay pairs to the existence of Barker sequences of the same length.
+]]></Summary>
+<Abstract><![CDATA[
+A 4-phase Golay sequence pair of length s &equiv; 5 (mod 8) is constructed from a Barker sequence
+of the same length whose even-indexed elements are prescribed. This explains the origin of the
+4-phase Golay seed pairs of length 5 and 13. The construction cannot produce new 4-phase
+Golay sequence pairs, because there are no Barker sequences of odd length greater than 13. A
+partial converse to the construction is given, under the assumption of additional structure on
+the 4-phase Golay sequence pair of length s &equiv; 5 (mod 8).
+]]></Abstract>
+<Download>bibtex</Download>
+<Download>paper</Download>
+</Publication>
+
+<Publication>
+<Area>Coding Theory</Area>
+<Project_ID>golay</Project_ID>
+<ID>11dcc-even</ID>
+<Title>Quaternary Golay Sequence Pairs I: Even Length</Title>
+<Authors><![CDATA[<b>Richard Gibson</b> and Jonathan Jedwab]]></Authors>
+<Published>Designs, Codes, and Cryptography 59 (2011)</Published>
+<Summary><![CDATA[
+This paper explains the existence of quaternary Golay pairs of small, even length.
+]]></Summary>
+<Abstract><![CDATA[
+The origin of all 4-phase Golay sequences and Golay sequence pairs of even length at most 26
+is explained. The principal techniques are the three-stage construction of Fiedler, Jedwab and
+Parker involving multi-dimensional Golay arrays, and a "sum-difference" construction
+that modifies a result due to Eliahou, Kervaire and Saffari. The existence of 4-phase
+seed pairs of lengths 3, 5, 11, and 13 is assumed; their origin is considered in [GJ].
+]]></Abstract>
+<Download>bibtex</Download>
+<Download>paper</Download>
+</Publication>
+
+<Publication>
+<Area>Coding Theory</Area>
+<Project_ID>golay</Project_ID>
+<ID>thesis-masters</ID>
+<Title>Quaternary Golay Sequence Pairs</Title>
+<Authors><![CDATA[<b>Richard Gibson</b>]]></Authors>
+<Published>Master's Thesis, Simon Fraser University (2008)</Published>
+<Summary><![CDATA[
+This thesis explains the existence of quaternary Golay pairs of small, even length and connects the existence of certain small, odd length pairs with the existence of Barker sequences of the same length.
+]]></Summary>
+<Abstract><![CDATA[
+This thesis classifies all ordered quaternary Golay sequence pairs of length less than 22.  Previous results, both classical and recent, are applied to explain the existence pattern for all even lengths less than 22.  In addition, a general construction is developed which derives quaternary Golay pairs of length congruent to 5 modulo 8 from binary Barker sequences of the same odd length.  Applying this construction to lengths 5 and 13 explains all such known pairs.
+<br>
+Furthermore, this thesis explores the possibility of reversing the Barker-to-Golay derivation by attempting to construct an odd-length binary Barker sequence from a quaternary Golay sequence of the same length.  This procedure is successful for all quaternary Golay sequences of length congruent to 5 modulo 8 satisfying certain conditions.  Since there are no binary Barker sequences of odd length greater than 13, all quaternary Golay sequences fulfilling these conditions are known.
+]]></Abstract>
+<Download>bibtex</Download>
+<Download>paper</Download>
+<Download>slides</Download>
+</Publication>
+
+<Publication>
+<Area>Graph Theory</Area>
+<Project_ID>graphs</Project_ID>
+<ID>09dm-clawfree</ID>
+<Title>Claw-Free Graphs Are Not Universal Fixers</Title>
+<Authors><![CDATA[Ernest Cockayne, <b>Richard Gibson</b>, and Kieka Mynhardt]]></Authors>
+<Published>Discrete Math 309 (2009)</Published>
+<Summary><![CDATA[
+We prove that every nontrivial universal fixer must contain a <i>claw</i> or, in other words, an induced subgraph of the complete bipartite graph K<sub>1,3</sub>.
+]]></Summary>
+<Abstract><![CDATA[
+For any permutation a &Pi; of the vertex set of a graph G, the generalized prism &pi;G is obtained by joining two copies of G by the
+matching {u&pi;(u) : u &isin; V(G)}. Denote the domination number of G by &gamma;(G).  If &gamma;(&pi;G) = &gamma;(G) for all &pi;, then G is called a
+universal fixer.  The edgeless graphs are the only known universal fixers, and are conjectured to be the only universal fixers. We
+prove that claw-free graphs are not universal fixers.
+]]></Abstract>
+<Download>bibtex</Download>
+<Download><![CDATA[<a href="http://www.sciencedirect.com/science?_ob=ArticleURL&_udi=B6V00-4RNK43G-4&_user=1067472&_coverDate=01/06/2009&_rdoc=1&_fmt=high&_orig=gateway&_origin=gateway&_sort=d&_docanchor=&view=c&_searchStrId=1670160730&_rerunOrigin=google&_acct=C000051251&_version=1&_urlVersion=0&_userid=1067472&md5=def8746cd00c05a954a766013b000894&searchtype=a">link</a>]]></Download>
+</Publication>
+
+<Publication>
+<Area>Graph Theory</Area>
+<Project_ID>graphs</Project_ID>
+<ID>08dm-bipartite</ID>
+<Title>Bipartite Graphs Are Not Universal Fixers</Title>
+<Authors><![CDATA[<b>Richard Gibson</b>]]></Authors>
+<Published>Discrete Math 308 (2008)</Published>
+<Summary><![CDATA[
+I prove that every nontrivial universal fixer must contain a 5-cycle, thus excluding all bipartite graphs as universal fixers.
+]]></Summary>
+<Abstract><![CDATA[
+For any permutation &pi; of the vertex set of a graph G, the graph &pi;G
+is obtained from two copies G' and G'' of G by
+joining u &isin; V(G') and v &isin; V(G'') if and only if
+v = &pi;(u). Denote the domination number of G by &gamma;(G). For all
+permutations &pi; of V(G), &gamma;(G) &le; &gamma;(&pi;G) &le; 2&gamma;(G). If
+&gamma;(&pi;G) = &gamma;(G) for all &pi;, then G is called a universal fixer.
+We prove that graphs without 5-cycles are not universal fixers, from which it
+follows that bipartite graphs are not universal fixers.
+]]></Abstract>
+<Download>bibtex</Download>
+<Download><![CDATA[<a href="http://www.sciencedirect.com/science?_ob=ArticleURL&_udi=B6V00-4RB5GMY-2&_user=10&_rdoc=1&_fmt=&_orig=search&_sort=d&_docanchor=&view=c&_acct=C000050221&_version=1&_urlVersion=0&_userid=10&md5=af5ea33d65ff9b080e8db5d527169c73">link</a>]]></Download>
+</Publication>
+
+<Publication>
+<Area>Graph Theory</Area>
+<Project_ID>graphs</Project_ID>
+<ID>08ajc-pairdom</ID>
+<Title>Diameter of Paired Domination Edge-Critical Graphs</Title>
+<Authors><![CDATA[Michelle Edwards, <b>Richard Gibson</b>, Michael A. Henning, and Kieka Mynhardt]]></Authors>
+<Published>Australasian Journal of Combinatorics 40 (2008)</Published>
+<Summary><![CDATA[
+This paper considers paired domination edge-critical graphs and bounds the diameter of such graphs. 
+]]></Summary>
+<Abstract><![CDATA[
+A paired dominating set of a graph G without isolated vertices is a
+dominating set of G whose induced subgraph has a perfect matching.
+The paired domination number &gamma;<sub>pr</sub>(G) of G is the minimum cardinality
+amongst all paired dominating sets of G. The graph G is paired domination edge-critical (&gamma;<sub>pr</sub>EC) if for every e &notin; E(G), &gamma;<sub>pr</sub>(G+e) < &gamma;<sub>pr</sub>(G).
+We investigate the diameter of &gamma;<sub>pr</sub>EC graphs. To this effect we characterize &gamma;<sub>pr</sub>EC trees. We show that for arbitrary even k = 4 there exists
+a k<sub>pr</sub>EC graph with diameter two. We provide an example which shows
+that the maximum diameter of a k<sub>pr</sub>EC graph is at least k-2 and prove
+that it is at most min{2k -6,3k/2 + 3}.
+]]></Abstract>
+<Download>bibtex</Download>
+<Download><![CDATA[<a href="https://ajc.maths.uq.edu.au/pdf/40/ajc_v40_p279.pdf">link</a>]]></Download>
+</Publication>
+
+<Publication>
+<Area>Graph Theory</Area>
+<Project_ID>graphs</Project_ID>
+<ID>07dmgt-counter</ID>
+<Title>Counterexample to a Conjecture on the Structure of Bipartite Partitionable Graphs</Title>
+<Authors><![CDATA[<b>Richard Gibson</b> and Kieka Mynhardt]]></Authors>
+<Published>Discussiones Mathematicae Graph Theory 27 (2007)</Published>
+<Summary><![CDATA[
+We disprove a conjecture proposed by Hartnell and Rall and prove an alternative result on the structure of bipartite partitionable graphs.
+]]></Summary>
+<Abstract><![CDATA[
+A graph G is called a prism fixer if &gamma;(G X K<sub>2</sub>) = &gamma;(G), where &gamma;(G) denotes the domination number of G. 
+A symmetric &gamma;-set of G is a minimum dominating set D which admits a partition D = D1 &cup; D2 such that V(G) - N[D<sub>i</sub>] = D<sub>j</sub>, i,j = 1,2,
+i &ne; j. 
+It is known that G is a prism fixer if and only if G has a symmetric &gamma;-set.
+<br>
+Hartnell and Rall [On dominating the Cartesian product of a graph and K<sub>2</sub>, <i>Discuss. Math. Graph Theory</i> <b>24</b> (2004), 389-402] conjectured that if G is a connected, bipartite graph such that V(G) can be partitioned into symmetric &gamma;-sets, then G &cong; C4 or G can be obtained from K<sub>2t,2t</sub> by removing the edges of t vertex-disjoint 4-cycles. 
+We construct a counterexample to this conjecture and prove an alternative result on the structure of such bipartite graphs.
+]]></Abstract>
+<Download>bibtex</Download>
+<Download>paper</Download>
+</Publication>
+
+<Publication>
+<Area>Mathematical Biology</Area>
+<Project_ID>none</Project_ID>
+<ID>07tbmm-circadian</ID>
+<Title>A Stochastic Model for Circadian Rhythms From Coupled Ultradian Oscillators</Title>
+<Authors><![CDATA[Roderick Edwards, <b>Richard Gibson</b>, Reinhard Illner, and Verner Paetkau]]></Authors>
+<Published>Theoretical Biology and Medical Modelling 4 (2007)</Published>
+<Summary><![CDATA[
+We present a rigorous mathematical model for circadian rhythms and generate numerical results that demonstrate robustness to stochasticity of protein binding/unbinding. 
+]]></Summary>
+<Abstract><![CDATA[
+<b>Background:</b> Circadian rhythms with varying components exist in organisms ranging from
+humans to cyanobacteria. A simple evolutionarily plausible mechanism for the origin of such a
+variety of circadian oscillators, proposed in earlier work, involves the non-disruptive coupling of
+pre-existing ultradian transcriptional-translational oscillators (TTOs), producing "beats," in
+individual cells. However, like other TTO models of circadian rhythms, it is important to establish
+that the inherent stochasticity of the protein binding and unbinding does not invalidate the finding
+of clear oscillations with circadian period.
+<br>
+<b>Results:</b> The TTOs of our model are described in two versions: 1) a version in which the activation
+or inhibition of genes is regulated stochastically, where the 'unoccupied" (or "free") time of the site
+under consideration depends on the concentration of a protein complex produced by another site,
+and 2) a deterministic, "time-averaged" version in which the switching between the "free" and
+"occupied" states of the sites occurs so rapidly that the stochastic effects average out. The second
+case is proved to emerge from the first in a mathematically rigorous way. Numerical results for
+both scenarios are presented and compared.
+<br>
+<b>Conclusion:</b> Our model proves to be robust to the stochasticity of protein binding/unbinding at
+experimentally determined rates and even at rates several orders of magnitude slower. We have
+not only confirmed this by numerical simulation, but have shown in a mathematically rigorous way
+that the time-averaged deterministic system is indeed the fast-binding-rate limit of the full
+stochastic model.
+]]></Abstract>
+<Download>bibtex</Download>
+<Download>paper</Download>
+</Publication>
+
+</Publications>

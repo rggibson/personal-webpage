@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div id="baseball-wrap">
+  <center>
+    <img id="baseball-gif" alt="baseball-gif">
+  </center>
+</div>
+
+<div id="error-404">
+  <center>
+  <h1>Error 404!</h1>
+  Oops, sorry, this page doesn't exist.
+  </center>
+</div>
+
+<script type="text/javascript">
+  window.onload = function() {
+  var num_gifs = 22;
+  var gifnum = Math.floor(Math.random() * num_gifs);
+  document.getElementById("baseball-gif").src = "static/gifs/baseball-" + gifnum + ".gif";
+  }
+</script>
+
+<div style="clear: both"></div>
+
+{% endblock %}

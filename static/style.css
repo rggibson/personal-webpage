@@ -1,0 +1,268 @@
+body { 
+font-family: Arial, sans-serif; 
+line-height: 1.5;
+font-size: 14px;
+background: black; /*#393939;*/
+margin: 0;
+padding: 0;
+color: #D0D0D0;
+}
+
+a { color: #00FFFF; text-decoration: none;}
+a:hover { text-decoration: underline; }
+a:visited { color: #0080E9; }
+
+#wrap { 
+width: 800px;
+margin: 20px auto;
+background: #101010;
+}
+
+#header-wrap {
+/*background: #101010; url(graphics/header.jpg) no-repeat;*/
+height: 150px;
+}
+
+#header {
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+}
+
+#title {
+    font-size: 32px;
+}
+
+#subtitle {
+    font-size: 24px;
+}
+
+.social-button {
+    float: left;
+    opacity: 0.75;
+    filter: alpha(opacity=75); /* For IE8 and earlier */
+    color: #101010;
+}
+
+.social-button:hover {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.social-button:visited {
+    color: #101010;
+}
+
+.bundled-button {
+    height: 30px;
+    margin-left: -5px;
+}
+
+.twitch-button {
+    height: 25px;
+    margin-top: 3px;
+    margin-left: -3px;
+}
+
+#headshot {
+    float: right;
+    height: 110px;
+}
+
+#headshot img {
+    max-height: 100%;
+}
+
+#menu {
+background: #700000;/* url(graphics/menu.jpg) no-repeat;*/
+height: 40px;
+line-height: 40px;
+}
+
+#menu ul {
+    list-style-type: none;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+#menu ul li {
+display: block;
+float: left;
+}
+#menu ul li:hover {
+    background: #A00000;
+}
+
+#menu ul li a, #menu ul ul li a {
+display: block;
+padding: 0 15px 0 15px;
+text-decoration: none;
+color: #F9F7ED;
+font-size: 14px;
+font-weight: 600;
+}
+
+/* Building submenu items */
+#menu ul ul {
+    display: none; /* initially menu item is hidden */
+    position: absolute;
+    padding: 0;
+    z-index: 1;
+}
+#menu ul ul li {
+    background: #700000;
+    float: none;
+}
+#menu ul ul li a {
+    width: 100%;
+    display: block;
+}
+#menu ul li:hover > ul {
+    display: block;
+}
+
+#content {
+margin-top: 30px;
+margin-bottom: 30px;
+padding: 0 40px 0 40px;
+}
+
+#content p { padding: 0 0 10px 0; }
+#content ul { padding: 0 20px 10px 30px; }
+
+#home-content {
+    height: 550px;
+}
+
+#twitter-feed {
+    float: right;
+    width: 250px;
+    padding-left: 20px;
+}
+
+#footer { 
+background: #700000;/* url(graphics/footer.jpg) no-repeat;*/
+text-align: center;
+color: #F9F7ED;
+height: 30px;
+line-height: 30px;
+}
+#footer p { padding: 0; margin: 0; }
+
+#baseball-wrap {
+    float: left;
+    padding-right: 20px;
+    height: 150px;
+    width: 350px;
+}
+
+#baseball-wrap center {
+    height: 100%;
+    width: 100%;
+}
+
+#baseball-gif {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+#error-404 {
+    height: 150px;
+}
+
+h1 {
+    font-size: 32px;
+    color: #FFFFC0;
+}
+
+.item .heading {
+    font-size: 24px;
+    color: #FFFF50;
+    font-style: italic;
+    font-weight: 600;
+    padding-bottom: 10px;
+}
+
+.related-work {
+    float: right;
+    position: relative;
+    top: 5px;
+    font-size: 16px;
+    font-family: "Courier New", Courier, monospace;
+}
+
+.graphic {
+    float: right;
+    padding-left: 20px;
+    pading-bottom: 20px;
+    max-width: 300px;
+}
+
+.graphic img, .graphic iframe {
+    max-height: 225px;
+    max-width: inherit;
+    background: inherit;
+}
+
+.item + .item {
+    padding-top: 20px;
+}
+
+.pub-area {
+    color: #FFFFC0;
+    font-size: 20px;
+    text-decoration: underline;
+    padding-top: 10px;
+    padding-bottom:10px;
+}
+
+.title, .title a {
+    font-size: 16px;
+    color: #FFFF50;
+}
+
+.authors, .date {
+    font-size: 16px;
+}
+
+.purpose {
+    font-size: 15px;
+    font-style: italic;
+}
+
+.show-hide-abstract,.show-hide-abstract:visited {
+    color: #A0FFFF;
+}
+
+.abstract {
+    display: none;
+}
+
+.downloads {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 14px;
+}
+
+#contact-list {
+}
+
+#contact-list ul {
+    list-style-type: none;
+}
+
+#contact-list ul li {
+    padding-bottom: 5px;
+}
+
+#contact-list ul li a {
+    line-height: 35px;
+    height: 35px;
+    font-size: 14px;
+    background: #101010;
+}
+
+#contact-list ul li a img {
+    float: left;
+    height: inherit;
+    padding-right: 10px;
+}

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Presentations>
+
+<Presentation>
+<ID>13aamas-3pkuhn</ID>
+<Project_ID>poker</Project_ID>
+<Subject>A Parameterized Family of Equilibrium Profiles for Three-Player Kuhn Poker</Subject>
+<Date>May 6, 2013</Date>
+<Purpose>The Twelfth International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2013)</Purpose>
+<Download>slides</Download>
+<Download>paper</Download>
+</Presentation>
+
+<Presentation>
+<ID>siat</ID>
+<Project_ID>none</Project_ID>
+<Subject>Recent Advances in Computer Poker and Future Research for Artificial Intelligence in Games</Subject>
+<Date>February 28, 2013</Date>
+<Purpose>Simon Fraser University - SIAT Faculty Candidate Presentation</Purpose>
+<Download>slides</Download>
+</Presentation>
+
+<Presentation>
+<ID>honours-seminar</ID>
+<Project_ID>poker</Project_ID>
+<Subject>Computer Poker Research at the University of Alberta</Subject>
+<Date>February 25, 2013</Date>
+<Purpose>University of Alberta - Computing Science Honours Seminar</Purpose>
+<Download>slides</Download>
+</Presentation>
+
+<Presentation>
+<ID>12aaai-domination</ID>
+<Project_ID>poker</Project_ID>
+<Subject>Counterfactual Regret Minimization and Domination in Extensive-Form Games</Subject>
+<Date>July 23, 2012</Date>
+<Purpose>AAAI 2012 Poker Symposium</Purpose>
+<Download>slides</Download>
+<Download>paper</Download>
+</Presentation>
+
+<Presentation>
+<ID>aiseminar</ID>
+<Project_ID>poker</Project_ID>
+<Subject>Solving Large Extensive-Form Games Quicker</Subject>
+<Date>June 15, 2012</Date>
+<Purpose>University of Alberta - AI Seminar</Purpose>
+<Download>slides</Download>
+</Presentation>
+
+<Presentation>
+<ID>10aiide-risk</ID>
+<Project_ID>risk</Project_ID>
+<Subject>Drafting Territories in the Board Game Risk</Subject>
+<Date>October 12, 2010</Date>
+<Purpose>The Sixth AAAI Conference on Artificial Intelligence and Interactive Digital Entertainment (AIIDE 2010)</Purpose>
+<Download>slides</Download>
+<Download>paper</Download>
+</Presentation>
+
+<Presentation>
+<ID>thesis-masters</ID>
+<Project_ID>golay</Project_ID>
+<Subject>Quaternary Golay Sequence Pairs</Subject>
+<Date>October 26, 2008</Date>
+<Purpose>Mathematics Graduate Student Conference (later repeated for Master's Thesis Defense)</Purpose>
+<Download>slides</Download>
+</Presentation>
+
+</Presentations>

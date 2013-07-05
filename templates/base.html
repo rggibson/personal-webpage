@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="static/style.css" />
+  <link rel="shortcut icon" href="static/images/favicon.ico" />
+  <title>Richard Gibson - Home</title>
+  <script type="text/javascript" src="static/js/parse-xml.js"></script>
+</head>
+
+<body>
+
+<div id="wrap">
+
+<div id="header-wrap">
+  <div id="header">
+    <img id="headshot" src="static/images/headshot.png">
+    <div id="title">Richard Gibson</div> 
+    <div id="subtitle">Ph.D. Student in Artificial Intelligence and Games</div>
+    <a href="https://twitter.com/RichardGGibson" class="social-button">
+      <img src="static/images/Twitter.png" alt="Twitter" class="bundled-button">
+    </a>
+    <a href="http://ca.linkedin.com/in/rggibson" class="social-button">
+      <img src="static/images/LinkedIn.png" alt="LinkedIn" class="bundled-button">
+    </a>
+    <a href="http://www.youtube.com/user/rggibson11" class="social-button">
+      <img src="static/images/Youtube.png" alt="YouTube" class="bundled-button">
+    </a>
+    <a href="http://www.twitch.tv/rggibson" class="social-button">
+      <img src="static/images/Twitch.png" alt="TwitchTV" class="twitch-button">
+    </a>
+  </div>
+</div>
+
+<div id="menu">
+  <ul>
+    <li>
+      <a href="/">Home</a>
+    </li>
+    <li>
+      <a href="/work">Academic Work</a>
+      <ul>
+	<li><a href="/work?t=projects">Projects</a></li>
+	<li><a href="/work?t=publications">Publications</a></li>
+	<li><a href="/work?t=presentations">Oral Presentations</a></li>
+	<li><a href="/work?t=awards">Awards</a></li>
+	<li><a href="/work?t=other">Other</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="/academia">Academic Interests</a>
+      <ul>
+	<li><a href="/academia?t=games">AI in Adversarial Games</a></li>
+	<li><a href="/academia?t=sports">AI in Sports</a></li>
+	<li><a href="/academia?t=vids">AI in Video Games</a></li>
+	<li><a href="/academia?t=music">Computer Music</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="/industry">Industrial Interests</a>
+      <ul>
+	<li><a href="/industry?t=gamedev">Game Development</a></li>
+	<li><a href="/industry?t=research">Research</a></li>
+	<li><a href="/industry?t=startups">Startups</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="/personal">Personal</a>
+      <ul>	
+	<li><a href="/personal?t=sports">Sports</a></li>
+	<li><a href="/personal?t=vids">Video Games</a></li>
+	<li><a href="/personal?t=boardgames">Board Games</a></li>
+      </ul>
+    </li>
+    <li><a href="/contact">Contact</a></li>
+  </ul>
+</div>
+
+<div id="content">
+
+{% block content %}
+{% endblock %}
+
+</div>
+
+<div id="footer">
+<p>&copy; Copyright 2013 Richard Gibson</p>
+</div>
+
+</div>
+
+</body>
+</html>

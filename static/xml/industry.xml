@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Industry>
+
+<Project>
+<ID>gamedev</ID>
+<Title>Game Development</Title>
+<Image>game-dev.png</Image>
+<Details><![CDATA[
+<p>
+Video game development is perhaps the largest intersection of both my passion and expertise. 
+Gaming has been a large part of my life and I spent many hours of my youth mastering several games of many genres. 
+In fact, video games are what first led to my fascination of the complexities and possibilities of artificial intelligence. 
+This fascination led me to the <a href="http://ualberta.ca">University of Alberta</a> and a Ph.D. studying <a href="academia?t=games">artificial intelligence and games</a>. 
+Developing champion computer poker programs has not only opened my eyes to state-of-the-art artificial intelligence algorithms, but it has also vastly improved my technical programming skills, particularly in C and C++. 
+</p>
+
+<p>
+I am very interested in applying my skills and expertise to create fun and innovative games. 
+In particular, I am interested in joining or forming a small team of developers where I can have a large impact on both the technical and creative components, especially within gameplay and AI. 
+While much of my career has been spent in academia, I did spend 8 months at <i>Propaganda Games</i>, a former Disney game studio in Vancouver. 
+I joined the studio during preproduction of a Pirates of the Caribbean game that unfortunately was later cancelled. 
+Nonetheless, I have experience in the industry and am enthusiastic towards returning to game development. 
+</p>
+]]></Details>
+</Project>
+
+<Project>
+<ID>research</ID>
+<Title>Industrial Research</Title>
+<Image>gavel.png</Image>
+<Details><![CDATA[
+<p>
+Research is a very rewarding line of work and I am interested in continuing my research career beyond academia. 
+My Ph.D. work in artificial intelligence and computational game theory has applications beyond the poker table. 
+The first examples that come to mind are those problems arising in industry that are simulated by the <a href="http://tac.sics.se/page.php?id=1">Trading Agent Competition</a>. 
+For instance, Google runs ad auctions where companies place bids for top link positions in keyword searches. 
+Such auction mechanisms lend themselves very well to a game-theoretic approach, much like the approach taken by successful computer poker agents. 
+I am interested in extending my work in computer poker to other domains, including ad auctions and other game-like problems. 
+Furthermore, I am very open to broadening my horizons and conducting research in other related domains, such as machine learning, mathematical modelling, and optimization. 
+</p>
+]]></Details>
+</Project>
+
+<Project>
+<ID>startups</ID>
+<Title>Startups</Title>
+<Image>rubik.png</Image>
+<Details><![CDATA[
+<p>
+A startup is a company that is built to grow rapidly. 
+I am interested in founding or joining young startups in the technology sector, and I have a number of ideas in areas related to gaming, sports, and entertainment. 
+I believe in the methodology of hiring and partnering with smart, creative individuals that are superstars at what they do. 
+While there are many risks involved with startups, I could be convinced to hop onboard if the right situation comes along. 
+</p>
+]]></Details>
+</Project>
+
+</Industry>

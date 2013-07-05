@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CourseProjects>
+
+<Project>
+<ID>10aiide-risk</ID>
+<Project_ID>risk</Project_ID>
+<Title>Multi-Player Strategies for Drafting Games with Applications to Risk</Title>
+<Course>CMPUT 651: Topics in Artificial Intelligence with Applications to Video Games (Fall 2009)</Course>
+<Instructor>Dr. Vadim Bulitko</Instructor>
+<Team><![CDATA[Team members: <b>Richard Gibson</b>, Neesha Desai, and Richard Zhao]]></Team>
+<Download>paper</Download>
+<Download>old-slides</Download>
+</Project>
+
+<Project>
+<ID>cmput603</ID>
+<Project_ID>poker</Project_ID>
+<Title>An Introduction to the Current Approaches in Computer Poker</Title>
+<Course>CMPUT 603: Teaching and Research Methods (Fall 2009)</Course>
+<Instructor>Dr. Russ Greiner</Instructor>
+<Team><![CDATA[Solo project]]></Team>
+<Download>paper</Download>
+<Download>poster</Download>
+</Project>
+
+<Project>
+<ID>cmput609</ID>
+<Project_ID>mario</Project_ID>
+<Title>Mario, State Abstractions, and the Wonderful World of Options</Title>
+<Course>CMPUT 609: Reinforcement Learning in AI (Winter 2009)</Course>
+<Instructor>Dr. Rich Sutton</Instructor>
+<Team><![CDATA[Team members: <b>Richard Gibson</b> and Nick Abou Risk]]></Team>
+<Download>paper</Download>
+<Download>slides</Download>
+<Download><![CDATA[<a href="http://www.youtube.com/watch?v=EZLkCdMXw8g">YouTube</a>]]></Download>
+</Project>
+
+<Project>
+<ID>cmput621</ID>
+<Project_ID>scheduling</Project_ID>
+<Title>Sports Scheduling in Video Games</Title>
+<Course>CMPUT 621: Constraint Programming (Winter 2009)</Course>
+<Instructor>Dr. Jia You</Instructor>
+<Team><![CDATA[Solo Project]]></Team>
+<Download>paper</Download>
+<Download>slides</Download>
+<Download>code</Download>
+</Project>
+
+</CourseProjects>

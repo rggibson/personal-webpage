@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BoardGames>
+
+<Project>
+<Title>Euro Games</Title>
+<Image>carcassonne.jpg</Image>
+<Details><![CDATA[
+I am a big fan of European-style board games. 
+While I still enjoy more familiar games such as Monopoly and Risk, most Euro games feature more strategy, more player engagement, and no player elimination. 
+I have a small collection of euro games with some of my favourites being <a href="http://boardgamegeek.com/boardgame/42/tigris-euphrates">Tigris & Euphrates</a>, <a href="http://boardgamegeek.com/boardgame/18602/caylus">Caylus</a>, <a href="http://boardgamegeek.com/boardgame/822/carcassonne">Carcossonne</a> (pictured on the right), and <a href="http://boardgamegeek.com/boardgame/31260/agricola">Agricola</a>. 
+I have even played in a small board game tournament where I finished second place in a field of about 20 or so board gamers. 
+]]></Details>
+</Project>
+
+<Project>
+<Title>Baseball Card Game</Title>
+<Image>baseball.png</Image>
+<Details><![CDATA[
+In 2006, a group of friends and I created a baseball card game.  
+Since then, I have modified the game a bit and written up a sheet of rules.  
+The game is for 2 players and can be played with a regular deck of playing cards.
+I have heard of a few other baseball card games that are based on poker hands, but this game is completely different and no poker knowlege is required.   
+I think the game is pretty fun, and so I have decided to share the game with the internet.  
+The 2-page rules and 1-page outcome tables can be found <a href="static/baseball-card-game.pdf">here</a>. 
+The rules are a bit dense, so feel free to <a href="mailto:richard.g.gibson@gmail.com">email me</a> with any questions you may have.  
+In addition, the outcome tables can be a bit cumbersome to carry around, so I suggest downloading the rules to your smartphone.  
+]]></Details>
+</Project>
+
+</BoardGames>
