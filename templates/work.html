@@ -5,94 +5,94 @@
 <div id="no-javascript">Sorry, you need Javascript enabled to see this page properly.</div>
 <script type="text/javascript">
   document.getElementById("no-javascript").style.display = "none";
+  document.getElementById("nav-work").setAttribute("class", "active");
       
   {% if not t or t == "projects" %}
-  {% if not t %}
-  document.writeln('<h1 align="center">Projects</h1>');
-  {% endif %}
+  document.writeln('<h1>Projects</h1>');
   parseProjects("static/xml/projects.xml");
   {% endif %}
 
   {% if not t or t == "publications" %}
-  {% if not t %}
-  document.writeln('<h1 align="center">Publications</h1>');    
-  {% endif %}
+  document.writeln('<h1>Publications</h1>');    
   parsePublications("static/xml/publications.xml");
   {% endif %}
 
   {% if not t or t == "presentations" %}
-  {% if not t %}
-  document.writeln('<h1 align="center">Oral Presentations</h1>');    
-  {% endif %}
+  document.writeln('<h1>Oral Presentations</h1>');    
   parsePresentations("static/xml/presentations.xml");
   {% endif %}
     
   {% if not t or t == "awards" %}
-  {% if not t %}
-  document.writeln('<h1 align="center">Awards</h1>');
-  {% endif %}
+  document.writeln('<h1>Awards</h1>');
   parseAwards("static/xml/awards.xml");
   {% endif %}
 
   function writeResearchBlogs() {
-  document.writeln('<div class="title">2012 Annual Computer Poker Competition</div>');
-  document.writeln('<div class="summary">A short series of blogs for IEEE Spectrum about the 2012 ACPC.</div>');
-  document.writeln('<div class="downloads">[<a href="http://spectrum.ieee.org/tech-talk/robotics/artificial-intelligence/a-texas-hold-em-tournament-for-ais">part 1</a>] [<a href="http://spectrum.ieee.org/tech-talk/robotics/artificial-intelligence/meet-hyperborean-the-poker-playing-ai">part 2</a>] [<a href="http://spectrum.ieee.org/tech-talk/robotics/artificial-intelligence/champions-declared-in-ai-poker-tournament">part 3</a>]');
-  document.writeln('</div>');    
+  document.writeln('<div class="row">');
+    document.writeln('<div class="col-lg-4">');
+      document.writeln('<div class="thumbnail thumbnail-rgg">');
+	document.writeln('<div class="caption">');	    
+	  document.writeln('<div class="title">2012 Annual Computer Poker Competition</div>');
+	  document.writeln('<div class="summary">A short series of blogs for IEEE Spectrum about the 2012 ACPC.</div>');
+	  document.writeln('<div class="downloads"><p><a href="http://spectrum.ieee.org/tech-talk/robotics/artificial-intelligence/a-texas-hold-em-tournament-for-ais" class="btn btn-rgg">part 1</a> <a href="http://spectrum.ieee.org/tech-talk/robotics/artificial-intelligence/meet-hyperborean-the-poker-playing-ai" class="btn btn-rgg">part 2</a> <a href="http://spectrum.ieee.org/tech-talk/robotics/artificial-intelligence/champions-declared-in-ai-poker-tournament" class="btn btn-rgg">part 3</a></p></div>');
+	  document.writeln('</div>');
+	document.writeln('</div>');
+      document.writeln('</div>');
+    document.writeln('</div>');	  
   }
   
   {% if not t or t == "other" %}  
-  document.writeln('<h1 align="center">Research Blogs</h1>');
+  document.writeln('<h1>Research Blogs</h1>');
   writeResearchBlogs();
-  document.writeln('<h1 align="center">Ph.D. Course Projects</h1>');
+  document.writeln('<h1>Ph.D. Course Projects</h1>');
   parseCourseWork("static/xml/course-work.xml");
   {% endif %}
 
 
   {% if t == "poker" %}
   
-  document.writeln('<h1 align="center">Publications</h1>');
+  document.writeln('<h1>Publications</h1>');
   parsePublications("static/xml/publications.xml", "poker");
-  document.writeln('<h1 align="center">Oral Presentations</h1>');
+  document.writeln('<h1>Oral Presentations</h1>');
   parsePresentations("static/xml/presentations.xml", "poker");
-  document.writeln('<h1 align="center">Awards</h1>');
+  document.writeln('<h1>Awards</h1>');
   parseAwards("static/xml/awards.xml", "poker");
-  document.writeln('<h1 align="center">Research Blogs</h1>');
+  document.writeln('<h1>Research Blogs</h1>');
   writeResearchBlogs();
-  document.writeln('<h1 align="center">Ph.D. Course Projects</h1>');
+  document.writeln('<h1>Ph.D. Course Projects</h1>');
   parseCourseWork("static/xml/course-work.xml", "poker");  
 
   {% elif t == "risk" %}
 
-  document.writeln('<h1 align="center">Publications</h1>');
+  document.writeln('<h1>Publications</h1>');
   parsePublications("static/xml/publications.xml", "risk");
-  document.writeln('<h1 align="center">Oral Presentations</h1>');
+  document.writeln('<h1>Oral Presentations</h1>');
   parsePresentations("static/xml/presentations.xml", "risk");
-  document.writeln('<h1 align="center">Ph.D. Course Projects</h1>');
+  document.writeln('<h1>Ph.D. Course Projects</h1>');
   parseCourseWork("static/xml/course-work.xml", "risk");  
 
   {% elif t == "mario" %}
 
-  document.writeln('<h1 align="center">Awards</h1>');
+  document.writeln('<h1>Awards</h1>');
   parseAwards("static/xml/awards.xml", "mario");
-  document.writeln('<h1 align="center">Ph.D. Course Projects</h1>');
+  document.writeln('<h1>Ph.D. Course Projects</h1>');
   parseCourseWork("static/xml/course-work.xml", "mario");  
 
   {% elif t == "scheduling" %}
 
-  document.writeln('<h1 align="center">Ph.D. Course Projects</h1>');
+  document.writeln('<h1>Ph.D. Course Projects</h1>');
   parseCourseWork("static/xml/course-work.xml", "scheduling");  
 
   {% elif t == "golay" %}
 
-  document.writeln('<h1 align="center">Publications</h1>');
+  document.writeln('<h1>Publications</h1>');
   parsePublications("static/xml/publications.xml", "golay");
-  document.writeln('<h1 align="center">Oral Presentations</h1>');
+  document.writeln('<h1>Oral Presentations</h1>');
   parsePresentations("static/xml/presentations.xml", "golay");
 
   {% elif t == "graphs" %}
 
-  document.writeln('<h1 align="center">Publications</h1>');
+  document.writeln('<h1>Publications</h1>');
   parsePublications("static/xml/publications.xml", "graphs");
 
   {% endif %}

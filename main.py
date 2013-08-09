@@ -28,7 +28,7 @@ class Handler(webapp2.RequestHandler):
         if res:
             self.write(res)
         else:
-            self.render("404.html")
+            self.render("404.html", **kw)
 
 
 class DefaultPage(Handler):
@@ -41,7 +41,7 @@ class DefaultPage(Handler):
             template = template[1:]
         # Check for homepage
         if( len(template) == 0 ):
-            template = "index"
+            template = "home"
         elif( template == "academia"
               or template == "industry" ):
             template = "interests"

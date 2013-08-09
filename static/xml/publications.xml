@@ -11,7 +11,7 @@
 <Published>ArXiv e-prints (2013)</Published>
 <Summary><![CDATA[
 In this paper, I provide the first set of theoretical guarantees for the Counterfactual Regret Minimization algorithm in games with more than two players. 
-In addition, I provide details of the 3-player limit hold'em champion program of the <a href="http://www.computerpokercompetition.org">Annual Computer Poker Competition</a>.
+In addition, I provide details of the 3-player limit hold'em champion program of the 2012 <a href="http://www.computerpokercompetition.org">Annual Computer Poker Competition</a>.
 ]]></Summary>
 <Abstract>
 In two-player zero-sum games, if both players minimize their average external regret, then the average of the strategy profiles converges to a Nash equilibrium. 
@@ -140,7 +140,7 @@ Under each of our selected sampling schemes, our new algorithm converges faster 
 This paper introduces <i>Public Chance Sampling</i>, a Monte Carlo CFR sampling algorithm that can take advantage of the structure of some games to perform <i>O(n<sup>2</sup>)</i> work in <i>O(n)</i> time. 
 ]]></Summary>
 <Abstract>
-Recently, there has been considerable progress towards algorithms for approximating Nash equilibrium strategies in extensive games.  One such algorithm, Counterfactual Regret Minimization (CFR), has proven to be effective in two-player zero-sum poker domains.  While the basic algorithm is iterative and performs a full game traversal on each iteration, sampling based approaches are possible.  For instance, chance-sampled CFR considers just a single chance outcome per traversal, resulting in faster but less precise iterations.  While more iterations are required, chance-sampled CFR requires less time overall to converge.  In this work, we present new sampling techniques that consider sets of chance outcomes during each traversal to produce slower, more accurate iterations.  By sampling only the public chance outcomes seen by all players, we take advantage of the imperfect information structure of the game to (i) avoid recomputation of strategy probabilities, and (ii) achieve an algorithmic speed improvement, performing $O(n^2)$ work at terminal nodes in $O(n)$ time.  We demonstrate that this new CFR update converges more quickly than chance-sampled CFR in the large domains of poker and Bluff.
+Recently, there has been considerable progress towards algorithms for approximating Nash equilibrium strategies in extensive games.  One such algorithm, Counterfactual Regret Minimization (CFR), has proven to be effective in two-player zero-sum poker domains.  While the basic algorithm is iterative and performs a full game traversal on each iteration, sampling based approaches are possible.  For instance, chance-sampled CFR considers just a single chance outcome per traversal, resulting in faster but less precise iterations.  While more iterations are required, chance-sampled CFR requires less time overall to converge.  In this work, we present new sampling techniques that consider sets of chance outcomes during each traversal to produce slower, more accurate iterations.  By sampling only the public chance outcomes seen by all players, we take advantage of the imperfect information structure of the game to (i) avoid recomputation of strategy probabilities, and (ii) achieve an algorithmic speed improvement, performing $O(n^2)$ work at terminal nodes in O(n) time.  We demonstrate that this new CFR update converges more quickly than chance-sampled CFR in the large domains of poker and Bluff.
 </Abstract>
 <Download>bibtex</Download>
 <Download>paper</Download>
@@ -236,7 +236,7 @@ This paper explains the existence of quaternary Golay pairs of small, even lengt
 <Abstract><![CDATA[
 The origin of all 4-phase Golay sequences and Golay sequence pairs of even length at most 26
 is explained. The principal techniques are the three-stage construction of Fiedler, Jedwab and
-Parker involving multi-dimensional Golay arrays, and a "sum-difference" construction
+Parker involving multi-dimensional Golay arrays, and a sum-difference construction
 that modifies a result due to Eliahou, Kervaire and Saffari. The existence of 4-phase
 seed pairs of lengths 3, 5, 11, and 13 is assumed; their origin is considered in [GJ].
 ]]></Abstract>
@@ -256,7 +256,7 @@ This thesis explains the existence of quaternary Golay pairs of small, even leng
 ]]></Summary>
 <Abstract><![CDATA[
 This thesis classifies all ordered quaternary Golay sequence pairs of length less than 22.  Previous results, both classical and recent, are applied to explain the existence pattern for all even lengths less than 22.  In addition, a general construction is developed which derives quaternary Golay pairs of length congruent to 5 modulo 8 from binary Barker sequences of the same odd length.  Applying this construction to lengths 5 and 13 explains all such known pairs.
-<br>
+
 Furthermore, this thesis explores the possibility of reversing the Barker-to-Golay derivation by attempting to construct an odd-length binary Barker sequence from a quaternary Golay sequence of the same length.  This procedure is successful for all quaternary Golay sequences of length congruent to 5 modulo 8 satisfying certain conditions.  Since there are no binary Barker sequences of odd length greater than 13, all quaternary Golay sequences fulfilling these conditions are known.
 ]]></Abstract>
 <Download>bibtex</Download>
@@ -281,7 +281,7 @@ universal fixer.  The edgeless graphs are the only known universal fixers, and a
 prove that claw-free graphs are not universal fixers.
 ]]></Abstract>
 <Download>bibtex</Download>
-<Download><![CDATA[<a href="http://www.sciencedirect.com/science?_ob=ArticleURL&_udi=B6V00-4RNK43G-4&_user=1067472&_coverDate=01/06/2009&_rdoc=1&_fmt=high&_orig=gateway&_origin=gateway&_sort=d&_docanchor=&view=c&_searchStrId=1670160730&_rerunOrigin=google&_acct=C000051251&_version=1&_urlVersion=0&_userid=1067472&md5=def8746cd00c05a954a766013b000894&searchtype=a">link</a>]]></Download>
+<Download><![CDATA[<a href="http://www.sciencedirect.com/science?_ob=ArticleURL&_udi=B6V00-4RNK43G-4&_user=1067472&_coverDate=01/06/2009&_rdoc=1&_fmt=high&_orig=gateway&_origin=gateway&_sort=d&_docanchor=&view=c&_searchStrId=1670160730&_rerunOrigin=google&_acct=C000051251&_version=1&_urlVersion=0&_userid=1067472&md5=def8746cd00c05a954a766013b000894&searchtype=a" class="btn btn-rgg">link</a>]]></Download>
 </Publication>
 
 <Publication>
@@ -305,7 +305,7 @@ We prove that graphs without 5-cycles are not universal fixers, from which it
 follows that bipartite graphs are not universal fixers.
 ]]></Abstract>
 <Download>bibtex</Download>
-<Download><![CDATA[<a href="http://www.sciencedirect.com/science?_ob=ArticleURL&_udi=B6V00-4RB5GMY-2&_user=10&_rdoc=1&_fmt=&_orig=search&_sort=d&_docanchor=&view=c&_acct=C000050221&_version=1&_urlVersion=0&_userid=10&md5=af5ea33d65ff9b080e8db5d527169c73">link</a>]]></Download>
+<Download><![CDATA[<a href="http://www.sciencedirect.com/science?_ob=ArticleURL&_udi=B6V00-4RB5GMY-2&_user=10&_rdoc=1&_fmt=&_orig=search&_sort=d&_docanchor=&view=c&_acct=C000050221&_version=1&_urlVersion=0&_userid=10&md5=af5ea33d65ff9b080e8db5d527169c73" class="btn btn-rgg">link</a>]]></Download>
 </Publication>
 
 <Publication>
@@ -321,15 +321,15 @@ This paper considers paired domination edge-critical graphs and bounds the diame
 <Abstract><![CDATA[
 A paired dominating set of a graph G without isolated vertices is a
 dominating set of G whose induced subgraph has a perfect matching.
-The paired domination number &gamma;<sub>pr</sub>(G) of G is the minimum cardinality
-amongst all paired dominating sets of G. The graph G is paired domination edge-critical (&gamma;<sub>pr</sub>EC) if for every e &notin; E(G), &gamma;<sub>pr</sub>(G+e) < &gamma;<sub>pr</sub>(G).
-We investigate the diameter of &gamma;<sub>pr</sub>EC graphs. To this effect we characterize &gamma;<sub>pr</sub>EC trees. We show that for arbitrary even k = 4 there exists
-a k<sub>pr</sub>EC graph with diameter two. We provide an example which shows
-that the maximum diameter of a k<sub>pr</sub>EC graph is at least k-2 and prove
+The paired domination number &gamma;pr(G) of G is the minimum cardinality
+amongst all paired dominating sets of G. The graph G is paired domination edge-critical (&gamma;prEC) if for every e &notin; E(G), &gamma;pr(G+e) < &gamma;pr(G).
+We investigate the diameter of &gamma;prEC graphs. To this effect we characterize &gamma;prEC trees. We show that for arbitrary even k = 4 there exists
+a kprEC graph with diameter two. We provide an example which shows
+that the maximum diameter of a kprEC graph is at least k-2 and prove
 that it is at most min{2k -6,3k/2 + 3}.
 ]]></Abstract>
 <Download>bibtex</Download>
-<Download><![CDATA[<a href="https://ajc.maths.uq.edu.au/pdf/40/ajc_v40_p279.pdf">link</a>]]></Download>
+<Download><![CDATA[<a href="https://ajc.maths.uq.edu.au/pdf/40/ajc_v40_p279.pdf" class="btn btn-rgg">link</a>]]></Download>
 </Publication>
 
 <Publication>
@@ -343,12 +343,12 @@ that it is at most min{2k -6,3k/2 + 3}.
 We disprove a conjecture proposed by Hartnell and Rall and prove an alternative result on the structure of bipartite partitionable graphs.
 ]]></Summary>
 <Abstract><![CDATA[
-A graph G is called a prism fixer if &gamma;(G X K<sub>2</sub>) = &gamma;(G), where &gamma;(G) denotes the domination number of G. 
-A symmetric &gamma;-set of G is a minimum dominating set D which admits a partition D = D1 &cup; D2 such that V(G) - N[D<sub>i</sub>] = D<sub>j</sub>, i,j = 1,2,
+A graph G is called a prism fixer if &gamma;(G X K2) = &gamma;(G), where &gamma;(G) denotes the domination number of G. 
+A symmetric &gamma;-set of G is a minimum dominating set D which admits a partition D = D1 &cup; D2 such that V(G) - N[Di] = Dj, i,j = 1,2,
 i &ne; j. 
 It is known that G is a prism fixer if and only if G has a symmetric &gamma;-set.
-<br>
-Hartnell and Rall [On dominating the Cartesian product of a graph and K<sub>2</sub>, <i>Discuss. Math. Graph Theory</i> <b>24</b> (2004), 389-402] conjectured that if G is a connected, bipartite graph such that V(G) can be partitioned into symmetric &gamma;-sets, then G &cong; C4 or G can be obtained from K<sub>2t,2t</sub> by removing the edges of t vertex-disjoint 4-cycles. 
+
+Hartnell and Rall [On dominating the Cartesian product of a graph and K2, Discuss. Math. Graph Theory 24 (2004), 389-402] conjectured that if G is a connected, bipartite graph such that V(G) can be partitioned into symmetric &gamma;-sets, then G &cong; C4 or G can be obtained from K2t,2t by removing the edges of t vertex-disjoint 4-cycles. 
 We construct a counterexample to this conjecture and prove an alternative result on the structure of such bipartite graphs.
 ]]></Abstract>
 <Download>bibtex</Download>
@@ -366,23 +366,21 @@ We construct a counterexample to this conjecture and prove an alternative result
 We present a rigorous mathematical model for circadian rhythms and generate numerical results that demonstrate robustness to stochasticity of protein binding/unbinding. 
 ]]></Summary>
 <Abstract><![CDATA[
-<b>Background:</b> Circadian rhythms with varying components exist in organisms ranging from
+Background: Circadian rhythms with varying components exist in organisms ranging from
 humans to cyanobacteria. A simple evolutionarily plausible mechanism for the origin of such a
 variety of circadian oscillators, proposed in earlier work, involves the non-disruptive coupling of
-pre-existing ultradian transcriptional-translational oscillators (TTOs), producing "beats," in
+pre-existing ultradian transcriptional-translational oscillators (TTOs), producing beats, in
 individual cells. However, like other TTO models of circadian rhythms, it is important to establish
 that the inherent stochasticity of the protein binding and unbinding does not invalidate the finding
 of clear oscillations with circadian period.
-<br>
-<b>Results:</b> The TTOs of our model are described in two versions: 1) a version in which the activation
-or inhibition of genes is regulated stochastically, where the 'unoccupied" (or "free") time of the site
+Results: The TTOs of our model are described in two versions: 1) a version in which the activation
+or inhibition of genes is regulated stochastically, where the unoccupied (or free) time of the site
 under consideration depends on the concentration of a protein complex produced by another site,
-and 2) a deterministic, "time-averaged" version in which the switching between the "free" and
-"occupied" states of the sites occurs so rapidly that the stochastic effects average out. The second
+and 2) a deterministic, time-averaged version in which the switching between the free and
+occupied states of the sites occurs so rapidly that the stochastic effects average out. The second
 case is proved to emerge from the first in a mathematically rigorous way. Numerical results for
 both scenarios are presented and compared.
-<br>
-<b>Conclusion:</b> Our model proves to be robust to the stochasticity of protein binding/unbinding at
+Conclusion: Our model proves to be robust to the stochasticity of protein binding/unbinding at
 experimentally determined rates and even at rates several orders of magnitude slower. We have
 not only confirmed this by numerical simulation, but have shown in a mathematically rigorous way
 that the time-averaged deterministic system is indeed the fast-binding-rate limit of the full

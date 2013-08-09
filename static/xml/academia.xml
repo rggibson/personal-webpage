@@ -2,7 +2,7 @@
 
 <Academia>
 
-<Project>
+<Interest>
 <ID>games</ID>
 <Title>Artificial Intelligence in Adversarial Games</Title>
 <Image>rock-paper-scissors.png</Image>
@@ -30,9 +30,9 @@ The nature of GGP is really at the heart of AI where we want to develop one prog
 Finally, I am very interested in applying <a href="academia?t=sports">artificial intelligence in sports</a>.
 </p>
 ]]></Details>
-</Project>
+</Interest>
 
-<Project>
+<Interest>
 <ID>sports</ID>
 <Title>Artificial Intelligence in Sports</Title>
 <Image>sports-strategy.jpg</Image>
@@ -85,9 +85,9 @@ Furthermore, today's state-of-the-art sports video games are very good job at si
 I believe these games could provide a testbed for research into not only making the AI for these games stronger, but also to help answer some of these questions within their real-life versions of these sports.
 </p>
 ]]></Details>
-</Project>
+</Interest>
 
-<Project>
+<Interest>
 <ID>vids</ID>
 <Title>Artificial Intelligence in Video Games</Title>
 <Image>ghost.png</Image>
@@ -121,9 +121,9 @@ Finally, I am interested in the widely studied area of pathfinding in video game
 A good example of this is PRA* (<a href="http://webdocs.cs.ualberta.ca/~nathanst/papers/partialpathfinding.pdf">Sturtevant and Buro 2005</a>), whioch was later implemented into the pathfinding engine of Bioware's <i>Dragon Age: Origins</i> role playing game. 
 </p>
 ]]></Details>
-</Project>
+</Interest>
 
-<Project>
+<Interest>
 <ID>music</ID>
 <Title>Computer Music</Title>
 <Youtube_ID>2kuY3BrmTfQ</Youtube_ID>
@@ -132,10 +132,10 @@ A good example of this is PRA* (<a href="http://webdocs.cs.ualberta.ca/~nathanst
 While there are many problems associated with computers and music, I am particularly interested in developing a computer program that can actually interpret and <i>create</i> music. 
 Unlike games such as poker that have specific rules that must be followed, music is an extremely unconstrained domain with no obvious set of goal states. 
 This makes music creation extremely challenging for computer programs. 
-Nonetheless, researchers have developed algorithms capable of composing remarkable scores, such as in the video seen on the right. 
+Nonetheless, researchers have developed algorithms capable of composing remarkable scores, such as in the attached video. 
 I am interested in further improving music creation programs and creating AI solutions to transform audio signals into written scores.  
 </p>
 ]]></Details>
-</Project>
+</Interest>
 
 </Academia>

@@ -1,27 +1,42 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div id="baseball-wrap">
-  <center>
-    <img id="baseball-gif" alt="baseball-gif">
-  </center>
-</div>
 
-<div id="error-404">
-  <center>
-  <h1>Error 404!</h1>
-  Oops, sorry, this page doesn't exist.
-  </center>
+<div class="row">
+
+  <div class="col-lg-8 col-lg-push-4">
+    <h1>Error 404!</h1>
+    <p>Oops, sorry, this page doesn't exist.</p>
+  </div>
+
+  <div class="col-lg-4 col-lg-pull-8">
+    <img id="baseball-gif" class="img-responsive" alt="Baseball gif">
+  </div>
+  
 </div>
 
 <script type="text/javascript">
+
+  /* We hash each url to a number to get the gif to display */
+  String.prototype.hashCode = function(){
+  var hash = 0, i, char;
+  if (this.length == 0) return hash;
+  for (i = 0, l = this.length; i < l; i++) {
+    char  = this.charCodeAt(i);
+    hash  = ((hash<<5)-hash)+char;
+    hash |= 0; // Convert to 32bit integer
+  }
+  return hash;
+};
+
   window.onload = function() {
-  var num_gifs = 22;
-  var gifnum = Math.floor(Math.random() * num_gifs);
+  var num_gifs = 23;
+  var gifnum = "{{url}}".hashCode() % num_gifs; 
+  while( gifnum < 0 ) {
+    gifnum += num_gifs;
+  }
   document.getElementById("baseball-gif").src = "static/gifs/baseball-" + gifnum + ".gif";
   }
 </script>
-
-<div style="clear: both"></div>
 
 {% endblock %}

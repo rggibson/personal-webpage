@@ -5,25 +5,20 @@
 <div id="no-javascript">Sorry, you need Javascript enabled to see this page properly.</div>
 <script type="text/javascript">
   document.getElementById("no-javascript").style.display = "none";
+  document.getElementById("nav-personal").setAttribute("class", "active");
   
   {% if not t or t == "sports" %}
-  {% if not t %}
   document.writeln('<h1 align="center">Sports</h1>');
-  {% endif %}
   parseProjects("static/xml/sports.xml");
   {% endif %}
 
   {% if not t or t == "vids" %}
-  {% if not t %}
   document.writeln('<h1 align="center">Video Games</h1>');
-  {% endif %}
   parseProjects("static/xml/vids.xml");
   {% endif %}
 
   {% if not t or t == "boardgames" %}
-  {% if not t %}
   document.writeln('<h1 align="center">Board Games</h1>');
-  {% endif %}
   parseProjects("static/xml/boardgames.xml");
   {% endif %}
 

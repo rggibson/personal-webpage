@@ -2,7 +2,7 @@
 
 <Industry>
 
-<Project>
+<Interest>
 <ID>gamedev</ID>
 <Title>Game Development</Title>
 <Image>game-dev.png</Image>
@@ -23,9 +23,9 @@ I joined the studio during preproduction of a Pirates of the Caribbean game that
 Nonetheless, I have experience in the industry and am enthusiastic towards returning to game development. 
 </p>
 ]]></Details>
-</Project>
+</Interest>
 
-<Project>
+<Interest>
 <ID>research</ID>
 <Title>Industrial Research</Title>
 <Image>gavel.png</Image>
@@ -40,9 +40,9 @@ I am interested in extending my work in computer poker to other domains, includi
 Furthermore, I am very open to broadening my horizons and conducting research in other related domains, such as machine learning, mathematical modelling, and optimization. 
 </p>
 ]]></Details>
-</Project>
+</Interest>
 
-<Project>
+<Interest>
 <ID>startups</ID>
 <Title>Startups</Title>
 <Image>rubik.png</Image>
@@ -60,6 +60,6 @@ My main areas of interest for a startup are in:
 </ul>
 </p>
 ]]></Details>
-</Project>
+</Interest>
 
 </Industry>

@@ -12,13 +12,13 @@ Much like IBM's Deep Blue defeated the world's best chess player in 1997, our go
 Unlike chess, poker involves stochastic events through random card deals, varying degrees of outcomes from different pot sizes, and imperfect information resulting from private hole cards. 
 These complications make poker a more challening game for computers to play than other traditional games like checkers or chess.</p>
 
-<p>In the <a href="http://poker.cs.ualberta.ca/man-machine/2007/">first official Man vs. Machine poker competition</a>, our program <i>Polaris</i> played against two poker pros, Phil Laak (video, right) and Ali Eslami, in heads-up limit Texas hold'em. 
+<p>In the <a href="http://poker.cs.ualberta.ca/man-machine/2007/">first official Man vs. Machine poker competition</a>, our program <i>Polaris</i> played against two poker pros, Phil Laak (video, above) and Ali Eslami, in heads-up limit Texas hold'em. 
 The pros narrowly defeated Polaris in a 4-round match. 
 The following year, an improved <a href="http://poker.cs.ualberta.ca/man-machine/">Polaris defeated a team of heads-up limit experts</a>. 
 Recently, we have played a few exhibition matches against human pros in heads-up no-limit hold'em with promising results. 
 In addition, each year the CPRG competes in the <a href="http://www.computerpokercompetition.org">Annual Computer Poker Competition</a>. 
 In this competition, teams of academics and hobbyists submit poker-playing programs that play millions of hands of poker against one another.  
-As of 2012, the CPRG has won 21 of 35 events while placing in the top 3 in all but one event.</p>
+As of 2013, the CPRG has won 24 of 41 events while placing in the top 3 in all but one event.</p>
 ]]></Details>
 </Project>
 
@@ -45,7 +45,7 @@ We later published our work and I presented the paper at Stanford during an AI c
 In this version, the level environments were also randomly generated, changing things such as Mario's jump height, speed, and even his objectives (whether to collect coins, kill enemies, complete levels, etc.). 
 Thus, the goal of this project was to create a Mario agent that could successfully learn and adapt to changes in the environment. 
 We submitted our agent to the Mario event of the 2009 Reinforcement Learning Competition where our agent earned second place.
-An early version of this agent is seen in the video on the right.</p>
+An early version of this agent is seen in the video above.</p>
 ]]></Details>
 </Project>
 

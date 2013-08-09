@@ -5,11 +5,12 @@
 <div id="no-javascript">Sorry, you need Javascript enabled to see this page properly.</div>
 <script type="text/javascript">
   document.getElementById("no-javascript").style.display = "none";
+  document.getElementById("nav-"+"{{url}}".substr(1)).setAttribute("class", "active");
 
   {% if not t %}
-  parseProjects("static/xml{{url}}.xml");
+  parseInterests("static/xml{{url}}.xml");
   {% else %}
-  parseProjects("static/xml{{url}}.xml", "{{t}}");
+  parseInterests("static/xml{{url}}.xml", "{{t}}");
   {% endif %}
 
 </script>

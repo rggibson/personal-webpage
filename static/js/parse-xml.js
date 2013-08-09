@@ -9,19 +9,6 @@ function loadXMLDoc( dname ) {
     return xhttp.responseXML;
 }
 
-function toggleAbstract( abstract_id ) {
-    var abs_elem = document.getElementById("abstract-" + abstract_id);
-    var show_elem = document.getElementById("show-hide-abstract-" + abstract_id);
-
-    if( abs_elem.style.display == "block" ) {
-	show_elem.innerHTML = "Show abstract";
-	abs_elem.style.display = "none";
-    } else {
-	show_elem.innerHTML = "Hide abstract";
-	abs_elem.style.display = "block";
-    }
-}
-
 function parseDownload( pub_id, type ) {
     var ext = '-' + type + '.pdf';
     if( type == 'bibtex' ) {
@@ -35,10 +22,11 @@ function parseDownload( pub_id, type ) {
     }
     var is_link = type.indexOf("link") + type.indexOf("YouTube");
     if( is_link == -2 ) {
-	document.writeln('[<a href="static/work/' 
-			 + pub_id + '/' + pub_id + ext + '">' + type + '</a>] ');
+	/* Not a link or redirect to youtube */
+	document.writeln('<a href="static/work/' + pub_id + '/' + pub_id + ext 
+			 + '" class="btn btn-rgg">' + type + '</a>');
     } else {
-	document.writeln('[' + type + '] ');
+	document.writeln( type + ' ' );
     }
 }
 
@@ -51,6 +39,7 @@ function parseProjects( projects_xml, t ) {
     }
     
     var projects = xmlDoc.getElementsByTagName("Project");
+    var items = 0;
     for( var i = 0; i < projects.length; i++ ) {
 	var project = projects[ i ];
 	var item_id = project.getElementsByTagName("ID");
@@ -60,36 +49,69 @@ function parseProjects( projects_xml, t ) {
 	    var title = project.getElementsByTagName("Title");
 	    var image = project.getElementsByTagName("Image");
 	    var youtube_id = project.getElementsByTagName("Youtube_ID");
-	    var twitter = project.getElementsByTagName("Twitter");
 	    var details = project.getElementsByTagName("Details");
 
-	    document.writeln('<div class="item">');
-	    if( project_id.length > 0 ) {
-		document.writeln('<div class="related-work">');
-		document.writeln('[<a href="work?t=' + project_id[0].childNodes[0].nodeValue + '">Related Work</a>]');
-		document.writeln('</div>');
+	    if( items % 3 == 0 ) {
+		document.writeln('<div class="row">');
 	    }
-	    document.writeln('<div class="heading">' + title[0].childNodes[0].nodeValue + '</div>');
+
+	    document.writeln('<div class="col-lg-4">');
+	    document.writeln('<div class="thumbnail thumbnail-rgg">');
 	    document.writeln('<div class="graphic">');
 	    if( youtube_id.length > 0 ) {
-		document.writeln('<iframe width="420" height="315" src="http://www.youtube.com/embed/' 
+		document.writeln('<iframe src="http://www.youtube.com/embed/' 
 				 + youtube_id[0].childNodes[0].nodeValue 
 				 + '" frameborder="0" allowfullscreen></iframe>');
 	    }
 	    if( image.length > 0 ) {
-		document.writeln('<img src="static/images/' +  image[0].childNodes[0].nodeValue + '">');
+		document.writeln('<img src="static/images/' 
+				 +  image[0].childNodes[0].nodeValue 
+				 + '" class="img-responsive" alt="' 
+				 + image[0].childNodes[0].nodeValue + '">');
 	    }
-	    if( twitter.length > 0 ) {
-		// Hack to get twitter feed onto vids page
-		document.writeln('<a class="twitter-timeline" href="https://twitter.com/rggibson_" data-widget-id="348846377314439168" data-link-color="#00C0FF" data-chrome="nofooter noborders transparent" data-tweet-limit="1" width="300">Tweets by @rggibson_</a>');
-		document.writeln('<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?\'http\':\'https\';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>');
-	    }
-	    document.writeln('</div>');
+	    document.writeln('</div>');	    
+	    document.writeln('<div class="caption">');	    
+	    document.writeln('<h3 align="center">' + title[0].childNodes[0].nodeValue 
+			     + '</h3>');	    
 	    document.writeln(details[0].childNodes[0].nodeValue);
+	    if( project_id.length > 0 ) {
+		/* Related work button */
+		document.writeln('<p><a href="work?t=' 
+				 + project_id[0].childNodes[0].nodeValue 
+				 + '" class="btn btn-rgg">Related Work</a></p>');
+	    }	    
+	    document.writeln('</div>');
+	    document.writeln('</div>');
+	    document.writeln('</div>');
 
-	    document.writeln('<div style="clear: both"></div>');
+	    ++items;
+	    if( items % 3 == 0 ) {
+		document.writeln('</div>');
+	    }
+	}
+    }
+
+    if( projects_xml.indexOf("vids.xml") >= 0 ) {
+	/* Little bit of a hack to get an extra column with a twitter feed 
+	 * for the vids page 
+	 */
+	if( items % 3 == 0 ) {
+	    document.writeln('<div class="row">');
+	}
+
+	document.writeln('<div class="col-lg-4" align="center">');
+	document.writeln('<a class="twitter-timeline" href="https://twitter.com/rggibson_" data-widget-id="348846377314439168" data-link-color="#00C0FF" data-chrome="nofooter noborders transparent" data-tweet-limit="3">Tweets by @rggibson_</a>');
+	document.writeln('<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?\'http\':\'https\';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>');
+	document.writeln('</div>'); 
+
+	++items;
+	if( items % 3 == 0 ) {
 	    document.writeln('</div>');
 	}
+    }
+
+    if( items % 3 != 0 ) {
+	document.writeln('</div>');	
     }
 }
 
@@ -103,6 +125,7 @@ function parsePublications( publications_xml, t ) {
 
     var publications = xmlDoc.getElementsByTagName("Publication");
     var cur_area = '';
+    var items = 0;
     for( var i = 0; i < publications.length; i++ ) {
 	var pub = publications[ i ];
 	var project_id = pub.getElementsByTagName("Project_ID");
@@ -118,59 +141,53 @@ function parsePublications( publications_xml, t ) {
 	var abs = pub.getElementsByTagName("Abstract");
 	var downloads = pub.getElementsByTagName("Download");
 
-	document.writeln('<div class="item">');
 	if( t == null && area[0].childNodes[0].nodeValue != cur_area ) {
+	    /* New publication area.  End row, write heading, start new row */
+	    if( items % 3 != 0 ) {
+		/* Make sure row hasn't already been ended */
+		document.writeln('</div>');
+	    }
 	    cur_area = area[0].childNodes[0].nodeValue;
-	    document.writeln('<div class="pub-area">' + cur_area + '</div>');
+	    document.writeln('<h2 align="center">' + cur_area + '</h2>');
+	    document.writeln('<div class="row">');
+	} else if( items % 3 == 0 ) {
+	    document.writeln('<div class="row">');
 	}
+
+	document.writeln('<div class="col-lg-4">');
+	document.writeln('<div class="thumbnail thumbnail-rgg">');
+	document.writeln('<div class="caption">');	    
 	document.writeln('<div class="title">'+title[0].childNodes[0].nodeValue+'</div>');
 	document.writeln('<div class="authors">' + authors[0].childNodes[0].nodeValue
 			 +'</div>');
-	document.writeln('<div class="purpose">'+published[0].childNodes[0].nodeValue+'</div>');
+	document.writeln('<div class="purpose">' + published[0].childNodes[0].nodeValue
+			 +'</div>');
 	document.writeln('<div class="summary">'+summary[0].childNodes[0].nodeValue+'</div>');
-	document.writeln('<a href="#" class="show-hide-abstract" id="show-hide-abstract-' + i 
-			 + '" onclick="toggleAbstract(\'' + i + '\');return false;">' 
-			 + 'Show abstract</a>');
-	document.writeln('<div id="abstract-' + i + '" class="abstract">' 
-			 + abs[0].childNodes[0].nodeValue + '</div>');
-	document.writeln('<div class="downloads">');
+	document.writeln('<div class="downloads"><p>');
+	document.writeln('<button type="button" class="btn btn-rgg" data-container="body"'
+			 + ' data-toggle="popover" data-placement="auto right" data-content="'
+			 + abs[0].childNodes[0].nodeValue + '" data-original-title title>'
+			 + 'abstract</button> ');
 	for( var j = 0; j < downloads.length; ++j ) {
-	    parseDownload( pub_id[0].childNodes[0].nodeValue, downloads[j].childNodes[0].nodeValue );
+	    parseDownload( pub_id[0].childNodes[0].nodeValue, 
+			   downloads[j].childNodes[0].nodeValue );
 	}
+	document.writeln('</p></div>');
 	document.writeln('</div>');
 	document.writeln('</div>');
-    }
-}
-
-function parseAwards( awards_xml, t ) {
-    t = t || null;
-    var xmlDoc = loadXMLDoc( awards_xml );
-    if( xmlDoc === null ) {
-	document.writeln('Sorry, xml doc [' + awards_xml + '] could not load.');
-	return( null );
-    }
-    
-    var awards = xmlDoc.getElementsByTagName("Award");
-    for( var i = 0; i < awards.length; i++ ) {
-	var award = awards[ i ];
-	var project_id = award.getElementsByTagName("Project_ID");
-	if( t != null && project_id[0].childNodes[0].nodeValue != t ) {
-	    continue;
-	}
-	var name = award.getElementsByTagName("Name");
-	var summary = award.getElementsByTagName("Summary");
-	var url = award.getElementsByTagName("Link");
-
-	var name_str = name[0].childNodes[0].nodeValue;
-	if( url.length > 0 ) {
-	    name_str = '<a href="' + url[0].childNodes[0].nodeValue + '">' + name_str + '</a>';
-	}
-
-	document.writeln('<div class="item">');
-	document.writeln('<div class="title">' + name_str + '</div>');
-	document.writeln('<div class="summary">' + summary[0].childNodes[0].nodeValue + '</div>');
 	document.writeln('</div>');
+
+	++items;
+	if( items % 3 == 0 ) {
+	    document.writeln('</div>');
+	}
     }
+    if( items % 3 != 0 ) {
+	document.writeln('</div>');	
+    }
+
+    /* Enable popovers */
+    $("[data-toggle=popover]").popover()
 }
 
 function parsePresentations( presentations_xml, t ) {
@@ -182,6 +199,7 @@ function parsePresentations( presentations_xml, t ) {
     }
 
     var presentations = xmlDoc.getElementsByTagName("Presentation");
+    var items = 0;
     for( var i = 0; i < presentations.length; i++ ) {
 	var pres = presentations[ i ];
 	var project_id = pres.getElementsByTagName("Project_ID");
@@ -194,17 +212,85 @@ function parsePresentations( presentations_xml, t ) {
 	var purpose = pres.getElementsByTagName("Purpose");
 	var downloads = pres.getElementsByTagName("Download");
 
-	document.writeln('<div class="item">');
-	document.writeln('<div class="title">' + subject[0].childNodes[0].nodeValue + '</div>');
+	if( items % 3 == 0 ) {
+	    document.writeln('<div class="row">');
+	}
+
+	document.writeln('<div class="col-lg-4">');
+	document.writeln('<div class="thumbnail thumbnail-rgg">');
+	document.writeln('<div class="caption">');	    
+	document.writeln('<div class="title">' + subject[0].childNodes[0].nodeValue 
+			 + '</div>');
 	document.writeln('<div class="date">' + date[0].childNodes[0].nodeValue
 			 +'</div>');
-	document.writeln('<div class="purpose">' + purpose[0].childNodes[0].nodeValue + '</div>');
-	document.writeln('<div class="downloads">');
+	document.writeln('<div class="purpose">' + purpose[0].childNodes[0].nodeValue 
+			 + '</div>');
+	document.writeln('<div class="downloads"><p>');
 	for( var j = 0; j < downloads.length; ++j ) {
-	    parseDownload( pres_id[0].childNodes[0].nodeValue, downloads[j].childNodes[0].nodeValue );
+	    parseDownload( pres_id[0].childNodes[0].nodeValue, 
+			   downloads[j].childNodes[0].nodeValue );
+	}
+	document.writeln('</p></div>');
+	document.writeln('</div>');
+	document.writeln('</div>');
+	document.writeln('</div>');
+
+	++items;
+	if( items % 3 == 0 ) {
+	    document.writeln('</div>');
+	}
+    }
+    if( items % 3 != 0 ) {
+	document.writeln('</div>');	
+    }
+}
+
+function parseAwards( awards_xml, t ) {
+    t = t || null;
+    var xmlDoc = loadXMLDoc( awards_xml );
+    if( xmlDoc === null ) {
+	document.writeln('Sorry, xml doc [' + awards_xml + '] could not load.');
+	return( null );
+    }
+    
+    var awards = xmlDoc.getElementsByTagName("Award");
+    var items = 0;
+    for( var i = 0; i < awards.length; i++ ) {
+	var award = awards[ i ];
+	var project_id = award.getElementsByTagName("Project_ID");
+	if( t != null && project_id[0].childNodes[0].nodeValue != t ) {
+	    continue;
+	}
+	var name = award.getElementsByTagName("Name");
+	var summary = award.getElementsByTagName("Summary");
+	var url = award.getElementsByTagName("Link");
+
+	if( items % 3 == 0 ) {
+	    document.writeln('<div class="row">');
+	}
+
+	document.writeln('<div class="col-lg-4">');
+	document.writeln('<div class="thumbnail thumbnail-rgg">');
+	document.writeln('<div class="caption">');	    
+	document.writeln('<div class="title">' + name[0].childNodes[0].nodeValue + '</div>');
+	document.writeln('<div class="summary">' + summary[0].childNodes[0].nodeValue 
+			 + '</div>');
+	if( url.length > 0 ) {
+	    document.writeln('<div class="downloads"><p><a href="' 
+			     + url[0].childNodes[0].nodeValue 
+			     + '" class="btn btn-rgg">Link</a></p></div>');
 	}
 	document.writeln('</div>');
 	document.writeln('</div>');
+	document.writeln('</div>');
+
+	++items;
+	if( items % 3 == 0 ) {
+	    document.writeln('</div>');
+	}
+    }
+    if( items % 3 != 0 ) {
+	document.writeln('</div>');	
     }
 }
 
@@ -217,6 +303,7 @@ function parseCourseWork( courseWork_xml, t ) {
     }
 
     var projects = xmlDoc.getElementsByTagName("Project");
+    var items = 0;
     for( var i = 0; i < projects.length; i++ ) {
 	var project = projects[ i ];
 	var project_id = project.getElementsByTagName("Project_ID");
@@ -230,16 +317,81 @@ function parseCourseWork( courseWork_xml, t ) {
 	var team = project.getElementsByTagName("Team");
 	var downloads = project.getElementsByTagName("Download");
 
-	document.writeln('<div class="item">');
+	if( items % 3 == 0 ) {
+	    document.writeln('<div class="row">');
+	}
+
+	document.writeln('<div class="col-lg-4">');
+	document.writeln('<div class="thumbnail thumbnail-rgg">');
+	document.writeln('<div class="caption">');	    
 	document.writeln('<div class="title">' + title[0].childNodes[0].nodeValue + '</div>');
 	document.writeln('<div class="authors">' + team[0].childNodes[0].nodeValue + '</div>');
 	document.writeln('<div class="purpose">For ' + course[0].childNodes[0].nodeValue
 			 + ' by ' + instructor[0].childNodes[0].nodeValue + '</div>');
-	document.writeln('<div class="downloads">');
+	document.writeln('<div class="downloads"><p>');
 	for( var j = 0; j < downloads.length; ++j ) {
 	    parseDownload( work_id[0].childNodes[0].nodeValue, downloads[j].childNodes[0].nodeValue );
 	}
+	document.writeln('</p></div>');
 	document.writeln('</div>');
 	document.writeln('</div>');
+	document.writeln('</div>');
+
+	++items;
+	if( items % 3 == 0 ) {
+	    document.writeln('</div>');
+	}
+    }
+    if( items % 3 != 0 ) {
+	document.writeln('</div>');	
+    }
+}
+
+function parseInterests( interests_xml, t ) {
+    t = t || null;
+    var xmlDoc = loadXMLDoc( interests_xml );
+    if( xmlDoc === null ) {
+	document.writeln('Sorry, xml doc [' + interests_xml + '] could not load.');
+	return( null );
+    }
+    
+    var interests = xmlDoc.getElementsByTagName("Interest");
+    for( var i = 0; i < interests.length; i++ ) {
+	var interest = interests[ i ];
+	var item_id = interest.getElementsByTagName("ID");
+	if( t == null || item_id.length == 0
+	    || t == item_id[0].childNodes[0].nodeValue ) {
+	    var title = interest.getElementsByTagName("Title");
+	    var image = interest.getElementsByTagName("Image");
+	    var youtube_id = interest.getElementsByTagName("Youtube_ID");
+	    var details = interest.getElementsByTagName("Details");
+
+	    document.writeln('<h3>' + title[0].childNodes[0].nodeValue + '</h3>');	    
+
+	    document.writeln('<div class="row">');
+
+	    document.writeln('<div class="col-lg-4 col-lg-push-8">');	    
+	    document.writeln('<div class="graphic">');
+	    if( youtube_id.length > 0 ) {
+		document.writeln('<iframe src="http://www.youtube.com/embed/' 
+				 + youtube_id[0].childNodes[0].nodeValue 
+				 + '" frameborder="0" class="img-interest"'
+				 + ' allowfullscreen></iframe>');
+	    }
+	    if( image.length > 0 ) {
+		document.writeln('<img src="static/images/' 
+				 +  image[0].childNodes[0].nodeValue 
+				 + '" class="img-responsive img-interest" alt="' 
+				 + image[0].childNodes[0].nodeValue + '">');
+	    }
+	    document.writeln('</div>');
+	    document.writeln('</div>');
+
+	    document.writeln('<div class="col-lg-8 col-lg-pull-4">');
+	    document.writeln(details[0].childNodes[0].nodeValue);
+	    document.writeln('</div>');
+
+	    document.writeln('</div>');
+	}
     }
 }
