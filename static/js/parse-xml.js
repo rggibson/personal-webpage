@@ -30,8 +30,7 @@ function parseDownload( pub_id, type ) {
     }
 }
 
-function parseProjects( projects_xml, t ) {
-    t = t || null;
+function parseProjects( projects_xml ) {
     var xmlDoc = loadXMLDoc( projects_xml );
     if( xmlDoc === null ) {
 	document.writeln('Sorry, xml doc [' + projects_xml + '] could not load.');
@@ -43,60 +42,57 @@ function parseProjects( projects_xml, t ) {
     for( var i = 0; i < projects.length; i++ ) {
 	var project = projects[ i ];
 	var item_id = project.getElementsByTagName("ID");
-	if( t == null || item_id.length == 0
-	    || t == item_id[0].childNodes[0].nodeValue ) {
-	    var project_id = project.getElementsByTagName("Project_ID");
-	    var title = project.getElementsByTagName("Title");
-	    var image = project.getElementsByTagName("Image");
-	    var youtube_id = project.getElementsByTagName("Youtube_ID");
-	    var details = project.getElementsByTagName("Details");
+	var project_id = project.getElementsByTagName("Project_ID");
+	var title = project.getElementsByTagName("Title");
+	var image = project.getElementsByTagName("Image");
+	var youtube_id = project.getElementsByTagName("Youtube_ID");
+	var details = project.getElementsByTagName("Details");
 
-	    if( items % 2 == 0 ) {
-		if( items > 0 ) {
-		    document.writeln('</div>');
-		}
-		document.writeln('<div class="row">');
+	if( items % 3 == 0 ) {
+	    if( items > 0 ) {
+		document.writeln('</div>');
 	    }
-
-	    document.writeln('<div class="col-lg-6 col-md-6">');
-	    document.writeln('<div class="thumbnail thumbnail-rgg">');
-	    document.writeln('<div class="graphic">');
-	    if( youtube_id.length > 0 ) {
-		document.writeln('<iframe src="http://www.youtube.com/embed/' 
-				 + youtube_id[0].childNodes[0].nodeValue 
-				 + '" frameborder="0" allowfullscreen></iframe>');
-	    }
-	    if( image.length > 0 ) {
-		document.writeln('<img src="static/images/' 
-				 +  image[0].childNodes[0].nodeValue 
-				 + '" class="img-responsive" alt="' 
-				 + image[0].childNodes[0].nodeValue + '">');
-	    }
-	    document.writeln('</div>');	    
-	    document.writeln('<div class="caption">');	    
-	    document.writeln('<h3 align="center">' + title[0].childNodes[0].nodeValue 
-			     + '</h3>');	    
-	    document.writeln(details[0].childNodes[0].nodeValue);
-	    if( project_id.length > 0 ) {
-		/* Related work button */
-		document.writeln('<p><a href="work?t=' 
-				 + project_id[0].childNodes[0].nodeValue 
-				 + '" class="btn btn-rgg">Related Work</a></p>');
-	    }	    
-	    document.writeln('</div>');
-	    document.writeln('</div>');
-	    document.writeln('</div>');
-
-	    ++items;
+	    document.writeln('<div class="row">');
 	}
+
+	document.writeln('<div class="col-lg-4 col-md-4">');
+	document.writeln('<div class="thumbnail thumbnail-rgg">');
+	document.writeln('<div class="graphic">');
+	if( youtube_id.length > 0 ) {
+	    document.writeln('<iframe src="http://www.youtube.com/embed/' 
+			     + youtube_id[0].childNodes[0].nodeValue 
+			     + '" frameborder="0" allowfullscreen></iframe>');
+	}
+	if( image.length > 0 ) {
+	    document.writeln('<img src="static/images/' 
+			     +  image[0].childNodes[0].nodeValue 
+			     + '" class="img-responsive" alt="' 
+			     + image[0].childNodes[0].nodeValue + '">');
+	}
+	document.writeln('</div>');	    
+	document.writeln('<div class="caption">');	    
+	document.writeln('<h3 align="center">' + title[0].childNodes[0].nodeValue 
+			 + '</h3>');	    
+	document.writeln(details[0].childNodes[0].nodeValue);
+	if( project_id.length > 0 ) {
+	    /* Related work button */
+	    document.writeln('<p><a href="work?t=' 
+			     + project_id[0].childNodes[0].nodeValue 
+			     + '" class="btn btn-rgg">Related Work</a></p>');
+	}	    
+	document.writeln('</div>');
+	document.writeln('</div>');
+	document.writeln('</div>');
+
+	++items;
     }
 
     if( projects_xml.indexOf("vids.xml") >= 0 ) {
 	/* Little bit of a hack to get an extra column with a twitter feed 
 	 * for the vids page 
 	 */
-	document.writeln('<div class="col-lg-6 col-md-6" align="center">');
-	document.writeln('<a class="twitter-timeline" href="https://twitter.com/rggibson_" data-widget-id="348846377314439168" data-link-color="#00C0FF" data-chrome="nofooter noborders transparent" data-tweet-limit="1">Tweets by @rggibson_</a>');
+	document.writeln('<div class="col-lg-4 col-md-4" align="center">');
+	document.writeln('<a class="twitter-timeline" href="https://twitter.com/rggibson_" data-widget-id="348846377314439168" data-link-color="#00C0FF" data-chrome="nofooter noborders transparent" data-tweet-limit="3">Tweets by @rggibson_</a>');
 	document.writeln('<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?\'http\':\'https\';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>');
 	document.writeln('</div>'); 
 
@@ -106,7 +102,6 @@ function parseProjects( projects_xml, t ) {
 }
 
 function parsePublications( publications_xml, t ) {
-    t = t || null;
     var xmlDoc = loadXMLDoc( publications_xml );
     if( xmlDoc === null ) {
 	document.writeln('Sorry, xml doc [' + publications.xml + '] could not load.');
@@ -119,7 +114,7 @@ function parsePublications( publications_xml, t ) {
     for( var i = 0; i < publications.length; i++ ) {
 	var pub = publications[ i ];
 	var project_id = pub.getElementsByTagName("Project_ID");
-	if( t != null && project_id[0].childNodes[0].nodeValue != t ) {
+	if( t != "None" && project_id[0].childNodes[0].nodeValue != t ) {
 	    continue;
 	}
 	var area = pub.getElementsByTagName("Area");
@@ -131,9 +126,9 @@ function parsePublications( publications_xml, t ) {
 	var abs = pub.getElementsByTagName("Abstract");
 	var downloads = pub.getElementsByTagName("Download");
 
-	if( t == null && area[0].childNodes[0].nodeValue != cur_area ) {
+	if( t == "None" && area[0].childNodes[0].nodeValue != cur_area ) {
 	    /* New publication area.  End row, write heading, start new row */
-	    if( items % 2 != 0 ) {
+	    if( items % 3 != 0 ) {
 		/* Make sure row hasn't already been ended */
 		document.writeln('</div>');
 	    }
@@ -141,11 +136,11 @@ function parsePublications( publications_xml, t ) {
 	    document.writeln('<h2 align="center">' + cur_area + '</h2>');
 	    document.writeln('<div class="row">');
 	    items = 0;
-	} else if( items % 2 == 0 ) {
+	} else if( items % 3 == 0 ) {
 	    document.writeln('<div class="row">');
 	}
 
-	document.writeln('<div class="col-lg-6 col-md-6">');
+	document.writeln('<div class="col-lg-4 col-md-4">');
 	document.writeln('<div class="thumbnail thumbnail-rgg">');
 	document.writeln('<div class="caption">');	    
 	document.writeln('<div class="title">'+title[0].childNodes[0].nodeValue+'</div>');
@@ -169,11 +164,11 @@ function parsePublications( publications_xml, t ) {
 	document.writeln('</div>');
 
 	++items;
-	if( items % 2 == 0 ) {
+	if( items % 3 == 0 ) {
 	    document.writeln('</div>');
 	}
     }
-    if( items % 2 != 0 ) {
+    if( items % 3 != 0 ) {
 	document.writeln('</div>');	
     }
 
@@ -182,7 +177,6 @@ function parsePublications( publications_xml, t ) {
 }
 
 function parsePresentations( presentations_xml, t ) {
-    t = t || null;
     var xmlDoc = loadXMLDoc( presentations_xml );
     if( xmlDoc === null ) {
 	document.writeln('Sorry, xml doc [' + presentations.xml + '] could not load.');
@@ -194,7 +188,7 @@ function parsePresentations( presentations_xml, t ) {
     for( var i = 0; i < presentations.length; i++ ) {
 	var pres = presentations[ i ];
 	var project_id = pres.getElementsByTagName("Project_ID");
-	if( t != null && project_id[0].childNodes[0].nodeValue != t ) {
+	if( t != "None" && project_id[0].childNodes[0].nodeValue != t ) {
 	    continue;
 	}
 	var pres_id = pres.getElementsByTagName("ID");
@@ -203,11 +197,11 @@ function parsePresentations( presentations_xml, t ) {
 	var purpose = pres.getElementsByTagName("Purpose");
 	var downloads = pres.getElementsByTagName("Download");
 
-	if( items % 2 == 0 ) {
+	if( items % 3 == 0 ) {
 	    document.writeln('<div class="row">');
 	}
 
-	document.writeln('<div class="col-lg-6 col-md-6">');
+	document.writeln('<div class="col-lg-4 col-md-4">');
 	document.writeln('<div class="thumbnail thumbnail-rgg">');
 	document.writeln('<div class="caption">');	    
 	document.writeln('<div class="title">' + subject[0].childNodes[0].nodeValue 
@@ -227,17 +221,16 @@ function parsePresentations( presentations_xml, t ) {
 	document.writeln('</div>');
 
 	++items;
-	if( items % 2 == 0 ) {
+	if( items % 3 == 0 ) {
 	    document.writeln('</div>');
 	}
     }
-    if( items % 2 != 0 ) {
+    if( items % 3 != 0 ) {
 	document.writeln('</div>');	
     }
 }
 
 function parseAwards( awards_xml, t ) {
-    t = t || null;
     var xmlDoc = loadXMLDoc( awards_xml );
     if( xmlDoc === null ) {
 	document.writeln('Sorry, xml doc [' + awards_xml + '] could not load.');
@@ -249,18 +242,18 @@ function parseAwards( awards_xml, t ) {
     for( var i = 0; i < awards.length; i++ ) {
 	var award = awards[ i ];
 	var project_id = award.getElementsByTagName("Project_ID");
-	if( t != null && project_id[0].childNodes[0].nodeValue != t ) {
+	if( t != "None" && project_id[0].childNodes[0].nodeValue != t ) {
 	    continue;
 	}
 	var name = award.getElementsByTagName("Name");
 	var summary = award.getElementsByTagName("Summary");
 	var url = award.getElementsByTagName("Link");
 
-	if( items % 2 == 0 ) {
+	if( items % 3 == 0 ) {
 	    document.writeln('<div class="row">');
 	}
 
-	document.writeln('<div class="col-lg-6 col-md-6">');
+	document.writeln('<div class="col-lg-4 col-md-4">');
 	document.writeln('<div class="thumbnail thumbnail-rgg">');
 	document.writeln('<div class="caption">');	    
 	document.writeln('<div class="title">' + name[0].childNodes[0].nodeValue + '</div>');
@@ -276,17 +269,16 @@ function parseAwards( awards_xml, t ) {
 	document.writeln('</div>');
 
 	++items;
-	if( items % 2 == 0 ) {
+	if( items % 3 == 0 ) {
 	    document.writeln('</div>');
 	}
     }
-    if( items % 2 != 0 ) {
+    if( items % 3 != 0 ) {
 	document.writeln('</div>');	
     }
 }
 
 function parseCourseWork( courseWork_xml, t ) {
-    t = t || null;
     var xmlDoc = loadXMLDoc( courseWork_xml );
     if( xmlDoc === null ) {
 	document.writeln('Sorry, xml doc [' + courseWork.xml + '] could not load.');
@@ -298,7 +290,7 @@ function parseCourseWork( courseWork_xml, t ) {
     for( var i = 0; i < projects.length; i++ ) {
 	var project = projects[ i ];
 	var project_id = project.getElementsByTagName("Project_ID");
-	if( t != null && project_id[0].childNodes[0].nodeValue != t ) {
+	if( t != "None" && project_id[0].childNodes[0].nodeValue != t ) {
 	    continue;
 	}
 	var work_id = project.getElementsByTagName("ID");
@@ -308,11 +300,11 @@ function parseCourseWork( courseWork_xml, t ) {
 	var team = project.getElementsByTagName("Team");
 	var downloads = project.getElementsByTagName("Download");
 
-	if( items % 2 == 0 ) {
+	if( items % 3 == 0 ) {
 	    document.writeln('<div class="row">');
 	}
 
-	document.writeln('<div class="col-lg-6 col-md-6">');
+	document.writeln('<div class="col-lg-4 col-md-4">');
 	document.writeln('<div class="thumbnail thumbnail-rgg">');
 	document.writeln('<div class="caption">');	    
 	document.writeln('<div class="title">' + title[0].childNodes[0].nodeValue + '</div>');
@@ -329,17 +321,16 @@ function parseCourseWork( courseWork_xml, t ) {
 	document.writeln('</div>');
 
 	++items;
-	if( items % 2 == 0 ) {
+	if( items % 3 == 0 ) {
 	    document.writeln('</div>');
 	}
     }
-    if( items % 2 != 0 ) {
+    if( items % 3 != 0 ) {
 	document.writeln('</div>');	
     }
 }
 
-function parseInterests( interests_xml, t ) {
-    t = t || null;
+function parseInterests( interests_xml ) {
     var xmlDoc = loadXMLDoc( interests_xml );
     if( xmlDoc === null ) {
 	document.writeln('Sorry, xml doc [' + interests_xml + '] could not load.');
@@ -350,39 +341,38 @@ function parseInterests( interests_xml, t ) {
     for( var i = 0; i < interests.length; i++ ) {
 	var interest = interests[ i ];
 	var item_id = interest.getElementsByTagName("ID");
-	if( t == null || item_id.length == 0
-	    || t == item_id[0].childNodes[0].nodeValue ) {
-	    var title = interest.getElementsByTagName("Title");
-	    var image = interest.getElementsByTagName("Image");
-	    var youtube_id = interest.getElementsByTagName("Youtube_ID");
-	    var details = interest.getElementsByTagName("Details");
+	var title = interest.getElementsByTagName("Title");
+	var image = interest.getElementsByTagName("Image");
+	var youtube_id = interest.getElementsByTagName("Youtube_ID");
+	var details = interest.getElementsByTagName("Details");
 
-	    document.writeln('<h3>' + title[0].childNodes[0].nodeValue + '</h3>');	    
-
-	    document.writeln('<div class="row">');
-
-	    document.writeln('<div class="col-lg-4 col-md-4 col-lg-push-8 col-md-push-8">'); 
-	    document.writeln('<div class="graphic">');
-	    if( youtube_id.length > 0 ) {
-		document.writeln('<iframe src="http://www.youtube.com/embed/' 
-				 + youtube_id[0].childNodes[0].nodeValue 
-				 + '" frameborder="0" class="img-interest"'
-				 + ' allowfullscreen></iframe>');
-	    }
-	    if( image.length > 0 ) {
-		document.writeln('<img src="static/images/' 
-				 +  image[0].childNodes[0].nodeValue 
-				 + '" class="img-responsive img-interest" alt="' 
-				 + image[0].childNodes[0].nodeValue + '">');
-	    }
-	    document.writeln('</div>');
-	    document.writeln('</div>');
-
-	    document.writeln('<div class="col-lg-8 col-md-8 col-lg-pull-4 col-md-pull-4">');
-	    document.writeln(details[0].childNodes[0].nodeValue);
-	    document.writeln('</div>');
-
-	    document.writeln('</div>');
+	document.writeln('<div id="' + item_id[0].childNodes[0].nodeValue + '">');
+	document.writeln('<h3>' + title[0].childNodes[0].nodeValue + '</h3>');	    
+	
+	document.writeln('<div class="row">');
+	
+	document.writeln('<div class="col-lg-4 col-md-4 col-lg-push-8 col-md-push-8">'); 
+	document.writeln('<div class="graphic">');
+	if( youtube_id.length > 0 ) {
+	    document.writeln('<iframe src="http://www.youtube.com/embed/' 
+			     + youtube_id[0].childNodes[0].nodeValue 
+			     + '" frameborder="0" class="img-interest"'
+			     + ' allowfullscreen></iframe>');
 	}
+	if( image.length > 0 ) {
+	    document.writeln('<img src="static/images/' 
+			     +  image[0].childNodes[0].nodeValue 
+			     + '" class="img-responsive img-interest" alt="' 
+			     + image[0].childNodes[0].nodeValue + '">');
+	}
+	document.writeln('</div>');
+	document.writeln('</div>');
+	
+	document.writeln('<div class="col-lg-8 col-md-8 col-lg-pull-4 col-md-pull-4">');
+	document.writeln(details[0].childNodes[0].nodeValue);
+	document.writeln('</div>');
+	
+	document.writeln('</div>');
+	document.writeln('</div>');
     }
 }

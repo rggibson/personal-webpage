@@ -2,25 +2,31 @@
 
 {% block content %}
 
+<ul class="nav nav-tabs nav-tabs-rgg">
+  <li><a href="#sports">Sports</a></li>
+  <li><a href="#vids">Video Games</a></li>
+  <li><a href="#boardgames">Board Games</a></li>
+</ul>
+
 <div id="no-javascript">Sorry, you need Javascript enabled to see this page properly.</div>
 <script type="text/javascript">
   document.getElementById("no-javascript").style.display = "none";
   document.getElementById("nav-personal").setAttribute("class", "active");
   
-  {% if not t or t == "sports" %}
+  document.writeln('<div id="sports">');
   document.writeln('<h1 align="center">Sports</h1>');
   parseProjects("static/xml/sports.xml");
-  {% endif %}
+  document.writeln('</div>');
 
-  {% if not t or t == "vids" %}
+  document.writeln('<div id="vids">');
   document.writeln('<h1 align="center">Video Games</h1>');
   parseProjects("static/xml/vids.xml");
-  {% endif %}
+  document.writeln('</div>');
 
-  {% if not t or t == "boardgames" %}
+  document.writeln('<div id="boardgames">');
   document.writeln('<h1 align="center">Board Games</h1>');
   parseProjects("static/xml/boardgames.xml");
-  {% endif %}
+  document.writeln('</div>');
 
 </script>
 

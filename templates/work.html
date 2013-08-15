@@ -2,34 +2,64 @@
 
 {% block content %}
 
+<ul class="nav nav-tabs nav-tabs-rgg">
+  {% if not t %}
+  <li><a href="#projects">Projects</a></li>
+  {% endif %}
+  {% if not t or t == "poker" or t == "risk" or t == "golay" or t == "graphs" %}
+  <li><a href="#publications">Publications</a></li>
+  {% endif %}
+  {% if not t or t == "poker" or t == "risk" or t == "golay" %}
+  <li><a href="#presentations">Oral Presentations</a></li>
+  {% endif %}
+  {% if not t or t == "poker" or t == "mario" %}
+  <li><a href="#awards">Awards</a></li>
+  {% endif %}
+  {% if not t or t == "poker" %}
+  <li><a href="#blogs">Research Blogs</a></li>
+  {% endif %}
+  {% if not t or t == "poker" or t == "risk" or t == "mario" or t == "scheduling" %}
+  <li><a href="#course-projects">Ph.D. Course Projects</a></li>
+  {% endif %}
+</ul>
+      
 <div id="no-javascript">Sorry, you need Javascript enabled to see this page properly.</div>
 <script type="text/javascript">
   document.getElementById("no-javascript").style.display = "none";
   document.getElementById("nav-work").setAttribute("class", "active");
-      
-  {% if not t or t == "projects" %}
+
+  {% if not t %}
+  document.writeln('<div id="projects">');
   document.writeln('<h1>Projects</h1>');
   parseProjects("static/xml/projects.xml");
+  document.writeln('</div>');
   {% endif %}
 
-  {% if not t or t == "publications" %}
-  document.writeln('<h1>Publications</h1>');    
-  parsePublications("static/xml/publications.xml");
+  {% if not t or t == "poker" or t == "risk" or t == "golay" or t == "graphs" %}
+  document.writeln('<div id="publications">');
+  document.writeln('<h1>Publications</h1>');
+  parsePublications("static/xml/publications.xml", "{{t}}" );
+  document.writeln('</div>');
   {% endif %}
 
-  {% if not t or t == "presentations" %}
+  {% if not t or t == "poker" or t == "risk" or t == "golay" %}
+  document.writeln('<div id="presentations">');
   document.writeln('<h1>Oral Presentations</h1>');    
-  parsePresentations("static/xml/presentations.xml");
+  parsePresentations("static/xml/presentations.xml", "{{t}}");
+  document.writeln('</div>');
   {% endif %}
     
-  {% if not t or t == "awards" %}
+  {% if not t or t == "poker" or t == "mario" %}
+  document.writeln('<div id="awards">');
   document.writeln('<h1>Awards</h1>');
-  parseAwards("static/xml/awards.xml");
+  parseAwards("static/xml/awards.xml", "{{t}}");
+  document.writeln('</div>');
   {% endif %}
 
+  {% if not t or t == "poker" %}
   function writeResearchBlogs() {
   document.writeln('<div class="row">');
-    document.writeln('<div class="col-lg-6 col-md-6">');
+    document.writeln('<div class="col-lg-4 col-md-4">');
       document.writeln('<div class="thumbnail thumbnail-rgg">');
 	document.writeln('<div class="caption">');	    
 	  document.writeln('<div class="title">2012 Annual Computer Poker Competition</div>');
@@ -39,62 +69,18 @@
 	document.writeln('</div>');
       document.writeln('</div>');
     document.writeln('</div>');	  
-  }
-  
-  {% if not t or t == "other" %}  
+  }  
+  document.writeln('<div id="blogs">');
   document.writeln('<h1>Research Blogs</h1>');
   writeResearchBlogs();
-  document.writeln('<h1>Ph.D. Course Projects</h1>');
-  parseCourseWork("static/xml/course-work.xml");
+  document.writeln('</div>');
   {% endif %}
 
-
-  {% if t == "poker" %}
-  
-  document.writeln('<h1>Publications</h1>');
-  parsePublications("static/xml/publications.xml", "poker");
-  document.writeln('<h1>Oral Presentations</h1>');
-  parsePresentations("static/xml/presentations.xml", "poker");
-  document.writeln('<h1>Awards</h1>');
-  parseAwards("static/xml/awards.xml", "poker");
-  document.writeln('<h1>Research Blogs</h1>');
-  writeResearchBlogs();
+  {% if not t or t == "poker" or t == "risk" or t == "mario" or t == "scheduling" %}
+  document.writeln('<div id="course-projects">');
   document.writeln('<h1>Ph.D. Course Projects</h1>');
-  parseCourseWork("static/xml/course-work.xml", "poker");  
-
-  {% elif t == "risk" %}
-
-  document.writeln('<h1>Publications</h1>');
-  parsePublications("static/xml/publications.xml", "risk");
-  document.writeln('<h1>Oral Presentations</h1>');
-  parsePresentations("static/xml/presentations.xml", "risk");
-  document.writeln('<h1>Ph.D. Course Projects</h1>');
-  parseCourseWork("static/xml/course-work.xml", "risk");  
-
-  {% elif t == "mario" %}
-
-  document.writeln('<h1>Awards</h1>');
-  parseAwards("static/xml/awards.xml", "mario");
-  document.writeln('<h1>Ph.D. Course Projects</h1>');
-  parseCourseWork("static/xml/course-work.xml", "mario");  
-
-  {% elif t == "scheduling" %}
-
-  document.writeln('<h1>Ph.D. Course Projects</h1>');
-  parseCourseWork("static/xml/course-work.xml", "scheduling");  
-
-  {% elif t == "golay" %}
-
-  document.writeln('<h1>Publications</h1>');
-  parsePublications("static/xml/publications.xml", "golay");
-  document.writeln('<h1>Oral Presentations</h1>');
-  parsePresentations("static/xml/presentations.xml", "golay");
-
-  {% elif t == "graphs" %}
-
-  document.writeln('<h1>Publications</h1>');
-  parsePublications("static/xml/publications.xml", "graphs");
-
+  parseCourseWork("static/xml/course-work.xml", "{{t}}");
+  document.writeln('</div>');
   {% endif %}
 
 </script>

@@ -2,16 +2,29 @@
 
 {% block content %}
 
+{% if url == "/academia" %}
+<ul class="nav nav-tabs nav-tabs-rgg">
+  <li><a href="#games">AI in Adversarial Games</a></li>
+  <li><a href="#sports">AI in Sports</a></li>
+  <li><a href="#vids">AI in Video Games</a></li>
+  <li><a href="#music">Computer Music</a></li>
+</ul>
+{% endif %}
+
+{% if url == "/industry" %}
+<ul class="nav nav-tabs nav-tabs-rgg">
+  <li><a href="#gamedev">Game Development</a></li>
+  <li><a href="#research">Industrial Research</a></li>
+  <li><a href="#startups">Startups</a></li>
+</ul>
+{% endif %}
+
 <div id="no-javascript">Sorry, you need Javascript enabled to see this page properly.</div>
 <script type="text/javascript">
   document.getElementById("no-javascript").style.display = "none";
   document.getElementById("nav-"+"{{url}}".substr(1)).setAttribute("class", "active");
 
-  {% if not t %}
   parseInterests("static/xml{{url}}.xml");
-  {% else %}
-  parseInterests("static/xml{{url}}.xml", "{{t}}");
-  {% endif %}
 
 </script>
 
