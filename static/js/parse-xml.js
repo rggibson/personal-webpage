@@ -51,11 +51,14 @@ function parseProjects( projects_xml, t ) {
 	    var youtube_id = project.getElementsByTagName("Youtube_ID");
 	    var details = project.getElementsByTagName("Details");
 
-	    if( items % 3 == 0 ) {
+	    if( items % 2 == 0 ) {
+		if( items > 0 ) {
+		    document.writeln('</div>');
+		}
 		document.writeln('<div class="row">');
 	    }
 
-	    document.writeln('<div class="col-lg-4">');
+	    document.writeln('<div class="col-lg-6 col-md-6">');
 	    document.writeln('<div class="thumbnail thumbnail-rgg">');
 	    document.writeln('<div class="graphic">');
 	    if( youtube_id.length > 0 ) {
@@ -85,9 +88,6 @@ function parseProjects( projects_xml, t ) {
 	    document.writeln('</div>');
 
 	    ++items;
-	    if( items % 3 == 0 ) {
-		document.writeln('</div>');
-	    }
 	}
     }
 
@@ -95,24 +95,14 @@ function parseProjects( projects_xml, t ) {
 	/* Little bit of a hack to get an extra column with a twitter feed 
 	 * for the vids page 
 	 */
-	if( items % 3 == 0 ) {
-	    document.writeln('<div class="row">');
-	}
-
-	document.writeln('<div class="col-lg-4" align="center">');
-	document.writeln('<a class="twitter-timeline" href="https://twitter.com/rggibson_" data-widget-id="348846377314439168" data-link-color="#00C0FF" data-chrome="nofooter noborders transparent" data-tweet-limit="3">Tweets by @rggibson_</a>');
+	document.writeln('<div class="col-lg-6 col-md-6" align="center">');
+	document.writeln('<a class="twitter-timeline" href="https://twitter.com/rggibson_" data-widget-id="348846377314439168" data-link-color="#00C0FF" data-chrome="nofooter noborders transparent" data-tweet-limit="1">Tweets by @rggibson_</a>');
 	document.writeln('<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?\'http\':\'https\';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>');
 	document.writeln('</div>'); 
 
-	++items;
-	if( items % 3 == 0 ) {
-	    document.writeln('</div>');
-	}
     }
 
-    if( items % 3 != 0 ) {
-	document.writeln('</div>');	
-    }
+    document.writeln('</div>');	
 }
 
 function parsePublications( publications_xml, t ) {
@@ -143,18 +133,19 @@ function parsePublications( publications_xml, t ) {
 
 	if( t == null && area[0].childNodes[0].nodeValue != cur_area ) {
 	    /* New publication area.  End row, write heading, start new row */
-	    if( items % 3 != 0 ) {
+	    if( items % 2 != 0 ) {
 		/* Make sure row hasn't already been ended */
 		document.writeln('</div>');
 	    }
 	    cur_area = area[0].childNodes[0].nodeValue;
 	    document.writeln('<h2 align="center">' + cur_area + '</h2>');
 	    document.writeln('<div class="row">');
-	} else if( items % 3 == 0 ) {
+	    items = 0;
+	} else if( items % 2 == 0 ) {
 	    document.writeln('<div class="row">');
 	}
 
-	document.writeln('<div class="col-lg-4">');
+	document.writeln('<div class="col-lg-6 col-md-6">');
 	document.writeln('<div class="thumbnail thumbnail-rgg">');
 	document.writeln('<div class="caption">');	    
 	document.writeln('<div class="title">'+title[0].childNodes[0].nodeValue+'</div>');
@@ -178,11 +169,11 @@ function parsePublications( publications_xml, t ) {
 	document.writeln('</div>');
 
 	++items;
-	if( items % 3 == 0 ) {
+	if( items % 2 == 0 ) {
 	    document.writeln('</div>');
 	}
     }
-    if( items % 3 != 0 ) {
+    if( items % 2 != 0 ) {
 	document.writeln('</div>');	
     }
 
@@ -212,11 +203,11 @@ function parsePresentations( presentations_xml, t ) {
 	var purpose = pres.getElementsByTagName("Purpose");
 	var downloads = pres.getElementsByTagName("Download");
 
-	if( items % 3 == 0 ) {
+	if( items % 2 == 0 ) {
 	    document.writeln('<div class="row">');
 	}
 
-	document.writeln('<div class="col-lg-4">');
+	document.writeln('<div class="col-lg-6 col-md-6">');
 	document.writeln('<div class="thumbnail thumbnail-rgg">');
 	document.writeln('<div class="caption">');	    
 	document.writeln('<div class="title">' + subject[0].childNodes[0].nodeValue 
@@ -236,11 +227,11 @@ function parsePresentations( presentations_xml, t ) {
 	document.writeln('</div>');
 
 	++items;
-	if( items % 3 == 0 ) {
+	if( items % 2 == 0 ) {
 	    document.writeln('</div>');
 	}
     }
-    if( items % 3 != 0 ) {
+    if( items % 2 != 0 ) {
 	document.writeln('</div>');	
     }
 }
@@ -265,11 +256,11 @@ function parseAwards( awards_xml, t ) {
 	var summary = award.getElementsByTagName("Summary");
 	var url = award.getElementsByTagName("Link");
 
-	if( items % 3 == 0 ) {
+	if( items % 2 == 0 ) {
 	    document.writeln('<div class="row">');
 	}
 
-	document.writeln('<div class="col-lg-4">');
+	document.writeln('<div class="col-lg-6 col-md-6">');
 	document.writeln('<div class="thumbnail thumbnail-rgg">');
 	document.writeln('<div class="caption">');	    
 	document.writeln('<div class="title">' + name[0].childNodes[0].nodeValue + '</div>');
@@ -285,11 +276,11 @@ function parseAwards( awards_xml, t ) {
 	document.writeln('</div>');
 
 	++items;
-	if( items % 3 == 0 ) {
+	if( items % 2 == 0 ) {
 	    document.writeln('</div>');
 	}
     }
-    if( items % 3 != 0 ) {
+    if( items % 2 != 0 ) {
 	document.writeln('</div>');	
     }
 }
@@ -317,11 +308,11 @@ function parseCourseWork( courseWork_xml, t ) {
 	var team = project.getElementsByTagName("Team");
 	var downloads = project.getElementsByTagName("Download");
 
-	if( items % 3 == 0 ) {
+	if( items % 2 == 0 ) {
 	    document.writeln('<div class="row">');
 	}
 
-	document.writeln('<div class="col-lg-4">');
+	document.writeln('<div class="col-lg-6 col-md-6">');
 	document.writeln('<div class="thumbnail thumbnail-rgg">');
 	document.writeln('<div class="caption">');	    
 	document.writeln('<div class="title">' + title[0].childNodes[0].nodeValue + '</div>');
@@ -338,11 +329,11 @@ function parseCourseWork( courseWork_xml, t ) {
 	document.writeln('</div>');
 
 	++items;
-	if( items % 3 == 0 ) {
+	if( items % 2 == 0 ) {
 	    document.writeln('</div>');
 	}
     }
-    if( items % 3 != 0 ) {
+    if( items % 2 != 0 ) {
 	document.writeln('</div>');	
     }
 }
@@ -370,7 +361,7 @@ function parseInterests( interests_xml, t ) {
 
 	    document.writeln('<div class="row">');
 
-	    document.writeln('<div class="col-lg-4 col-lg-push-8">');	    
+	    document.writeln('<div class="col-lg-4 col-md-4 col-lg-push-8 col-md-push-8">'); 
 	    document.writeln('<div class="graphic">');
 	    if( youtube_id.length > 0 ) {
 		document.writeln('<iframe src="http://www.youtube.com/embed/' 
@@ -387,7 +378,7 @@ function parseInterests( interests_xml, t ) {
 	    document.writeln('</div>');
 	    document.writeln('</div>');
 
-	    document.writeln('<div class="col-lg-8 col-lg-pull-4">');
+	    document.writeln('<div class="col-lg-8 col-md-8 col-lg-pull-4 col-md-pull-4">');
 	    document.writeln(details[0].childNodes[0].nodeValue);
 	    document.writeln('</div>');
 

@@ -15,12 +15,12 @@ a:visited { color: #0080E9; }
 
 .jumbotron-rgg {
     background-color: inherit;
+    margin-top: -20px;
+    margin-bottom: -20px;
 }
 
 #headshot {
-    float: right;
     max-height: 175px;
-    padding-left: 10px;
 }
 
 .social-button {
@@ -45,6 +45,7 @@ a:visited { color: #0080E9; }
 
 .navbar-rgg {
     background-color: #0060A9;
+    border: none;
 }
 
 .navbar-nav-rgg > li > a,
@@ -69,7 +70,7 @@ a:visited { color: #0080E9; }
 .navbar-nav-rgg > .active > a:hover,
 .navbar-nav-rgg > .active > a:focus {
     color: #0060A9;
-    background-color: #FFFFC0;/*#F9F7ED;*/
+    background-color: #FFFFC0;
 }
 
 .navbar-nav-rgg > .active > a:hover,
@@ -79,29 +80,23 @@ a:visited { color: #0080E9; }
     background-color: #80C8DC;
 }
 
-.dropdown-menu-rgg {
+.navbar-nav-rgg > .open > .dropdown-menu {
     background-color: #F9F7ED;
 }
 
-.dropdown-menu-rgg > li > a,
-.dropdown-menu-rgg > li > a:hover,
-.dropdown-menu-rgg > li > a:focus {
+.navbar-nav-rgg > .open > .dropdown-menu > li > a,
+.navbar-nav-rgg > .open > .dropdown-menu > li > a:hover,
+.navbar-nav-rgg > .open > .dropdown-menu > li > a:focus {
     color: #0060A9;
     font-weight: 600;
     font-size: 15px;
 }
 
-.dropdown-menu-rgg > li > a:hover,
-.dropdown-menu-rgg > li > a:focus {
+.navbar-nav-rgg > .open > .dropdown-menu > li > a:hover,
+.navbar-nav-rgg > .open > .dropdown-menu > li > a:focus {
     background-color: #0090F9;
     color: #F9F7Ed;
     background-image: none;
-}
-
-.navbar-brand-rgg,
-.navbar-brand-rgg:hover,
-.navbar-brand-rgg:focus {
-    color: #0060A9;
 }
 
 #content {
@@ -194,10 +189,6 @@ h3 {
 
 .graphic > .img-interest {
     margin-bottom: 5px;
-}
-
-#contact-list {
-    margin: 10px 0px;
 }
 
 #contact-list ul {

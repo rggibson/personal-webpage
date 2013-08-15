@@ -40,49 +40,67 @@
 <div id="wrap" class="container">
 
 <div class="jumbotron jumbotron-rgg">
-  
-  <img src="static/images/headshot.png" alt="Headshot" class="img-responsive img-circle" 
-       id="headshot">
-  <h1>Richard Gibson</h1> 
-  <p class="load">Ph.D. Student in Artificial Intelligence and Games</p>
-  <a href="mailto:richard.g.gibson@gmail.com" class="social-button pull-left">
-    <img src="static/images/email.png" alt="Email" class="img-responsive img-social">
-  </a>
-  <a href="https://twitter.com/RichardGGibson" class="social-button pull-left" 
-     style="padding-left: 2px;">
-    <img src="static/images/Twitter.png" alt="Twitter" class="img-responsive img-social">
-  </a>
-  <a href="http://ca.linkedin.com/in/rggibson" class="social-button pull-left"
-     style="padding-right: 3px;">
-    <img src="static/images/LinkedIn.png" alt="LinkedIn" class="img-responsive img-social">
-  </a>
-  <a href="https://github.com/rggibson" class="social-button pull-left" 
-     style="padding-right: 3px;">
-    <img src="static/images/Github.png" alt="Github" class="img-responsive img-social"
-	 style="height: 36px;">
-  </a>
-  <a href="http://www.youtube.com/user/rggibson11" class="social-button pull-left" 
-     style="padding-right: 3px;">
-    <img src="static/images/Youtube.png" alt="YouTube" class="img-responsive img-social">
-  </a>
-  <a href="http://www.twitch.tv/rggibson" class="social-button pull-left">
-    <img src="static/images/Twitch.png" alt="TwitchTV" class="img-responsive img-social"
-	 style="height: 33px;">
-  </a>
+
+  <div class="row">
+    <div class="col-lg-3 col-md-3 col-lg-push-9 col-md-push-9">
+      <img src="static/images/headshot.png" alt="Headshot" 
+	   class="img-responsive img-circle" id="headshot">
+    </div>
+    <div class="col-lg-9 col-md-9 col-lg-pull-3 col-md-pull-3">
+      <h1>Richard Gibson</h1> 
+      <p class="lead">Ph.D. Student in Artificial Intelligence and Games</p>
+      <a href="mailto:richard.g.gibson@gmail.com" class="social-button pull-left">
+	<img src="static/images/email.png" alt="Email" class="img-responsive img-social">
+      </a>
+      <a href="https://twitter.com/RichardGGibson" class="social-button pull-left" 
+	 style="padding-left: 2px;">
+	<img src="static/images/Twitter.png" alt="Twitter" class="img-responsive img-social">
+      </a>
+      <a href="http://ca.linkedin.com/in/rggibson" class="social-button pull-left"
+	 style="padding-right: 3px;">
+	<img src="static/images/LinkedIn.png" alt="LinkedIn" 
+	     class="img-responsive img-social">
+      </a>
+      <a href="https://github.com/rggibson" class="social-button pull-left" 
+	 style="padding-right: 3px;">
+	<img src="static/images/Github.png" alt="Github" class="img-responsive img-social"
+	     style="height: 36px;">
+      </a>
+      <a href="http://www.youtube.com/user/rggibson11" class="social-button pull-left" 
+	 style="padding-right: 3px;">
+	<img src="static/images/Youtube.png" alt="YouTube" class="img-responsive img-social">
+      </a>
+      <a href="http://www.twitch.tv/rggibson" class="social-button pull-left">
+	<img src="static/images/Twitch.png" alt="TwitchTV" class="img-responsive img-social"
+	     style="height: 33px;">
+      </a>
+    </div>
+  </div>
 </div>
 
-<div class="navbar navbar-rgg">
-  <!-- Button for the collapsed navigation menu -->
-  <button type="button" class="navbar-toggle" data-toggle="collapse" 
-	  data-target=".navbar-responsive-collapse">
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-  </button>
-  <div class="navbar-brand navbar-brand-rgg visible-sm">#</div>
-  <div class="nav-collapse collapse navbar-responsive-collapse">
+<div class="navbar navbar-rgg" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header"> 
+    <!-- Button for the collapsed navigation menu -->
+    <button type="button" class="navbar-toggle" data-toggle="collapse" 
+	    data-target=".navbar-collapse-rgg">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+
+    <!-- <div class="navbar-brand navbar-brand-rgg">#</div>   -->
+  </div>
+
+  <div class="collapse navbar-collapse navbar-collapse-rgg">
     <ul class="nav navbar-nav navbar-nav-rgg">
       <li id="nav-home"><a href="/">Home</a></li>
+      <li id="nav-work"><a href="/work">Academic Work</a></li>
+      <li id="nav-academia"><a href="/academia">Academic Interests</a></li>
+      <li id="nav-industry"><a href="/industry">Industrial Interests</a></li>
+      <li id="nav-personal"><a href="/personal">Personal</a></li>
+      <!-- BROKEN NAVBAR DROPDOWN MENUS BELOW 
       <li id="nav-work">
 	<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 	  Academic Work <b class="caret"></b>
@@ -100,7 +118,7 @@
 	<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 	  Academic Interests <b class="caret"></b>
 	</a>
-	<ul class="dropdown-menu dropdown-menu-rgg">
+	<ul class="dropdown-menu">
 	  <li><a href="/academia">All</a></li>
 	  <li><a href="/academia?t=games">AI in Adversarial Games</a></li>
 	  <li><a href="/academia?t=sports">AI in Sports</a></li>
@@ -130,6 +148,7 @@
 	  <li><a href="/personal?t=boardgames">Board Games</a></li>
 	</ul>
       </li>
+      -->
       <li id="nav-contact"><a href="/contact">Contact</a></li>
     </ul>
   </div>
