@@ -83,6 +83,12 @@ a:visited,
     background-color: #80C8DC;
 }
 
+@media (max-width: 767px) {
+    .nav-tabs-rgg > li {
+	float: none;
+    }
+}
+
 #content {
     margin: 0px 30px;
 }
