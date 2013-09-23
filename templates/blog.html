@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div id="no-javascript">Sorry, you need Javascript enabled to see this page properly.</div>
+<script type="text/javascript">
+  document.getElementById("no-javascript").style.display = "none";
+  document.getElementById("nav-blog").setAttribute("class", "active");
+
+  parseBlogs("static/xml/blog.xml");
+
+</script>
+
+{% endblock %}

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Blogs>
+
+<Blog>
+<Title>PB Tracker</Title>
+<Date>September 23, 2013</Date>
+<Image>pbtracker-front-092313.png</Image>
+<Image>pbtracker-rggibson-092313.png</Image>
+<Text><![CDATA[
+<p>
+A while back, I spent several hours creating <a href="https://sites.google.com/site/richardggibson/rggibson">an info page for my Twitch TV channel</a> that, among a few other things, tracks my personal best times for all the games I speedrun. 
+It's just a simple, static html page generated from a spreadsheet and a couple dirty scripts. 
+However, it takes a bit of effort to update and I have been meaning to improve the page for some time now. 
+After taking <a href="https://www.udacity.com/course/cs253">Udacity's Web Development online course</a>, I feel like I have enough tools now to actually build something significantly better.  
+</p>
+<p>
+To that end, I started developing a dynamic web app called "PB Tracker" to make it easier to record and display speedrun times in a simple, tabular format. 
+I have included user signups, so the app will be available for anyone to use that may be interested in tracking their own runs. 
+At first glance, you may notice that the site looks, well, very grey. 
+This is because I have spent zero time on the actual appearance of the site and have only focused on functionality to this point. 
+Also, if you are familiar with some of the other speedrunning sites around, you may also see some similarities here with both <a href="http://www.congratsio.com/">Congratsio</a> and <a href="https://forum.speeddemosarchive.com/post/speedrun_leaderboards_discussion_topic_srl.html">the SpeedRunsLive leaderboards plan</a>. 
+In fact, the SRL guys were looking for some coding help, and I didn't volunteer to instead work on this. 
+I feel a little guilty about that, but I feel the goals of PB Tracker are significantly different from Congratsio's and SRL's. 
+</p>
+<p>
+Firstly, though the name of the site may be a bit misleading, the site is built to track <i>all</i> run times, not just PBs. 
+One of the things I enjoy about speedrunning is setting goals and making progress towards those goals. 
+Beating a PB is always a great goal, but sometimes that is a daunting task (at least for me). 
+Instead, I like to think about beating my <i>average</i> time. 
+So, by submiting every run, the site will track both average times and best times. 
+Secondly, one of my stretch goals is to build a new split program that can automatically upload finished run times to PB Tracker, making the recording of times much more seamless. 
+The split program will likely be quite simple and compatible with the <a href="http://www.mediafire.com/?llxj7i54wuxgi">WSplit</a> file format.  
+I'm also planning to have splits recorded from other runners be downloadable for anyone to use.
+</p>
+<p>
+On the tech side of things, I will be deploying the site through Google App Engine at the custom domain <a href="http://www.pbtracker.net">pbtracker.net</a> that I just registered this morning. 
+I am developing in Python, using the latest version of <a href="http://getbootstrap.com">Twitter Bootstrap</a> and doing some html templating with <a href="http://jinja.pocoo.org/">jinja2</a>. 
+I am not a web developer by any stretch of the imagination, so I will likely be doing some very foolish things along the way. 
+I don't have a release date planned for PB Tracker just yet, but I do plan to release the site as soon as it is functional, even if all the features are not quite there yet. 
+Stay tuned. 
+</p>
+]]></Text>
+</Blog>
+
+</Blogs>

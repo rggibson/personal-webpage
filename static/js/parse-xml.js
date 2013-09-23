@@ -376,3 +376,47 @@ function parseInterests( interests_xml ) {
 	document.writeln('</div>');
     }
 }
+
+function parseBlogs( blogs_xml ) {
+    var xmlDoc = loadXMLDoc( blogs_xml );
+    if( xmlDoc === null ) {
+	document.writeln('Sorry, xml doc [' + blogs_xml + '] could not load.');
+	return( null );
+    }
+    
+    var blogs = xmlDoc.getElementsByTagName("Blog");
+    for( var i = 0; i < blogs.length; i++ ) {
+	var blog = blogs[ i ];
+	var title = blog.getElementsByTagName("Title");
+	var date = blog.getElementsByTagName("Date");
+	var images = blog.getElementsByTagName("Image");
+	var text = blog.getElementsByTagName("Text");
+
+	document.writeln('<h3>' + title[0].childNodes[0].nodeValue + '</h3>');
+	document.writeln('<p class="lead">' + date[0].childNodes[0].nodeValue
+			 + '</p>');
+	document.writeln('<div class="row">');
+	
+	document.writeln('<div class="col-lg-4 col-md-4 col-lg-push-8 col-md-push-8">'); 
+	for( var j = 0; j < images.length; j++ ) {
+	    document.writeln('<div class="graphic">');
+	    document.writeln('<a href="static/images/' 
+			     + images[j].childNodes[0].nodeValue
+			     + '"><img src="static/images/' 
+			     + images[j].childNodes[0].nodeValue 
+			     + '" class="img-responsive img-interest" alt="' 
+			     + images[j].childNodes[0].nodeValue + '"></a>');
+	    document.writeln('</div>');
+	    if( j < images.length - 1 ) {
+		document.writeln('<br>');
+	    }
+	}
+	document.writeln('</div>');
+	
+	document.writeln('<div class="col-lg-8 col-md-8 col-lg-pull-4 col-md-pull-4">');
+	document.writeln(text[0].childNodes[0].nodeValue);
+	document.writeln('</div>');
+	
+	document.writeln('</div>');
+    }
+}
