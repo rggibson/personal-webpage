@@ -3,6 +3,49 @@
 <Blogs>
 
 <Blog>
+<Title>PB Tracker Update</Title>
+<Date>September 30, 2013</Date>
+<Image>pbtracker-rggibson-093013.png</Image>
+<Image>pbtracker-beavisbutthead-093013.png</Image>
+<Image>pbtracker-submit-093013.png</Image>
+<Image>pbtracker-viewall-093013.png</Image>
+<Text><![CDATA[
+<p>
+A week has passed since I first posted about PB Tracker, so I figure it's time to post an update. 
+I have had at least a few people mention something to me about the site, so it's good to hear that there is some interest in this project. 
+</p>
+<p>
+PB Tracker still looks as grey as ever, but the site is much more functional than it was a week ago. 
+Optional links to videos can now be added to runs. 
+In addition, all runs submitted by a runner can be viewed and the owner of the runs can edit submissions at will. 
+While the colour scheme may still be boring, I've also added appropriate box art to many of the pages. 
+Since I'm wanting a site that at the minimum replicates <a href="https://sites.google.com/site/richardggibson/rggibson">my old Twitch TV personal best table</a>, box art was mandatory. 
+</p>
+<p>
+Furthermore, there are now game pages that list every runner's personal best time for each run category. 
+I dare say the word "leaderboard" here, but I guess that is kind of what these pages represent. 
+Just to be clear, I am not trying to compete with SRL and their upcoming leaderboard. 
+These game pages are only here for convenience, much like <a href="http://www.congratsio.com/game/mario-tennis/records">similar pages exist on Congratsio</a>. 
+Runners' times will only appear on these game pages if the runners themselves submit their runs. 
+For this reason, PB Tracker's game pages will be far from an accurate speedrunning leaderboard. 
+I am actually excited to see what the SRL guys come up with as it sounds like they will be implementing a true leaderboard that will list the best run times with video links known for many games. 
+</p>
+<p>
+I still have a number of things on my to-do list before I push the site live. 
+This list includes the ability to delete previous runs, as well as a column that lists a runner's average time for any given game and category. 
+User profiles are also very minimal at the moment. 
+I would like to include links to a runner's Twitter, YouTube, and TwitchTV accounts on their PB page. 
+It would be really cool to add the option to auto-tweet upon submission, but that certainly won't be available from the get-go. 
+We'll see if I ever get to any such fancy features after deployment. 
+</p>
+<p>
+That's all for now. 
+Keep fit and have fun. 
+</p>
+]]></Text>
+</Blog>
+
+<Blog>
 <Title>PB Tracker</Title>
 <Date>September 23, 2013</Date>
 <Image>pbtracker-front-092313.png</Image>
