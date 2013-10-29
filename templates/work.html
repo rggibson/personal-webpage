@@ -31,28 +31,28 @@
   {% if not t %}
   document.writeln('<div id="projects">');
   document.writeln('<h1>Projects</h1>');
-  parseProjects("static/xml/projects.xml");
+  parseProjects("/static/xml/projects.xml");
   document.writeln('</div>');
   {% endif %}
 
   {% if not t or t == "poker" or t == "risk" or t == "golay" or t == "graphs" %}
   document.writeln('<div id="publications">');
   document.writeln('<h1>Publications</h1>');
-  parsePublications("static/xml/publications.xml", "{{t}}" );
+  parsePublications("/static/xml/publications.xml", "{{t}}" );
   document.writeln('</div>');
   {% endif %}
 
   {% if not t or t == "poker" or t == "risk" or t == "golay" %}
   document.writeln('<div id="presentations">');
   document.writeln('<h1>Oral Presentations</h1>');    
-  parsePresentations("static/xml/presentations.xml", "{{t}}");
+  parsePresentations("/static/xml/presentations.xml", "{{t}}");
   document.writeln('</div>');
   {% endif %}
     
   {% if not t or t == "poker" or t == "mario" %}
   document.writeln('<div id="awards">');
   document.writeln('<h1>Awards</h1>');
-  parseAwards("static/xml/awards.xml", "{{t}}");
+  parseAwards("/static/xml/awards.xml", "{{t}}");
   document.writeln('</div>');
   {% endif %}
 
@@ -79,7 +79,7 @@
   {% if not t or t == "poker" or t == "risk" or t == "mario" or t == "scheduling" %}
   document.writeln('<div id="course-projects">');
   document.writeln('<h1>Ph.D. Course Projects</h1>');
-  parseCourseWork("static/xml/course-work.xml", "{{t}}");
+  parseCourseWork("/static/xml/course-work.xml", "{{t}}");
   document.writeln('</div>');
   {% endif %}
 

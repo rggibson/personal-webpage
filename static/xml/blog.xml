@@ -3,6 +3,49 @@
 <Blogs>
 
 <Blog>
+<Title>PB Tracker Launched!</Title>
+<Date>October 29, 2013</Date>
+<Image>pbtracker-console-102913.png</Image>
+<Text><![CDATA[
+<p>
+About two weeks ago, PB Tracker went live at <a href="http://www.pbtracker.net">http://www.pbtracker.net</a> and I was officially the first user to sign up (surprise surprise). 
+New users have been slowly trickling on and feedback about the site sounds positive so far. 
+The site received a huge spike in action yesterday morning and afternoon when <a href="https://twitter.com/regularduck">duckfist</a> tweeted about PB Tracker. 
+I guess it doesn't hurt to have a popular Mega Man speedrunner speak highly of your web site. 
+At last count, there are 148 runners signed up on PB Tracker and more seem to keep coming every day. 
+</p>
+<p>
+A few bugs have reared their ugly heads since launch. 
+The worst problem I've encountered so far was a bug that blocked new users from submitting runs entirely (oops). 
+Luckily, I was able to fix this one pretty quickly once I was made aware of it. 
+The community has been great helping me out too, quickly letting me know over Twitter when something suspicious happens. 
+I have even had a few volunteer their time to help with development, which is amazing. 
+This finally convinced me yesterday to write some documentation in the code to better facilitate new developers jumping on the open project. 
+</p>
+<p>
+Though I will need to spend more of my time working on other things soon, there are still some matters to attend to. 
+Last post, I mentioned that I wanted to write my own splits program that automatically submits runs to PB Tracker. 
+However, I have changed my stance on this. 
+There are already three good splits programs out there: <a href="http://www.mediafire.com/?tpcyj74d9vpy7">WSplit</a>, <a href="http://jenmaarai.com/xunkar/llanfair/">Llanfair</a> and <a href="https://forum.speeddemosarchive.com/post/timerstopwatch_program_368.html#timerstopwatch_program_368">TimeSplitTracker</a>. 
+The community really doesn't need a fourth. 
+Instead, I have been talking with the authors of TimeSplitTracker and <a href="http://allspeedruns.com/">allspeedruns.com</a>, and we are working on a protocol for communication between splits programs and run tracking sites like PB Tracker. 
+In a perfect world, we would have an option available to submit to PB Tracker from all three splits programs, but we'll see how close we can get to that goal. 
+</p>
+<p>
+While auto-submission for splits is being sorted out, I have a few more improvements in mind. 
+For me, the primary feature of PB Tracker is the runner pages where anyone can view the personal best times submitted by an individual runner in a nice, tabular format. 
+This provides a convenient page to link to from one's Twitch TV channel, especially with their less-than-popular switch from HTML to Markdown panels for listing channel info. 
+As such, the improvements I want to make to PB Tracker focus on enhancing the runner pages. 
+For example, I'm hoping to allow users to choose which columns of their PB table are visible to viewers so that only information important to the runner is reported. 
+I also want to add some sorting and filtering options for the "view all runs" pages. 
+Currently, all runs are simply listed by date. 
+It would be nice to be able to, for example, list only runs for a certain game or category and to sort runs by, say, run time. 
+I haven't thought much about how to implement these options, but hopefully they are easy enough to include.  
+</p>
+]]></Text>
+</Blog>
+
+<Blog>
 <Title>PB Tracker Update 2</Title>
 <Date>October 9, 2013</Date>
 <Image>pbtracker-front-100913.png</Image>
@@ -22,7 +65,7 @@ As you may be able to tell from the screenshots, I basically used Font Awesome i
 I tried really hard to find a good use for the <a href="http://fortawesome.github.io/Font-Awesome/icon/bolt/">lightning bolt</a> icon, but unfortunately the site is currently sans lightning bolt.
 </p>
 <p>
-I was acutally able to spend some time on the visuals because all the basic features of the site are now implemented. 
+I was actually able to spend some time on the visuals because all the basic features of the site are now implemented. 
 Users can now add links to their Twitter, YouTube and Twitch TV accounts. 
 Profile images can also be added through <a href="https://gravatar.com">Gravatar</a>. 
 I didn't want to host any additional images, so Gravatar seemed like a good fit here. 
