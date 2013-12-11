@@ -7,15 +7,15 @@
 <Title>Computer Poker</Title>
 <Youtube_ID>ScXX2bndGJc</Youtube_ID>
 <Details><![CDATA[
-<p>I am a member of the <a href="http://poker.cs.ualberta.ca">Computer Poker Research Group (CPRG)</a> at the University of Alberta. 
-Much like IBM's Deep Blue defeated the world's best chess player in 1997, our goal is to develop computer poker programs capable of defeating the world's best Texas hold'em players. 
+<p>I am a former member of the <a href="http://poker.cs.ualberta.ca">Computer Poker Research Group (CPRG)</a> at the University of Alberta. 
+Much like IBM's Deep Blue defeated the world's best chess player in 1997, the CPRG's goal is to develop computer poker programs capable of defeating the world's best Texas hold'em players. 
 Unlike chess, poker involves stochastic events through random card deals, varying degrees of outcomes from different pot sizes, and imperfect information resulting from private hole cards. 
 These complications make poker a more challening game for computers to play than other traditional games like checkers or chess.</p>
 
 <p>In the <a href="http://poker.cs.ualberta.ca/man-machine/2007/">first official Man vs. Machine poker competition</a>, our program <i>Polaris</i> played against two poker pros, Phil Laak (video, above) and Ali Eslami, in heads-up limit Texas hold'em. 
 The pros narrowly defeated Polaris in a 4-round match. 
 The following year, an improved <a href="http://poker.cs.ualberta.ca/man-machine/">Polaris defeated a team of heads-up limit experts</a>. 
-Recently, we have played a few exhibition matches against human pros in heads-up no-limit hold'em with promising results. 
+Recently, we played a few exhibition matches against human pros in heads-up no-limit hold'em with promising results. 
 In addition, each year the CPRG competes in the <a href="http://www.computerpokercompetition.org">Annual Computer Poker Competition</a>. 
 In this competition, teams of academics and hobbyists submit poker-playing programs that play millions of hands of poker against one another.  
 As of 2013, the CPRG has won 24 of 41 events while placing in the top 3 in all but one event.</p>

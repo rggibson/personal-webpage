@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Other>
+
+<Interest>
+<ID>pbtracker</ID>
+<Title>PB Tracker</Title>
+<Image>pbtracker-rggibson-100913.png</Image>
+<Details><![CDATA[
+<p>
+<a href="http://www.pbtracker.net">PB Tracker</a> is a web app for tracking <a href="/personal#vids">speedrunning</a> times, personal bests (PBs) and viewing other runners' PBs. 
+Runners sign up and submit their times to populate their very own personal runner page. 
+This runner page is the main feature of PB Tracker, providing a useful reference point for looking up a runner's best times. 
+In addition, PB Tracker includes individual game pages that list all the submitted times for the corresponding game, sorted by time. 
+These game pages allow runners to compare their own times with other PB Trackers, as well as keep track of the best known time for a given game and category. 
+</p>
+<p>
+This hobby project began as an improvement over my old method of tracking and posting my own PBs through spreadsheets and HTML-generating scripts. 
+I quickly realized that it would not be too difficult to release PB Tracker out to the public so that others may make use of these tools as well. 
+On the tech side of things, the app is written in Python and deployed on <a href="https://developers.google.com/appengine/">Google App Engine</a>. 
+I am making use of a lot of other web projects, including <a href="http://getbootstrap.com/">Twitter Bootstrap</a>, <a href="http://bootswatch.com/">Bootswatch</a>, <a href="https://gravatar.com/">Gravatar</a> and <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a>. 
+The project is open source and <a href="https://github.com/rggibson/pb-tracker">available through GitHub</a>. 
+I have learned a lot about web development by working on PB Tracker and I continue to maintain and update the site when I have the time. 
+</p>
+]]></Details>
+</Interest>
+
+</Other>

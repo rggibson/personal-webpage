@@ -3,6 +3,15 @@
 <Presentations>
 
 <Presentation>
+<ID>thesis-phd</ID>
+<Project_ID>poker</Project_ID>
+<Subject>Regret Minimization in Games and the Development of Champion Multiplayer Computer Poker Agents</Subject>
+<Date>December 6, 2013</Date>
+<Purpose>PhD Thesis Presentation</Purpose>
+<Download>slides</Download>
+</Presentation>
+
+<Presentation>
 <ID>13aamas-3pkuhn</ID>
 <Project_ID>poker</Project_ID>
 <Subject>A Parameterized Family of Equilibrium Profiles for Three-Player Kuhn Poker</Subject>

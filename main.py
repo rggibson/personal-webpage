@@ -43,7 +43,8 @@ class DefaultPage(Handler):
         if( len(template) == 0 ):
             template = "home"
         elif( template == "academia"
-              or template == "industry" ):
+              or template == "industry"
+              or template == "other" ):
             template = "interests"
 
         logging_str = "Rendering template [" + template
