@@ -5,6 +5,40 @@
 <Publication>
 <Area>Artificial Intelligence</Area>
 <Project_ID>poker</Project_ID>
+<ID>thesis-phd</ID>
+<Title>Regret Minimization in Games and the Development of Champion Multiplayer Computer Poker-Playing Agents</Title>
+<Authors><![CDATA[<b>Richard Gibson</b>]]></Authors>
+<Published>PhD Thesis, University of Alberta</Published>
+<Summary><![CDATA[
+This thesis studies regret minimization with application to building multiplayer computer poker-playing agents.
+Included are details of the winning three-player limit Texas hold'em agents of the 2010, 2011, 2012, and 2013 <a href="http://www.computerpokercompetition.org">Annual Computer Poker Competitions</a>. 
+]]></Summary>
+<Abstract>
+Recently, poker has emerged as a popular domain for investigating decision problems under conditions of uncertainty. 
+Unlike traditional games such as checkers and chess, poker exhibits imperfect information, varying utilities, and stochastic events. 
+Because of these complications, decisions at the poker table are more analogous to the decisions faced by humans in everyday life.
+
+In this dissertation, we investigate regret minimization in extensive-form games and apply our work in developing champion computer poker agents. 
+Counterfactual Regret Minimization (CFR) is the current state-of-the-art approach to computing capable strategy profiles for large extensive-form games. 
+Our primary focus is to advance our understanding and application of CFR in domains with more than two players. 
+We present four major contributions. 
+First, we provide the first set of theoretical guarantees for CFR when applied to games that are not two-player zero-sum. 
+We prove that in such domains, CFR eliminates strictly dominated plays. 
+In addition, we provide a modification of CFR that is both more efficient and can lead to stronger strategies than were previously possible. 
+Second, we provide new regret bounds for CFR, present three new CFR sampling variants, and demonstrate their efficiency in several different domains. 
+Third, we prove the first set of sufficient conditions that guarantee CFR will minimize regret in games with imperfect recall. 
+Fourth, we generalize three previous game tree decomposition methods, present a new decomposition method, and demonstrate their improvement empirically over standard techniques. 
+Finally, we apply the work in this thesis to construct three-player Texas hold'em agents and enter them into the Annual Computer Poker Competition. 
+Our agents won six out of the seven three-player events that we entered from the 2010, 2011, 2012, and 2013 computer poker competitions. 
+</Abstract>
+<Download>bibtex</Download>
+<Download>paper</Download>
+<Download>slides</Download>
+</Publication>
+
+<Publication>
+<Area>Artificial Intelligence</Area>
+<Project_ID>poker</Project_ID>
 <ID>13arxiv-domination</ID>
 <Title>Regret Minimization in Non-Zero-Sum Games with Applications to Building Champion Multiplayer Computer Poker Agents</Title>
 <Authors><![CDATA[<b>Richard Gibson</b>]]></Authors>
