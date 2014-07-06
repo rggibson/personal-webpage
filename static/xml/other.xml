@@ -3,6 +3,35 @@
 <Other>
 
 <Interest>
+<ID>pokerconsulting</ID>
+<Title>Poker AI Consulting</Title>
+<Image>poker-room.png</Image>
+<Details><![CDATA[
+<p>
+As of January 2014, I have been working as a poker AI specialist for a small group of poker professionals who hope to use the AI I build to improve their own play. 
+The project is confidential, so I cannot talk about the specifics of my current work. 
+Instead, I can discuss a few of the things I have done with poker AI in the past during my PhD and how that may be of interest to professional poker players.
+</p>
+<p>
+As a member of the <a href="http://webdocs.cs.ualberta.ca/~games/poker/">Computer Poker Research Group (CPRG)</a> at the University of Alberta, a major focus of our work involved building poker AI programs (or "bots" or "agents") that approximate game-theoretic optimal poker. 
+For heads-up poker games, if a player follows a game-theoretic optimal strategy, this means that the player is guaranteed to do no worse than break even against an opponent in the long run, regardless of how the opponent plays. 
+In practice, we see that game-theoretic optimal play often wins a significant amount of money against a sub-optimal opponent. 
+Therefore, a high stakes poker player may wish to better understand optimal play to improve their winnings. 
+Our algorithms developed in the CPRG are mathematically proven to converge to an optimal strategy in the game being modelled by the program. 
+<a href="https://github.com/rggibson/open-pure-cfr">Open Pure CFR</a> is one such algorithm that I have implemented and is freely available through GitHub.
+</p>
+<p>
+Developing game-theoretical optimal poker AI leads to other exciting analyses, including:
+<ul>
+<li>post-play dissection of hands to help remove luck and get a better estimate of how much money the player should have expected to win or lose,</li>
+<li>comparison between sets of bet sizes in no-limit games to see which best exploits a player with certain betting tendencies, and</li>
+<li>calculations of optimal play statistics, including hand ranges and overall calling percentages after any sequence of betting.</li>
+</ul>
+</p>
+]]></Details>
+</Interest>
+
+<Interest>
 <ID>pbtracker</ID>
 <Title>PB Tracker</Title>
 <Image>pbtracker-rggibson-100913.png</Image>
