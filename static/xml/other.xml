@@ -10,7 +10,7 @@
 <p>
 As of January 2014, I have been working as a poker AI specialist for a small group of poker professionals who hope to use the AI I build to improve their own play. 
 The project is confidential, so I cannot talk about the specifics of my current work. 
-Instead, I can discuss a few of the things I have done with poker AI in the past during my PhD and how that may be of interest to professional poker players.
+Instead, I can discuss a few of the things I have done with poker AI in the past during my Ph.D. and how that may be of interest to professional poker players.
 </p>
 <p>
 As a member of the <a href="http://webdocs.cs.ualberta.ca/~games/poker/">Computer Poker Research Group (CPRG)</a> at the University of Alberta, a major focus of our work involved building poker AI programs (or "bots" or "agents") that approximate game-theoretic optimal poker. 
@@ -48,8 +48,7 @@ This hobby project began as an improvement over my old method of tracking and po
 I quickly realized that it would not be too difficult to release PB Tracker out to the public so that others may make use of these tools as well. 
 On the tech side of things, the app is written in Python and deployed on <a href="https://developers.google.com/appengine/">Google App Engine</a>. 
 I am making use of a lot of other web projects, including <a href="http://getbootstrap.com/">Twitter Bootstrap</a>, <a href="http://bootswatch.com/">Bootswatch</a>, <a href="https://gravatar.com/">Gravatar</a> and <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a>. 
-The project is open source and <a href="https://github.com/rggibson/pb-tracker">available through GitHub</a>. 
-I have learned a lot about web development by working on PB Tracker and I continue to maintain and update the site when I have the time. 
+The project is open-sourced through <a href="https://github.com/rggibson/pb-tracker">GitHub</a> and I continue to maintain and update the site when I have the time. 
 </p>
 ]]></Details>
 </Interest>

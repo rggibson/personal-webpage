@@ -8,7 +8,7 @@
 <Youtube_ID>ScXX2bndGJc</Youtube_ID>
 <Details><![CDATA[
 <p>I am a former member of the <a href="http://poker.cs.ualberta.ca">Computer Poker Research Group (CPRG)</a> at the University of Alberta. 
-Much like IBM's Deep Blue defeated the world's best chess player in 1997, the CPRG's goal is to develop computer poker programs capable of defeating the world's best Texas hold'em players. 
+Much like how IBM's Deep Blue defeated the world's best chess player in 1997, the CPRG's goal is to develop computer poker programs capable of defeating the world's best Texas hold'em players. 
 Unlike chess, poker involves stochastic events through random card deals, varying degrees of outcomes from different pot sizes, and imperfect information resulting from private hole cards. 
 These complications make poker a more challening game for computers to play than other traditional games like checkers or chess.</p>
 
@@ -27,7 +27,7 @@ As of 2013, the CPRG has won 24 of 41 events while placing in the top 3 in all b
 <Title>AI for the Board Game RISK</Title>
 <Image>risk.png</Image>
 <Details><![CDATA[
-<p>As part of a Ph.D. course project with a team of 3 students, I wrote a computer program that played the board game RISK.
+<p>As part of a Ph.D. course project with a team of 2 other students, I wrote a computer program that played the board game RISK.
 Given a short time frame to complete the project, we focused just on one aspect of the game, namely the opening <i>draft</i> of territories.
 In this opening phase of the game, players alternate selecting starting territories on the board until all territories are occupied by some player.
 This mechanism resembles a rookie player draft in many professional sports leagues and this relationship was actually my main motivation for working on this project.
@@ -80,7 +80,7 @@ My work studied the structure of these sequences, explained how the known sequen
 <p>Much of my early research was in graph theory during my time as an undergraduate in <a href="http://www.uvic.ca/science/math-statistics/">Mathematics at the University of Victoria</a>.
 Graph theory deals with the study of nodes (dots) connected by edges (lines) that can be used to represent many different entities, from simple games to even on-line networks.
 I considered problems regarding a special class of graphs known as <i>universal fixers</i>.
-Universal fixers are conjectured to not exist beyond simple, trivial examples. 
+Universal fixers were conjectured (now proven) to not exist beyond simple, trivial examples. 
 My main result proves that every nontrivial <a href="http://en.wikipedia.org/wiki/Bipartite_graph">bipartite graph</a> is not a universal fixer.</p> 
 ]]></Details>
 </Project>

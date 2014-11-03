@@ -8,12 +8,12 @@
 <Image>rock-paper-scissors.png</Image>
 <Details><![CDATA[
 <p>
-With the <a href="http://poker.cs.ualberta.ca">Computer Poker Research Group</a> at the <a href="http://ualberta.ca">University of Alberta</a>, my research investigates game-theoretic solutions to large imperfect information games.  
+With the <a href="http://poker.cs.ualberta.ca">Computer Poker Research Group</a> at the <a href="http://ualberta.ca">University of Alberta</a>, my Ph.D. research investigated game-theoretic solutions to large imperfect information games.  
 There have been recent successes in Nash equilibrium computation of large two-player zero-sum games (see, for example, <a href="http://books.nips.cc/papers/files/nips20/NIPS2007_0682.pdf">Zinkevich et al. 2008</a>).  
 These advances were the driving force behind the program <i>Polaris</i> that defeated a team of humans pros at heads-up limit Texas hold'em.  
 In large games involving more than two players, however, Nash equilibria are much harder to compute and are a less attractive solution concept compared to the zero-sum case.  
-The main focus of my Ph.D. research is in understanding what types of solution concepts are desirable in games involving more than two players and how we can compute such solutions.  
-I have also spent some time improving the efficiency of our equilibrium solvers for zero-sum games (<a href="static/work/12aamas-pcs/12aamas-pcs-paper.pdf">Johanson et al. 2012</a>, <a href="static/work/12nips-as/12nips-as-paper.pdf">Gibson et al. 2012</a>).
+The main focus of my Ph.D. research was in understanding what types of solution concepts are desirable in games involving more than two players and how we can compute such solutions.  
+I also spent some time improving the efficiency of our equilibrium solvers for zero-sum games (<a href="static/work/12aamas-pcs/12aamas-pcs-paper.pdf">Johanson et al. 2012</a>, <a href="static/work/12nips-as/12nips-as-paper.pdf">Gibson et al. 2012</a>).
 </p>
 <p>
 Besides computer poker, I am interested in a number of other projects in adversarial games.  
@@ -22,12 +22,11 @@ StarCraft is a far more challenging domain than poker as actions must be taken s
 Secondly, the <a href="http://tac.sics.se/page.php?id=1">Trading Agent Competition (TAC)</a> is an annual event at the AAAI conference. 
 TAC includes a number of different competitions, including ad auctions for on-line markets and automated supply chain management.
 Many problems and characteristics that arise in TAC, such as multiple adversaries, opponent modelling, and bid optimization, are quite similar to those arising in computer poker. 
-One of my research goals is to apply my work from computer poker to problems in the TAC domain. 
 Thirdly, I am interested in the <a href="http://games.stanford.edu/">General Game Playing (GGP) Competition</a>.  
 In GGP, competitors write programs capable of playing games without having any prior knowledge as to what game is going to be played. 
 Thus, a single GGP program must be capable of playing competently in a wide variety of games, from chess, to poker, to even solo puzzles like the Rubik's Cube. 
 The nature of GGP is really at the heart of AI where we want to develop one program that can succeed at many different, potentially unrelated tasks. 
-Finally, I am very interested in applying <a href="academia?t=sports">artificial intelligence in sports</a>.
+Finally, I am very interested in applying <a href="academia#sports">artificial intelligence in sports</a>.
 </p>
 ]]></Details>
 </Interest>
@@ -76,7 +75,7 @@ Several examples of such possible decisions come to mind:
   </ul>
   <li>Professional Sports Drafts</li>
   <ul>
-    <li>What is the best strategy for picking players during an entry / rookie draft? This problem partly motivated my research project that investigated strategies for drafting territories in the board game Risk (<a href="static/work/10aiide-risk/10aiide-risk-paper.pdf">Gibson, Desai, and Zhao 2010</a>).</li>
+    <li>What is the best strategy for picking players during an entry / rookie draft? This problem partly motivated my research project that investigated strategies for drafting territories in the board game RISK (<a href="static/work/10aiide-risk/10aiide-risk-paper.pdf">Gibson, Desai, and Zhao 2010</a>).</li>
   </ul>
 </ul>
 Some of these problems could lend themselves well to a mathematical formulation in an attempt to "solve" for optimal play. 
@@ -108,7 +107,7 @@ This is a very challenging task that advocates generality and is potentially app
 </p>
 
 <p>
-In addition, the <a href="http://www.marioai.org/home">Mario AI Championship</a> has become an annual event involving a number of different problems based on the classic <i>Super Mario Bros.</i> Nintendo games. 
+In addition, the <a href="http://www.marioai.org/home">Mario AI Championship</a> (now the <a href="http://www.platformersai.com/">Platformer AI Competition</a>) poses a number of different problems based on the classic <i>Super Mario Bros.</i> Nintendo games. 
 There are a number of different competition tracks, including game play, level generation, learning, and Turing test.  
 For example, in the level generation competition, the goal is to develop a procedural method that creates Mario levels that are as <i>fun</i> as possible. 
 To evaluate fun, human judges play the automatically generated levels and score each based on how much they enjoyed the level. 
@@ -118,7 +117,7 @@ While I have never competed in the Mario AI Championship, I did enter a related 
 <p>
 Other interesting problems include the <a href="http://t.co/ALB1rIGZ">StarCraft AI Competition</a>, where teams compete to create the strongest programs for the popular real-time strategy game. 
 Finally, I am interested in the widely studied area of pathfinding in video games. 
-A good example of this is PRA* (<a href="http://webdocs.cs.ualberta.ca/~nathanst/papers/partialpathfinding.pdf">Sturtevant and Buro 2005</a>), whioch was later implemented into the pathfinding engine of Bioware's <i>Dragon Age: Origins</i> role playing game. 
+A good example of this is PRA* (<a href="http://webdocs.cs.ualberta.ca/~nathanst/papers/partialpathfinding.pdf">Sturtevant and Buro 2005</a>), which was later implemented into the pathfinding engine of Bioware's <i>Dragon Age: Origins</i> role playing game. 
 </p>
 ]]></Details>
 </Interest>
