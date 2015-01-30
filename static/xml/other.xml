@@ -48,7 +48,7 @@ This hobby project began as an improvement over my old method of tracking and po
 I quickly realized that it would not be too difficult to release PB Tracker out to the public so that others may make use of these tools as well. 
 On the tech side of things, the app is written in Python and deployed on <a href="https://developers.google.com/appengine/">Google App Engine</a>. 
 I am making use of a lot of other web projects, including <a href="http://getbootstrap.com/">Twitter Bootstrap</a>, <a href="http://bootswatch.com/">Bootswatch</a>, <a href="https://gravatar.com/">Gravatar</a> and <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a>. 
-The project is open-sourced through <a href="https://github.com/rggibson/pb-tracker">GitHub</a> and I continue to maintain and update the site when I have the time. 
+The project is open-sourced through <a href="https://github.com/rggibson/pb-tracker">GitHub</a> and now mostly runs as-is as I don't have much time to work on it these days.
 </p>
 ]]></Details>
 </Interest>
