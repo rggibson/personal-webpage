@@ -3,6 +3,15 @@
 <Presentations>
 
 <Presentation>
+<ID>video-games-talk</ID>
+<Project_ID>none</Project_ID>
+<Subject>Video Games Presentation</Subject>
+<Date>June 4, 2015</Date>
+<Purpose>Invited presentation for young students</Purpose>
+<Download>slides</Download>
+</Presentation>
+
+<Presentation>
 <ID>thesis-phd</ID>
 <Project_ID>poker</Project_ID>
 <Subject>Regret Minimization in Games and the Development of Champion Multiplayer Computer Poker Agents</Subject>
