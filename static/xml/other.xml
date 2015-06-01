@@ -8,7 +8,7 @@
 <Image>poker-room.png</Image>
 <Details><![CDATA[
 <p>
-As of January 2014, I have been working as a poker AI specialist for a small group of poker professionals who hope to use the AI I build to improve their own play. 
+As of January 2014, I have been working as a poker AI specialist for a small group of poker professionals who hope to use the AI I build to improve their own play.
 The project is confidential, so I cannot talk about the specifics of my current work. 
 Instead, I can discuss a few of the things I have done with poker AI in the past during my Ph.D. and how that may be of interest to professional poker players.
 </p>
@@ -27,6 +27,9 @@ Developing game-theoretical optimal poker AI leads to other exciting analyses, i
 <li>comparison between sets of bet sizes in no-limit games to see which best exploits a player with certain betting tendencies, and</li>
 <li>calculations of optimal play statistics, including hand ranges and overall calling percentages after any sequence of betting.</li>
 </ul>
+</p>
+<p>
+In May 2015, I decided to incorporate my business and <a href="http://robotsharkgaming.com">Robot Shark Gaming</a> was born.
 </p>
 ]]></Details>
 </Interest>
