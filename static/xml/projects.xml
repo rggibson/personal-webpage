@@ -23,6 +23,19 @@ As of 2013, the CPRG has won 24 of 41 events while placing in the top 3 in all b
 </Project>
 
 <Project>
+<Project_ID>scheduling</Project_ID>
+<Title>Automated Sports Scheduling for Video Games</Title>
+<Image>sports-schedule.png</Image>
+<Details><![CDATA[
+<p>I briefly worked on a solo project that considered the problem of generating schedules for a sports league, particularly for sports video games. 
+Real world professional sports schedules often take months of computation to generate, and thus many sports games only contain a small number of hard-coded league schedules for the games' season modes.
+In this project, I looked at relaxing the constraints required for real-world professional leagues in order to efficiently generate random sports schedules of user-defined size.
+My preliminary results indicate that dynamic, efficient scheduling is possible using <a href="http://en.wikipedia.org/wiki/Answer_set_programming">answer set programming</a> and could be implemented in modern video games.</p>
+<p>More recently, I wrote <a href="https://github.com/rggibson/sports-scheduling">a C++ library for efficiently generating balanced home/away sports schedules</a> that could potentially be used in a sports video game or other related project. It is open-sourced and MIT-licensed, so it is free to use and be modified by anyone.</p>
+]]></Details>
+</Project>
+
+<Project>
 <Project_ID>risk</Project_ID>
 <Title>AI for the Board Game RISK</Title>
 <Image>risk.png</Image>
@@ -46,18 +59,6 @@ In this version, the level environments were also randomly generated, changing t
 Thus, the goal of this project was to create a Mario agent that could successfully learn and adapt to changes in the environment. 
 We submitted our agent to the Mario event of the 2009 Reinforcement Learning Competition where our agent earned second place.
 An early version of this agent is seen in the video above.</p>
-]]></Details>
-</Project>
-
-<Project>
-<Project_ID>scheduling</Project_ID>
-<Title>Automated Sports Scheduling for Video Games</Title>
-<Image>sports-schedule.png</Image>
-<Details><![CDATA[
-<p>I briefly worked on a solo project that considered the problem of generating schedules for a sports league, particularly for sports video games. 
-Real world professional sports schedules often take months of computation to generate, and thus many sports games only contain a small number of hard-coded league schedules for the games' season modes.
-In this project, I looked at relaxing the constraints required for real-world professional leagues in order to efficiently generate random sports schedules of user-defined size.
-My preliminary results indicate that dynamic, efficient scheduling is possible using <a href="http://en.wikipedia.org/wiki/Answer_set_programming">answer set programming</a> and could be implemented in modern video games.</p>
 ]]></Details>
 </Project>
 
