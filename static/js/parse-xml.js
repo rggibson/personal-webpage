@@ -30,10 +30,10 @@ function parseDownload( pub_id, type ) {
     }
 }
 
-function parseProjects( projects_xml ) {
-    var xmlDoc = loadXMLDoc( projects_xml );
+function parsePersonal( personal_xml ) {
+    var xmlDoc = loadXMLDoc( personal_xml );
     if( xmlDoc === null ) {
-	document.writeln('Sorry, xml doc [' + projects_xml + '] could not load.');
+	document.writeln('Sorry, xml doc [' + personal_xml + '] could not load.');
 	return( null );
     }
     
@@ -87,7 +87,7 @@ function parseProjects( projects_xml ) {
 	++items;
     }
 
-    if( projects_xml.indexOf("vids.xml") >= 0 ) {
+    if( personal_xml.indexOf("vids.xml") >= 0 ) {
 	/* Little bit of a hack to get an extra column with a twitter feed 
 	 * for the vids page 
 	 */
@@ -330,23 +330,23 @@ function parseCourseWork( courseWork_xml, t ) {
     }
 }
 
-function parseInterests( interests_xml ) {
-    var xmlDoc = loadXMLDoc( interests_xml );
+function parseProjects( projects_xml ) {
+    var xmlDoc = loadXMLDoc( projects_xml );
     if( xmlDoc === null ) {
-	document.writeln('Sorry, xml doc [' + interests_xml + '] could not load.');
+	document.writeln('Sorry, xml doc [' + projects_xml + '] could not load.');
 	return( null );
     }
     
-    var interests = xmlDoc.getElementsByTagName("Interest");
-    for( var i = 0; i < interests.length; i++ ) {
-	var interest = interests[ i ];
-	var item_id = interest.getElementsByTagName("ID");
-	var title = interest.getElementsByTagName("Title");
-	var image = interest.getElementsByTagName("Image");
-	var youtube_id = interest.getElementsByTagName("Youtube_ID");
-	var details = interest.getElementsByTagName("Details");
+    var projects = xmlDoc.getElementsByTagName("Project");
+    for( var i = 0; i < projects.length; i++ ) {
+	var project = projects[ i ];
+	var project_id = project.getElementsByTagName("ID");
+	var title = project.getElementsByTagName("Title");
+	var image = project.getElementsByTagName("Image");
+	var youtube_id = project.getElementsByTagName("Youtube_ID");
+	var details = project.getElementsByTagName("Details");
 
-	document.writeln('<div id="' + item_id[0].childNodes[0].nodeValue + '">');
+	document.writeln('<div id="' + project_id[0].childNodes[0].nodeValue + '">');
 	document.writeln('<h3>' + title[0].childNodes[0].nodeValue + '</h3>');	    
 	
 	document.writeln('<div class="row">');
@@ -356,13 +356,13 @@ function parseInterests( interests_xml ) {
 	if( youtube_id.length > 0 ) {
 	    document.writeln('<iframe src="http://www.youtube.com/embed/' 
 			     + youtube_id[0].childNodes[0].nodeValue 
-			     + '" frameborder="0" class="img-interest"'
+			     + '" frameborder="0" class="img-project"'
 			     + ' allowfullscreen></iframe>');
 	}
 	if( image.length > 0 ) {
 	    document.writeln('<img src="static/images/' 
 			     +  image[0].childNodes[0].nodeValue 
-			     + '" class="img-responsive img-interest" alt="' 
+			     + '" class="img-responsive img-project" alt="' 
 			     + image[0].childNodes[0].nodeValue + '">');
 	}
 	document.writeln('</div>');

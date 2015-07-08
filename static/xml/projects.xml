@@ -3,27 +3,39 @@
 <Projects>
 
 <Project>
-<Project_ID>poker</Project_ID>
-<Title>Computer Poker</Title>
+<ID>poker</ID>
+<Title>Poker AI</Title>
 <Youtube_ID>ScXX2bndGJc</Youtube_ID>
 <Details><![CDATA[
-<p>I am a former member of the <a href="http://poker.cs.ualberta.ca">Computer Poker Research Group (CPRG)</a> at the University of Alberta. 
-Much like how IBM's Deep Blue defeated the world's best chess player in 1997, the CPRG's goal is to develop computer poker programs capable of defeating the world's best Texas hold'em players. 
+<p>
+I am a former member of the <a href="http://poker.cs.ualberta.ca">Computer Poker Research Group (CPRG)</a> at the University of Alberta. 
 Unlike chess, poker involves stochastic events through random card deals, varying degrees of outcomes from different pot sizes, and imperfect information resulting from private hole cards. 
-These complications make poker a more challening game for computers to play than other traditional games like checkers or chess.</p>
-
-<p>In the <a href="http://poker.cs.ualberta.ca/man-machine/2007/">first official Man vs. Machine poker competition</a>, our program <i>Polaris</i> played against two poker pros, Phil Laak (video, above) and Ali Eslami, in heads-up limit Texas hold'em. 
-The pros narrowly defeated Polaris in a 4-round match. 
-The following year, an improved <a href="http://poker.cs.ualberta.ca/man-machine/">Polaris defeated a team of heads-up limit experts</a>. 
-Recently, we played a few exhibition matches against human pros in heads-up no-limit hold'em with promising results. 
-In addition, each year the CPRG competes in the <a href="http://www.computerpokercompetition.org">Annual Computer Poker Competition</a>. 
-In this competition, teams of academics and hobbyists submit poker-playing programs that play millions of hands of poker against one another.  
-As of 2013, the CPRG has won 24 of 41 events while placing in the top 3 in all but one event.</p>
+These complications make poker a more challening game for computers to play than other traditional games like checkers or chess.
+</p>
+<p>
+As a member of the CPRG, a major focus of our work involved building poker AI programs (or "bots" or "agents") that approximate game-theoretic optimal poker. 
+For heads-up poker games, if a player follows a game-theoretic optimal strategy, this means that the player is guaranteed to do no worse than break even against an opponent in the long run, regardless of how the opponent plays. 
+In practice, we see that game-theoretic optimal play often wins a significant amount of money against a sub-optimal opponent. 
+Therefore, a high stakes poker player may wish to better understand optimal play to improve their winnings. 
+Our algorithms developed in the CPRG are mathematically proven to converge to an optimal strategy in the game being modelled by the program. 
+<a href="https://github.com/rggibson/open-pure-cfr">Open Pure CFR</a> is one such algorithm that I have implemented and is freely available through GitHub.
+</p>
+<p>
+Developing game-theoretical optimal poker AI leads to other exciting analyses, including:
+<ul>
+<li>post-play dissection of hands to help remove luck and get a better estimate of how much money the player should have expected to win or lose,</li>
+<li>comparison between sets of bet sizes in no-limit games to see which best exploits a player with certain betting tendencies, and</li>
+<li>calculations of optimal play statistics, including hand ranges and overall calling percentages after any sequence of betting.</li>
+</ul>
+</p>
+<p>
+I recently founded my company, <a href="http://www.robotsharkgaming.com">Robot Shark Gaming</a>, where the current focus of my work involves building game-theoretic optimal poker AI and related software tools to help professional poker players improve their game.
+</p>
 ]]></Details>
 </Project>
 
 <Project>
-<Project_ID>scheduling</Project_ID>
+<ID>scheduling</ID>
 <Title>Automated Sports Scheduling for Video Games</Title>
 <Image>sports-schedule.png</Image>
 <Details><![CDATA[
@@ -31,12 +43,35 @@ As of 2013, the CPRG has won 24 of 41 events while placing in the top 3 in all b
 Real world professional sports schedules often take months of computation to generate, and thus many sports games only contain a small number of hard-coded league schedules for the games' season modes.
 In this project, I looked at relaxing the constraints required for real-world professional leagues in order to efficiently generate random sports schedules of user-defined size.
 My preliminary results indicate that dynamic, efficient scheduling is possible using <a href="http://en.wikipedia.org/wiki/Answer_set_programming">answer set programming</a> and could be implemented in modern video games.</p>
-<p>More recently, I wrote <a href="https://github.com/rggibson/sports-scheduling">a C++ library for efficiently generating balanced home/away sports schedules</a> that could potentially be used in a sports video game or other related project. It is open-sourced and MIT-licensed, so it is free to use and be modified by anyone.</p>
+<p>More recently, I wrote <a href="https://github.com/rggibson/sports-scheduling">a C++ library for efficiently generating balanced home/away sports schedules</a> that could potentially be used in a sports video game or other related project.
+It is open-sourced and MIT-licensed, so it is free to use and be modified by anyone.</p>
 ]]></Details>
 </Project>
 
 <Project>
-<Project_ID>risk</Project_ID>
+<ID>pbtracker</ID>
+<Title>PB Tracker</Title>
+<Image>pbtracker-rggibson-100913.png</Image>
+<Details><![CDATA[
+<p>
+<a href="http://www.pbtracker.net">PB Tracker</a> is a web app for tracking <a href="/personal#vids">speedrunning</a> times, personal bests (PBs) and viewing other runners' PBs. 
+Runners sign up and submit their times to populate their very own personal runner page. 
+This runner page is the main feature of PB Tracker, providing a useful reference point for looking up a runner's best times. 
+In addition, PB Tracker includes individual game pages that list all the submitted times for the corresponding game, sorted by time. 
+These game pages allow runners to compare their own times with other PB Trackers, as well as keep track of the best known time for a given game and category. 
+</p>
+<p>
+This hobby project began as an improvement over my old method of tracking and posting my own PBs through spreadsheets and HTML-generating scripts. 
+I quickly realized that it would not be too difficult to release PB Tracker out to the public so that others may make use of these tools as well. 
+On the tech side of things, the app is written in Python and deployed on <a href="https://developers.google.com/appengine/">Google App Engine</a>. 
+I am making use of a lot of other web projects, including <a href="http://getbootstrap.com/">Twitter Bootstrap</a>, <a href="http://bootswatch.com/">Bootswatch</a>, <a href="https://gravatar.com/">Gravatar</a> and <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a>. 
+The project is open-sourced through <a href="https://github.com/rggibson/pb-tracker">GitHub</a> and now mostly runs as-is as I don't have much time to work on it these days.
+</p>
+]]></Details>
+</Project>
+
+<Project>
+<ID>risk</ID>
 <Title>AI for the Board Game RISK</Title>
 <Image>risk.png</Image>
 <Details><![CDATA[
@@ -50,7 +85,7 @@ We later published our work and I presented the paper at Stanford during an AI c
 </Project>
 
 <Project>
-<Project_ID>mario</Project_ID>
+<ID>mario</ID>
 <Title>A Learning AI for Super Mario Bros.</Title>
 <Youtube_ID>EZLkCdMXw8g</Youtube_ID>
 <Details><![CDATA[
@@ -63,26 +98,39 @@ An early version of this agent is seen in the video above.</p>
 </Project>
 
 <Project>
-<Project_ID>golay</Project_ID>
-<Title>Barker and Golay Sequences</Title>
-<Image>golay.png</Image>
+<ID>gamedev</ID>
+<Title>Game Development</Title>
+<Image>game-dev.png</Image>
 <Details><![CDATA[
-<p>As a Master's student in the <a href="http://www.math.sfu.ca/">Mathematics Department at Simon Fraser University</a>, I studied problems related to the combinatorial sequences known as Barker sequences and Golay sequences. 
-These are sequences, typically binary or quaternary, that occur infrequently and have applications in coding theory, particularly in radar and multislit spectrometry. 
-My work studied the structure of these sequences, explained how the known sequences at small lengths are generated, and proved that certain classes of these sequences do not exist beyond the known small lengths.</p>
+<p>
+Video game development is perhaps the largest intersection of both my passion and expertise. 
+Gaming has been a large part of my life and I spent many hours of my youth mastering several games of many genres. 
+In fact, video games are what first led to my fascination of the complexities and possibilities of artificial intelligence. 
+This fascination led me to the <a href="http://ualberta.ca">University of Alberta</a> and a Ph.D. studying <a href="academia?t=games">artificial intelligence and games</a>. 
+Developing champion computer poker programs has not only opened my eyes to state-of-the-art artificial intelligence algorithms, but it has also vastly improved my technical programming skills, particularly in C and C++. 
+</p>
+<p>
+While much of my career has been spent in academia, I did spend 8 months at <i>Propaganda Games</i>, a former Disney game studio in Vancouver. 
+I joined the studio during preproduction of a Pirates of the Caribbean game that unfortunately was later cancelled.
+In addition, I have participated in <a href="http://www.orcajam.com/">OrcaJam</a>, a local annual game jam event in Victoria, BC.
+I hope to find more time for game development projects in the future.
+</p>
 ]]></Details>
 </Project>
 
 <Project>
-<Project_ID>graphs</Project_ID>
-<Title>Graph Theory - Universal Fixers</Title>
-<Image>graph-theory.png</Image>
+<ID>baseball</ID>
+<Title>Baseball Card Game</Title>
+<Image>baseball.png</Image>
 <Details><![CDATA[
-<p>Much of my early research was in graph theory during my time as an undergraduate in <a href="http://www.uvic.ca/science/math-statistics/">Mathematics at the University of Victoria</a>.
-Graph theory deals with the study of nodes (dots) connected by edges (lines) that can be used to represent many different entities, from simple games to even on-line networks.
-I considered problems regarding a special class of graphs known as <i>universal fixers</i>.
-Universal fixers were conjectured (now proven) to not exist beyond simple, trivial examples. 
-My main result proves that every nontrivial <a href="http://en.wikipedia.org/wiki/Bipartite_graph">bipartite graph</a> is not a universal fixer.</p> 
+In 2006, a group of friends and I created a baseball card game.  
+Since then, I have modified the game a bit and written up a sheet of rules.  
+The game is for 2 players and can be played with a regular deck of playing cards.
+I have heard of a few other baseball card games that are based on poker hands, but this game is completely different and no poker knowlege is required.   
+I think the game is pretty fun, and so I have decided to share the game with the internet.  
+The 2-page rules and 1-page outcome tables can be found <a href="static/baseball-card-game.pdf">here</a>. 
+The rules are a bit dense, so feel free to <a href="mailto:richard.g.gibson@gmail.com">email me</a> with any questions you may have.  
+In addition, the outcome tables can be a bit cumbersome to carry around, so I suggest downloading the rules to your smartphone.
 ]]></Details>
 </Project>
 

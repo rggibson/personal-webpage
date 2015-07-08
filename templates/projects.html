@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<ul class="nav nav-tabs nav-tabs-rgg">
+  <li><a href="#poker">Poker AI</a></li>
+  <li><a href="#scheduling">Sports Scheduling</a></li>
+  <li><a href="#pbtracker">PB Tracker</a></li>
+  <li><a href="#risk">RISK AI</a></li>
+  <li><a href="#mario">Super Mario AI</a></li>
+  <li><a href="#gamedev">Game Development</a></li>
+  <li><a href="#baseball">Baseball Card Game</a></li>
+</ul>
+
+<div id="no-javascript">Sorry, you need Javascript enabled to see this page properly.</div>
+<script type="text/javascript">
+  document.getElementById("no-javascript").style.display = "none";
+  document.getElementById("nav-projects").setAttribute("class", "active");
+
+  parseProjects("/static/xml{{url}}.xml");
+
+</script>
+
+{% endblock %}

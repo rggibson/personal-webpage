@@ -42,10 +42,6 @@ class DefaultPage(Handler):
         # Check for homepage
         if( len(template) == 0 ):
             template = "home"
-        elif( template == "academia"
-              or template == "industry"
-              or template == "other" ):
-            template = "interests"
 
         logging_str = "Rendering template [" + template
         if t:

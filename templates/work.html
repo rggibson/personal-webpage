@@ -3,9 +3,6 @@
 {% block content %}
 
 <ul class="nav nav-tabs nav-tabs-rgg">
-  {% if not t %}
-  <li><a href="#projects">Projects</a></li>
-  {% endif %}
   {% if not t or t == "poker" or t == "risk" or t == "golay" or t == "graphs" %}
   <li><a href="#publications">Publications</a></li>
   {% endif %}
@@ -31,13 +28,6 @@
 <script type="text/javascript">
   document.getElementById("no-javascript").style.display = "none";
   document.getElementById("nav-work").setAttribute("class", "active");
-
-  {% if not t %}
-  document.writeln('<div id="projects">');
-  document.writeln('<h1>Projects</h1>');
-  parseProjects("/static/xml/projects.xml");
-  document.writeln('</div>');
-  {% endif %}
 
   {% if not t or t == "poker" or t == "risk" or t == "golay" or t == "graphs" %}
   document.writeln('<div id="publications">');
