@@ -3,6 +3,25 @@
 <Projects>
 
 <Project>
+<ID>sportsbid</ID>
+<Title>SportsBid</Title>
+<Image>sb.png</Image>
+<Details><![CDATA[
+<p><a href="https://sportsbid.net">SportsBid</a> is a new take on fantasy sports where players pick teams, not athletes.
+Rather than scoring points based on athletes' statistics, points are earned when teams win.
+SportsBid fits a new genre of fantasy games that I call "team fantasy."
+Team fantasy maintains the fun, interactive elements of fantasy, such as live drafting, while also keeping the simplicity of choosing teams instead of players, as in pick'em games.
+In addition, SportsBid ties in elements of poker to create a game that is more about strategy than sports knowledge.</p>
+<p>SportsBid is derived from a game that friends and I have played for years, particularly to make NHL and MLB playoffs more exciting to watch.
+We would gather in person with pencil, paper, and a deck of cards.
+With each team assigned a card in the deck, we'd deal them out one at a time and record the winning bids for each team until all teams were claimed.
+I later built an online prototype to better facilitate the game and we have continued to use that to play.
+I find the game itself a ton of fun and decided to flesh it out into a public, monetized version.
+SportsBid is still a work in progress and I am continuing to develop it.</p>
+]]></Details>
+</Project>
+
+<Project>
 <ID>poker</ID>
 <Title>Poker AI</Title>
 <Youtube_ID>ScXX2bndGJc</Youtube_ID>
