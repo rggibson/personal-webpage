@@ -3,21 +3,22 @@
 <Projects>
 
 <Project>
-<ID>sportsbid</ID>
-<Title>SportsBid</Title>
-<Image>sb.png</Image>
+<ID>bracket-bids</ID>
+<Title>Bracket Bids</Title>
+<Image>bb-logo.png</Image>
 <Details><![CDATA[
-<p><a href="https://sportsbid.net">SportsBid</a> is a new take on fantasy sports where players pick teams, not athletes.
-Rather than scoring points based on athletes' statistics, points are earned when teams win.
-SportsBid fits a new genre of fantasy games that I call "team fantasy."
-Team fantasy maintains the fun, interactive elements of fantasy, such as live drafting, while also keeping the simplicity of choosing teams instead of players, as in pick'em games.
-In addition, SportsBid ties in elements of poker to create a game that is more about strategy than sports knowledge.</p>
-<p>SportsBid is derived from a game that friends and I have played for years, particularly to make NHL and MLB playoffs more exciting to watch.
+<p><a href="https://bracketbids.com">Bracket Bids</a> is the fusion of sports pools and poker.
+It is designed for people like me who love sports, love strategy games, but also love having their free time too.
+Bracket Bids provides playoff and tournament sports pool contests for you and your friends that feature auction-style drafts for teams.
+Unlike Yahoo! and Officepools.com, our drafts require zero hours of preparation and zero days of post-draft management.
+In Bracket Bids, winning is all about strategy.
+It is not who studies the most, but who plays the best that wins.</p>
+<p>Bracket Bids is derived from a game that friends and I have played for years, particularly to make NHL and MLB playoffs more exciting to watch.
 We would gather in person with pencil, paper, and a deck of cards.
 With each team assigned a card in the deck, we'd deal them out one at a time and record the winning bids for each team until all teams were claimed.
 I later built an online prototype to better facilitate the game and we have continued to use that to play.
 I find the game itself a ton of fun and decided to flesh it out into a public, monetized version.
-SportsBid is still a work in progress and I am continuing to develop it.</p>
+Bracket Bids is still a work in progress and I am continuing to develop it.</p>
 ]]></Details>
 </Project>
 

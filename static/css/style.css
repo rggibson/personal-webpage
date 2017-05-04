@@ -127,7 +127,7 @@ h3 {
 .graphic > img, 
 .graphic > iframe {
     background-color: inherit;
-    height: 200px;
+    max-height: 200px;
 }
 
 .graphic > iframe {
