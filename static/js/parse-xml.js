@@ -59,7 +59,7 @@ function parsePersonal( personal_xml ) {
 	document.writeln('<div class="thumbnail thumbnail-rgg">');
 	document.writeln('<div class="graphic">');
 	if( youtube_id.length > 0 ) {
-	    document.writeln('<iframe src="http://www.youtube.com/embed/'
+	    document.writeln('<iframe src="https://www.youtube.com/embed/'
 			     + youtube_id[0].childNodes[0].nodeValue
 			     + '" frameborder="0" allowfullscreen></iframe>');
 	}
