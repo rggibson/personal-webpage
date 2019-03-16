@@ -3,6 +3,17 @@
 <Presentations>
 
 <Presentation>
+<ID>igda-2019-talk</ID>
+<Project_ID>super-mega-baseball</Project_ID>
+<Subject>Online Competitive Matchmaking in Super Mega Baseball 2</Subject>
+<Date>March 6, 2019</Date>
+<Purpose>IGDA Victoria Monthly Talk</Purpose>
+<Link><![CDATA[
+https://www.meetup.com/igdayyj/events/njrwknyzfbjb/
+]]></Link>
+</Presentation>
+
+<Presentation>
 <ID>video-games-talk</ID>
 <Project_ID>none</Project_ID>
 <Subject>Video Games Presentation</Subject>

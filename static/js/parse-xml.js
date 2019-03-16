@@ -23,7 +23,7 @@ function parseDownload( pub_id, type ) {
     var is_link = type.indexOf("link") + type.indexOf("YouTube");
     if( is_link == -2 ) {
 	/* Not a link or redirect to youtube */
-	document.writeln('<a href="static/work/' + pub_id + '/' + pub_id + ext 
+	document.writeln('<a href="static/work/' + pub_id + '/' + pub_id + ext
 			 + '" class="btn btn-rgg">' + type + '</a>');
     } else {
 	document.writeln( type + ' ' );
@@ -36,7 +36,7 @@ function parsePersonal( personal_xml ) {
 	document.writeln('Sorry, xml doc [' + personal_xml + '] could not load.');
 	return( null );
     }
-    
+
     var projects = xmlDoc.getElementsByTagName("Project");
     var items = 0;
     for( var i = 0; i < projects.length; i++ ) {
@@ -59,27 +59,27 @@ function parsePersonal( personal_xml ) {
 	document.writeln('<div class="thumbnail thumbnail-rgg">');
 	document.writeln('<div class="graphic">');
 	if( youtube_id.length > 0 ) {
-	    document.writeln('<iframe src="http://www.youtube.com/embed/' 
-			     + youtube_id[0].childNodes[0].nodeValue 
+	    document.writeln('<iframe src="http://www.youtube.com/embed/'
+			     + youtube_id[0].childNodes[0].nodeValue
 			     + '" frameborder="0" allowfullscreen></iframe>');
 	}
 	if( image.length > 0 ) {
-	    document.writeln('<img src="static/images/' 
-			     +  image[0].childNodes[0].nodeValue 
-			     + '" class="img-responsive" alt="' 
+	    document.writeln('<img src="static/images/'
+			     +  image[0].childNodes[0].nodeValue
+			     + '" class="img-responsive" alt="'
 			     + image[0].childNodes[0].nodeValue + '">');
 	}
-	document.writeln('</div>');	    
-	document.writeln('<div class="caption">');	    
-	document.writeln('<h3 align="center">' + title[0].childNodes[0].nodeValue 
-			 + '</h3>');	    
+	document.writeln('</div>');
+	document.writeln('<div class="caption">');
+	document.writeln('<h3 align="center">' + title[0].childNodes[0].nodeValue
+			 + '</h3>');
 	document.writeln(details[0].childNodes[0].nodeValue);
 	if( project_id.length > 0 ) {
 	    /* Related work button */
-	    document.writeln('<p><a href="work?t=' 
-			     + project_id[0].childNodes[0].nodeValue 
+	    document.writeln('<p><a href="work?t='
+			     + project_id[0].childNodes[0].nodeValue
 			     + '" class="btn btn-rgg">Related Work</a></p>');
-	}	    
+	}
 	document.writeln('</div>');
 	document.writeln('</div>');
 	document.writeln('</div>');
@@ -88,17 +88,17 @@ function parsePersonal( personal_xml ) {
     }
 
     if( personal_xml.indexOf("vids.xml") >= 0 ) {
-	/* Little bit of a hack to get an extra column with a twitter feed 
-	 * for the vids page 
+	/* Little bit of a hack to get an extra column with a twitter feed
+	 * for the vids page
 	 */
 	document.writeln('<div class="col-lg-4 col-md-4" align="center">');
 	document.writeln('<a class="twitter-timeline" href="https://twitter.com/rggibson_" data-widget-id="348846377314439168" data-link-color="#00C0FF" data-chrome="nofooter noborders transparent" data-tweet-limit="3">Tweets by @rggibson_</a>');
 	document.writeln('<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?\'http\':\'https\';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>');
-	document.writeln('</div>'); 
+	document.writeln('</div>');
 
     }
 
-    document.writeln('</div>');	
+    document.writeln('</div>');
 }
 
 function parsePublications( publications_xml, t ) {
@@ -142,7 +142,7 @@ function parsePublications( publications_xml, t ) {
 
 	document.writeln('<div class="col-lg-4 col-md-4">');
 	document.writeln('<div class="thumbnail thumbnail-rgg">');
-	document.writeln('<div class="caption">');	    
+	document.writeln('<div class="caption">');
 	document.writeln('<div class="title">'+title[0].childNodes[0].nodeValue+'</div>');
 	document.writeln('<div class="authors">' + authors[0].childNodes[0].nodeValue
 			 +'</div>');
@@ -155,7 +155,7 @@ function parsePublications( publications_xml, t ) {
 			 + abs[0].childNodes[0].nodeValue + '" data-original-title title>'
 			 + 'abstract</button> ');
 	for( var j = 0; j < downloads.length; ++j ) {
-	    parseDownload( pub_id[0].childNodes[0].nodeValue, 
+	    parseDownload( pub_id[0].childNodes[0].nodeValue,
 			   downloads[j].childNodes[0].nodeValue );
 	}
 	document.writeln('</p></div>');
@@ -169,7 +169,7 @@ function parsePublications( publications_xml, t ) {
 	}
     }
     if( items % 3 != 0 ) {
-	document.writeln('</div>');	
+	document.writeln('</div>');
     }
 
     /* Enable popovers */
@@ -196,6 +196,7 @@ function parsePresentations( presentations_xml, t ) {
 	var date = pres.getElementsByTagName("Date");
 	var purpose = pres.getElementsByTagName("Purpose");
 	var downloads = pres.getElementsByTagName("Download");
+	var url = pres.getElementsByTagName("Link");
 
 	if( items % 3 == 0 ) {
 	    document.writeln('<div class="row">');
@@ -203,18 +204,23 @@ function parsePresentations( presentations_xml, t ) {
 
 	document.writeln('<div class="col-lg-4 col-md-4">');
 	document.writeln('<div class="thumbnail thumbnail-rgg">');
-	document.writeln('<div class="caption">');	    
-	document.writeln('<div class="title">' + subject[0].childNodes[0].nodeValue 
+	document.writeln('<div class="caption">');
+	document.writeln('<div class="title">' + subject[0].childNodes[0].nodeValue
 			 + '</div>');
 	document.writeln('<div class="date">' + date[0].childNodes[0].nodeValue
 			 +'</div>');
-	document.writeln('<div class="purpose">' + purpose[0].childNodes[0].nodeValue 
+	document.writeln('<div class="purpose">' + purpose[0].childNodes[0].nodeValue
 			 + '</div>');
 	document.writeln('<div class="downloads"><p>');
 	for( var j = 0; j < downloads.length; ++j ) {
-	    parseDownload( pres_id[0].childNodes[0].nodeValue, 
+	    parseDownload( pres_id[0].childNodes[0].nodeValue,
 			   downloads[j].childNodes[0].nodeValue );
 	}
+  if( url.length > 0 ) {
+   document.writeln('<div class="downloads"><p><a href="'
+        + url[0].childNodes[0].nodeValue
+        + '" class="btn btn-rgg">Link</a></p></div>');
+  }
 	document.writeln('</p></div>');
 	document.writeln('</div>');
 	document.writeln('</div>');
@@ -226,7 +232,7 @@ function parsePresentations( presentations_xml, t ) {
 	}
     }
     if( items % 3 != 0 ) {
-	document.writeln('</div>');	
+	document.writeln('</div>');
     }
 }
 
@@ -236,7 +242,7 @@ function parseAwards( awards_xml, t ) {
 	document.writeln('Sorry, xml doc [' + awards_xml + '] could not load.');
 	return( null );
     }
-    
+
     var awards = xmlDoc.getElementsByTagName("Award");
     var items = 0;
     for( var i = 0; i < awards.length; i++ ) {
@@ -255,13 +261,13 @@ function parseAwards( awards_xml, t ) {
 
 	document.writeln('<div class="col-lg-4 col-md-4">');
 	document.writeln('<div class="thumbnail thumbnail-rgg">');
-	document.writeln('<div class="caption">');	    
+	document.writeln('<div class="caption">');
 	document.writeln('<div class="title">' + name[0].childNodes[0].nodeValue + '</div>');
-	document.writeln('<div class="summary">' + summary[0].childNodes[0].nodeValue 
+	document.writeln('<div class="summary">' + summary[0].childNodes[0].nodeValue
 			 + '</div>');
 	if( url.length > 0 ) {
-	    document.writeln('<div class="downloads"><p><a href="' 
-			     + url[0].childNodes[0].nodeValue 
+	    document.writeln('<div class="downloads"><p><a href="'
+			     + url[0].childNodes[0].nodeValue
 			     + '" class="btn btn-rgg">Link</a></p></div>');
 	}
 	document.writeln('</div>');
@@ -274,7 +280,7 @@ function parseAwards( awards_xml, t ) {
 	}
     }
     if( items % 3 != 0 ) {
-	document.writeln('</div>');	
+	document.writeln('</div>');
     }
 }
 
@@ -306,7 +312,7 @@ function parseCourseWork( courseWork_xml, t ) {
 
 	document.writeln('<div class="col-lg-4 col-md-4">');
 	document.writeln('<div class="thumbnail thumbnail-rgg">');
-	document.writeln('<div class="caption">');	    
+	document.writeln('<div class="caption">');
 	document.writeln('<div class="title">' + title[0].childNodes[0].nodeValue + '</div>');
 	document.writeln('<div class="authors">' + team[0].childNodes[0].nodeValue + '</div>');
 	document.writeln('<div class="purpose">For ' + course[0].childNodes[0].nodeValue
@@ -326,7 +332,7 @@ function parseCourseWork( courseWork_xml, t ) {
 	}
     }
     if( items % 3 != 0 ) {
-	document.writeln('</div>');	
+	document.writeln('</div>');
     }
 }
 
@@ -336,7 +342,7 @@ function parseProjects( projects_xml ) {
 	document.writeln('Sorry, xml doc [' + projects_xml + '] could not load.');
 	return( null );
     }
-    
+
     var projects = xmlDoc.getElementsByTagName("Project");
     for( var i = 0; i < projects.length; i++ ) {
 	var project = projects[ i ];
@@ -347,31 +353,31 @@ function parseProjects( projects_xml ) {
 	var details = project.getElementsByTagName("Details");
 
 	document.writeln('<div id="' + project_id[0].childNodes[0].nodeValue + '">');
-	document.writeln('<h3>' + title[0].childNodes[0].nodeValue + '</h3>');	    
-	
+	document.writeln('<h3>' + title[0].childNodes[0].nodeValue + '</h3>');
+
 	document.writeln('<div class="row">');
-	
-	document.writeln('<div class="col-lg-4 col-md-4 col-lg-push-8 col-md-push-8">'); 
+
+	document.writeln('<div class="col-lg-4 col-md-4 col-lg-push-8 col-md-push-8">');
 	document.writeln('<div class="graphic">');
 	if( youtube_id.length > 0 ) {
-	    document.writeln('<iframe src="http://www.youtube.com/embed/' 
-			     + youtube_id[0].childNodes[0].nodeValue 
+	    document.writeln('<iframe src="http://www.youtube.com/embed/'
+			     + youtube_id[0].childNodes[0].nodeValue
 			     + '" frameborder="0" class="img-project"'
 			     + ' allowfullscreen></iframe>');
 	}
 	if( image.length > 0 ) {
-	    document.writeln('<img src="static/images/' 
-			     +  image[0].childNodes[0].nodeValue 
-			     + '" class="img-responsive img-project" alt="' 
+	    document.writeln('<img src="static/images/'
+			     +  image[0].childNodes[0].nodeValue
+			     + '" class="img-responsive img-project" alt="'
 			     + image[0].childNodes[0].nodeValue + '">');
 	}
 	document.writeln('</div>');
 	document.writeln('</div>');
-	
+
 	document.writeln('<div class="col-lg-8 col-md-8 col-lg-pull-4 col-md-pull-4">');
 	document.writeln(details[0].childNodes[0].nodeValue);
 	document.writeln('</div>');
-	
+
 	document.writeln('</div>');
 	document.writeln('</div>');
     }
@@ -383,7 +389,7 @@ function parseBlogs( blogs_xml ) {
 	document.writeln('Sorry, xml doc [' + blogs_xml + '] could not load.');
 	return( null );
     }
-    
+
     var blogs = xmlDoc.getElementsByTagName("Blog");
     for( var i = 0; i < blogs.length; i++ ) {
 	var blog = blogs[ i ];
@@ -396,15 +402,15 @@ function parseBlogs( blogs_xml ) {
 	document.writeln('<p class="lead">' + date[0].childNodes[0].nodeValue
 			 + '</p>');
 	document.writeln('<div class="row">');
-	
-	document.writeln('<div class="col-lg-4 col-md-4 col-lg-push-8 col-md-push-8">'); 
+
+	document.writeln('<div class="col-lg-4 col-md-4 col-lg-push-8 col-md-push-8">');
 	for( var j = 0; j < images.length; j++ ) {
 	    document.writeln('<div class="graphic">');
-	    document.writeln('<a href="static/images/' 
+	    document.writeln('<a href="static/images/'
 			     + images[j].childNodes[0].nodeValue
-			     + '"><img src="static/images/' 
-			     + images[j].childNodes[0].nodeValue 
-			     + '" class="img-responsive img-interest" alt="' 
+			     + '"><img src="static/images/'
+			     + images[j].childNodes[0].nodeValue
+			     + '" class="img-responsive img-interest" alt="'
 			     + images[j].childNodes[0].nodeValue + '"></a>');
 	    document.writeln('</div>');
 	    if( j < images.length - 1 ) {
@@ -412,11 +418,11 @@ function parseBlogs( blogs_xml ) {
 	    }
 	}
 	document.writeln('</div>');
-	
+
 	document.writeln('<div class="col-lg-8 col-md-8 col-lg-pull-4 col-md-pull-4">');
 	document.writeln(text[0].childNodes[0].nodeValue);
 	document.writeln('</div>');
-	
+
 	document.writeln('</div>');
     }
 }
