@@ -4,45 +4,41 @@
 
 <Project>
 <ID>super-mega-baseball</ID>
-<Title>Super Mega Baseball 2</Title>
-<Youtube_ID>LZhu2Y5Gfio</Youtube_ID>
+<Title>Super Mega Baseball</Title>
+<Youtube_ID>WTRY-SP2EuI</Youtube_ID>
 <Details><![CDATA[
 <p>
-Super Mega Baseball 2 (SMB2) is a baseball video game developed by <a href="http://metalheadsoftware.com">Metalhead Software</a>, a local development company here in Victoria.
-It is the sequel to the original Super Mega Baseball, which was named <a href="https://www.polygon.com/2014/12/17/7408391/2014-in-review-sports-game-of-the-year"> Sports Game of the Year</a> by Polygon after its release.
-SMB and SMB2 feature made-up players and teams with very accessible controls, yet packs a deep baseball simulation that is tons of fun to play.
-</p>
-<p>
-From November 2016 to August 2018, I worked as a contractor providing production support for SMB2, taking on the role of an extra developer for the small Metalhead team.
-My efforts resulted in new game features, such as the ability to adjust your fielders' defensive positioning, and improved AI decision-making, such as when to pinch hit for the pitcher.
-I may have had a hand in creating some of the new player names too, with <i>Winnie Noelle</i> being my favourite.
-Since September 2018, I am now a (mostly) full time employee and am leading gameplay and AI development.
+Super Mega Baseball (SMB) is a series of baseball video games developed by <a href="http://metalheadsoftware.com">Metalhead Software</a>, a local development company here in Victoria.
+The original Super Mega Baseball was named <a href="https://www.polygon.com/2014/12/17/7408391/2014-in-review-sports-game-of-the-year"> Sports Game of the Year</a> by Polygon after its release.
+I joined the team part way through development of Super Mega Baseball 2, and took on the lead gameplay developer role for Super Mega Baseball 3.
+SMB features made-up players and teams with memorable names, such as Hammer Longballo of the Sirloins and Juice Jackson of the Jacks.
+The series is very accessible, yet packs a deep baseball simulation that is tons of fun to play.
 </p>
 <p>
 While I had no part in development of the original Super Mega Baseball, I was a big fan of the game.
 At one point, I was pretty good at it and managed to pitch a perfect game on a very high difficulty setting.
 This actually caught the attention of Polygon as well, who wrote an article describing this feat as <a href="https://www.polygon.com/2015/2/7/7996237/super-mega-baseball-perfect-game">"the hardest thing you can do in any current sports video game"</a>.
-I don't think this helped me score my contracting gig for SMB2, but it is certainly fun to work on a project that scratches my own itch.
+I don't think this helped me score my job with Metalhead, but it is certainly fun to work on a project that scratches my own itch.
 </p>
 ]]></Details>
 </Project>
 
 <Project>
 <ID>fanteamsy</ID>
-<Title>Fanteamsy</Title>
-<Image>fanteamsy-logo.png</Image>
+<Title>Wins League Fantasy</Title>
+<Image>wlfantasy.png</Image>
 <Details><![CDATA[
-<p><a href="https://fanteamsy.com">Fanteamsy</a> is the season-long fantasy game designed for people like me who love sports, love the idea of playing fantasy sports, but also love having their free time too.
-Fanteamsy is a cross between wins leagues and fantasy sports for you and your friends that brings the excitement of drafting and following your picks without the homework.
-Unlike fantasy sports where you draft players by position, in Fanteamsy, you draft teams by division.
+<p><a href="https://winsleaguefantasy.com">Wins League Fantasy</a> is the season-long fantasy game designed for people like me who love sports, love the idea of playing fantasy sports, but also love having their free time too.
+Wins League Fantasy is a cross between wins pools and fantasy sports for you and your friends that brings the excitement of drafting and following your picks without the homework.
+Unlike fantasy sports where you draft players by position, in Wins League Fantasy, you draft teams by division.
 When your teams win, you score points, making for a better cheering experience.
-Take your wins league to the next level with Fanteamsy and get the best out of both fantasy sports and pick'em contests in one pool.
+Take your wins pool to the next level with Wins League Fantasy and get the best out of both fantasy sports and pick'em contests in one pool.
 </p>
 <p>I played fantasy sports for several years, participating in multiple leagues across multiple sports.
 Once I had kids, I found that I lost a lot of my free time and struggled to keep up with everything I needed to know to keep my fantasy teams afloat.
 Eventually, I quit playing fantasy sports all together.
-Fanteamsy is a passion project that brings back the enjoyment I got out of playing fantasy sports, but without that high time investment that fantasy sports suffers from.
-It also brings the benefits of wins leagues, like better cheering and simplified scoring, to a fantasy-type game, which I have really enjoyed.</p>
+Wins League Fantasy is a passion project that brings back the enjoyment I got out of playing fantasy sports, but without that high time investment that fantasy sports suffers from.
+It also brings the benefits of wins pools, like better cheering and simplified scoring, to a fantasy-type game, which I have really enjoyed.</p>
 ]]></Details>
 </Project>
 
