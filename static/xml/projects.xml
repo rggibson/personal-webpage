@@ -91,7 +91,7 @@ It is open-sourced and MIT-licensed, so it is free to use and be modified by any
 <Image>pbtracker-rggibson-100913.png</Image>
 <Details><![CDATA[
 <p>
-<a href="http://pb-tracker.appspot.com">PB Tracker</a> is a web app for tracking <a href="/personal#vids">speedrunning</a> times, personal bests (PBs) and viewing other runners' PBs.
+<a href="https://github.com/rggibson/pb-tracker">PB Tracker</a> is a web app for tracking <a href="/personal#vids">speedrunning</a> times, personal bests (PBs) and viewing other runners' PBs.
 Runners sign up and submit their times to populate their very own personal runner page.
 This runner page is the main feature of PB Tracker, providing a useful reference point for looking up a runner's best times.
 In addition, PB Tracker includes individual game pages that list all the submitted times for the corresponding game, sorted by time.
